@@ -11,6 +11,18 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Merriweather"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"
+    />
     <title>Bootstrap demo</title>
 
     <link
@@ -20,19 +32,41 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <div style="background-color: #f1efea">
+  <body style="background-color: #f1efea">
+    <div class="container-fluid" style="width: fit-content">
       <div class="container-fluid" style="height: 30%">
-        <div class="row align-items-center ">
+        <div class="row align-items-center" style="padding: 2%">
           <div class="col-8">
-            <p class="m-0">Chief of Staff</p>
+            <p
+              class="m-0"
+              style="
+                font-family: Merriweather;
+                font-size: 24px;
+                font-weight: 700;
+              "
+              ;
+            >
+              Chief of Staff
+            </p>
           </div>
           <div class="col-4 d-flex justify-content-end">
             <button
               class="btn btn-primary"
-              style="background-color: #ed6838; margin-top: 24px"
+              style="
+                height: 67px;
+                width: 209px;
+                left: 1183px;
+                top: 24px;
+                border-radius: 16px;
+                padding: 24px 16px 24px 16px;
+                background-color: #ed6838;
+                box-shadow: 0px 4px 16px rgba(251, 97, 42, 0.8);
+                border: none;
+              "
             >
-              Purchase Latest Issue
+              <p style="font-family: Inter; font-size: 16px; font-weight: 600">
+                Purchase Latest Issue
+              </p>
             </button>
           </div>
         </div>
@@ -46,13 +80,11 @@
           display: flex;
           flex-direction: column;
           align-content: center;
+          margin-top: 5%;
         "
       >
-        <div class="row d-flex justify-content-center">
-          <div
-            class="col-md-3 d-flex justify-content-center align-items-center"
-            style="height: 80%"
-          >
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-3 d-flex" style="height: 70%">
             <img
               src="img/images/leftHeader.png"
               alt="your image"
@@ -69,24 +101,30 @@
               "
               class="text-center"
             >
-              <h1
-                style="
-                  font-family: Merriweather;
-                  font-weight: 300;
-                  font-size: 54px;
-                  margin-left: 70px;
-                  margin-right: 70px;
-                "
-              >
-                Your source for ‘informative stuff
-              </h1>
+              <p>
+                <span
+                  style="font-family: Inter; font-weight: 300; font-size: 54px"
+                  >Your source for
+                </span>
+                <span
+                  style="
+                    font-family: Merriweather;
+                    font-weight: 700;
+                    font-size: 54px;
+                  "
+                  >‘informative
+                </span>
+                <span
+                  style="font-family: Inter; font-weight: 300; font-size: 54px"
+                  >stuff</span
+                >
+              </p>
               <p
                 style="
                   font-family: Inter;
                   font-weight: 400;
                   font-size: 24px;
-                  margin-left: 70px;
-                  margin-right: 70px;
+                  max-lines: 3;
                 "
               >
                 Whether it’s a cheeky fun fact, deep dive into emerging tech, or
@@ -157,10 +195,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="col-md-3 d-flex justify-content-center align-items-center"
-            style="height: 80%"
-          >
+          <div class="col-md-3 d-flex justify-content-end" style="height: 60%">
             <img
               src="img/images/rightHeader.png"
               alt="your image"
@@ -169,7 +204,7 @@
           </div>
         </div>
       </div>
-      <div class="row d-flex" style="margin: 48px">
+      <div class="row d-flex" style="margin: 3%">
         <div class="col-md-4">
           <div
             class="my-element text-start"
@@ -321,89 +356,435 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid" style="margin-top: 48px;margin-bottom: 48px;">
+      <div class="container-fluid">
+        <div
+          class="container-fluid align-content-center justify-content-center"
+          style="
+            width: 93%;
+            border-radius: 40px;
+            background-color: #e9e6e0;
+            padding: 48px;
+            margin-top: 8%;
+            margin-bottom: 5%;
+          "
+        >
+          <div class="col">
+            <div class="col">
+              <div class="row-md-12">
+                <button
+                  class="btn btn-primary"
+                  style="
+                    width: 12%;
+                    border-radius: 16px;
+                    margin-right: 5px;
+                    padding: 24px 40px 10px 40px;
+                    background-color: #ed6838;
+                    box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
+                    border: none;
+                  "
+                >
+                  <p
+                    class="text-nowrap"
+                    style="
+                      font-family: Inter;
+                      font-size: 16px;
+                      font-weight: 600;
+                      max-lines: 1;
+                    "
+                  >
+                    Magazine
+                  </p>
+                </button>
+                <button
+                  class="btn btn-primary"
+                  style="
+                    width: 12%;
+                    border-radius: 16px;
+                    margin-right: 5px;
+                    margin-left: 5px;
+                    padding: 24px 40px 10px 40px;
+                    background-color: #ed6838;
+                    box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
+                    border: none;
+                  "
+                >
+                  <p
+                    class="text-nowrap"
+                    style="
+                      font-family: Inter;
+                      font-size: 16px;
+                      font-weight: 600;
+                      max-lines: 1;
+                    "
+                  >
+                    Articles
+                  </p>
+                </button>
+                <button
+                  class="btn btn-primary"
+                  style="
+                    width: 12%;
+                    border-radius: 16px;
+                    margin-right: 5px;
+                    margin-left: 5px;
+                    padding: 24px 40px 10px 40px;
+                    background-color: #ed6838;
+                    box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
+                    border: none;
+                  "
+                >
+                  <p
+                    class="text-nowrap"
+                    style="
+                      font-family: Inter;
+                      font-size: 16px;
+                      font-weight: 600;
+                      max-lines: 1;
+                    "
+                  >
+                    Other Stuff
+                  </p>
+                </button>
+                <button
+                  class="btn btn-primary"
+                  style="
+                    width: 12%;
+                    border-radius: 16px;
+                    margin-left: 5px;
+                    padding: 24px 40px 10px 40px;
+                    background-color: #ed6838;
+                    box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
+                    border: none;
+                  "
+                >
+                  <p
+                    class="text-nowrap"
+                    style="
+                      font-family: Inter;
+                      font-size: 16px;
+                      font-weight: 600;
+                      max-lines: 1;
+                    "
+                  >
+                    Our Story
+                  </p>
+                </button>
+              </div>
+            </div>
+            <div
+              class="col-md-6"
+              style="margin-top: 2%; background-color: #e9e6e0"
+            >
+              <iframe
+                src="https://www.example.com"
+                style="width: max-content"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container-fluid align-items-center"
+        style="background-color: #ffffff; padding: 5%"
+      >
+        <h1
+          class="fw-bold"
+          style="
+            font-family: Merriweather;
+            font-size: 54px;
+            text-align: left;
+            padding-left: 2%;
+          "
+        >
+          Real content, real voices
+        </h1>
+        <p
+          class="fs-5"
+          style="
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 400;
+            text-align: left;
+            padding-left: 2%;
+          "
+        >
+          Hear what people have to say about us
+        </p>
+        <div
+          class="container-fluid"
+          style="width: 100%; padding: 0%; margin-top: 10%; margin-bottom: 10%"
+        >
+          <div
+            class="carousel slide"
+            id="mySlider"
+            data-bs-ride="carousel"
+            style="border-radius: 16px"
+          >
+            <!-- Add carousel items here -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  class="img-fluid"
+                  src="img/images/corusal.png"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="carousel-item active">
+                <img
+                  class="img-fluid"
+                  src="img/images/corusal.png"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="carousel-item active">
+                <img
+                  class="img-fluid"
+                  src="img/images/corusal.png"
+                  style="width: 100%"
+                />
+              </div>
+              <div class="carousel-item active">
+                <img
+                  class="img-fluid"
+                  src="img/images/corusal.png"
+                  style="width: 100%"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- carousel slides -->
+              <ol class="carousel-indicators" style="bottom: 100px">
+                <li
+                  data-target="#mySlider"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li data-target="#mySlider" data-slide-to="1"></li>
+                <li data-target="#mySlider" data-slide-to="2"></li>
+                <li data-target="#mySlider" data-slide-to="3"></li>
+              </ol>
+            </div>
+          </div>
+        </div>
         <div
           class="container"
           style="
-          height: 1000px;
-            border-radius: 40px;
-            padding: 40px;
-            
-            background-color: #e9e6e0;
+            height: 254px;
+            width: 1280px;
+            border-radius: 16px;
+            padding: 24px;
+            background: radial-gradient(
+              45.18% 69.12% at 23.39% 47.87%,
+              rgba(241, 255, 77, 0.64) 0%,
+              #ffffff 100%
+            );
+            mix-blend-mode: normal;
+            border: 2px solid rgba(0, 0, 0, 0.12);
+            border-radius: 16px;
           "
         >
           <!-- Add content here -->
-        </div>
-      </div>
-      <div class="container-fluid align-items-center"  style="background-color: #ffffff;height: 1400px;">
-        
-            <!-- Element 1: Text -->
-            <h1 class="fw-bold" style="font-family: Merriweather; font-size: 54px; line-height: 68px; letter-spacing: 0em; text-align: left;">Title Text Goes Here</h1>
-            
-            <!-- Element 2: Text -->
-            <p class="fs-5" style="font-family: Inter; font-size: 24px; font-weight: 400; line-height: 34px; letter-spacing: 0em; text-align: left;">Subtitle text goes here</p>
-            
-            <!-- Element 3: Carousel -->
-            <div class="carousel slide" data-bs-ride="carousel" style="height: 390px; width: 1280px; border-radius: 16px; padding: 40px;">
-              <!-- Add carousel items here -->
-            </div>
-            
-            <!-- Element 4: Container -->
-            <div class="container" style="height: 254px; width: 1280px; border-radius: 16px; padding: 24px;">
-                <div class="container">
-                    <div class="row">
-                      <div class="col-12">
-                        <h1 class="fw-bold text-left" style="font-family: Merriweather; font-size: 54px; line-height: 68px;">Title Text</h1>
-                        <p class="text-left" style="font-family: Inter; font-size: 24px; font-weight: 500; line-height: 34px;">Subtitle Text</p>
-                        <div class="row">
-                          <div class="row-md-3">
-                            <button class="btn btn-primary" style="height: 72px; width: 200px; border-radius: 10.706319808959961px;">
-                              <img src="img/icons/music.png" alt="icon" style="height: 40px; width: 40px;">
-                              <div class="d-flex flex-column">
-                                <span style="font-size: 14px;">Button Text 1</span>
-                                <span style="font-size: 12px;">Button Text 2</span>
-                              </div>
-                            </button>
-                          </div>
-                          <div class="row-md-3">
-                            <button class="btn btn-primary" style="height: 72px; width: 200px; border-radius: 10.706319808959961px;">
-                              <img src="img/icons/spotify.png" alt="icon" style="height: 40px; width: 40px;">
-                              <div class="d-flex flex-column">
-                                <span style="font-size: 14px;">Button Text 1</span>
-                                <span style="font-size: 12px;">Button Text 2</span>
-                              </div>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
+
+          <div class="container" style="height: 254px; border-radius: 16px">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <h1
+                    class="fw-bold text-left"
+                    style="
+                      font-family: Merriweather;
+                      font-size: 54px;
+                      line-height: 68px;
+                    "
+                  >
+                    Peep the playlist
+                  </h1>
+                  <p
+                    class="text-left"
+                    style="
+                      font-family: Inter;
+                      font-size: 24px;
+                      font-weight: 500;
+                      line-height: 34px;
+                    "
+                  >
+                    A curated audio experience to pair with our magazine
+                  </p>
+                  <div class="row">
+                    <div class="col-md-2">
+                      <button
+                        class="btn btn-primary w-100 h-100"
+                        style="
+                          width: 200px;
+                          height: 72px;
+                          border: 0.8px solid #090909;
+                          background-color: #ffffff;
+                        "
+                      >
+                        <img
+                          src="img/icons/music.png"
+                          alt="Image description"
+                          class="img-fluid"
+                        />
+                      </button>
+                    </div>
+                    <div class="col-md-2">
+                      <button
+                        class="btn btn-primary w-100 h-100"
+                        style="
+                          width: 200px;
+                          height: 72px;
+                          border: 0.8px solid #090909;
+                          background-color: #ffffff;
+                        "
+                      >
+                        <img
+                          src="img/icons/spotify.png"
+                          alt="Image description"
+                          class="img-fluid"
+                        />
+                      </button>
                     </div>
                   </div>
-                  
-            </div>
-        <!-- <div class="container-fluid ">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" style="height: fit-content;width: 70%;">
-                <div class="carousel-inner" style="height: fit-content;">
-                  <div class="carousel-item active" style="height: fit-content;">
-                    <iframe src="tabs/corousal/page1.html" width="100%" ></iframe>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="image2.jpg" class="d-block w-100" alt="Image 2">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="image3.jpg" class="d-block w-100" alt="Image 3">
-                  </div>
                 </div>
-              </div> -->
-
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Footer-->
+    <footer
+      class="footer align-content-center justify-content-center"
+      style="background-color: #f1efea; margin: 2%"
+    >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-8">
+            <p
+              class="text-left"
+              style="
+                font-family: Merriweather;
+                font-size: 24px;
+                font-weight: 700;
+              "
+            >
+              Chief Of Stuff
+            </p>
+          </div>
+          <div class="col-4 d-flex justify-content-end">
+            <div class="row">
+              <div class="col-4">
+                <button
+                  class="btn btn-primary"
+                  style="
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: #e9e6e0;
+                    padding: 5%;
+                  "
+                >
+                  <img
+                    src="img/icons/instagram.png"
+                    alt="Image 1"
+                    class="img-fluid"
+                  />
+                </button>
+              </div>
+              <div class="col-4">
+                <button
+                  class="btn btn-primary"
+                  style="
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: #e9e6e0;
+                    padding: 5%;
+                  "
+                >
+                  <img
+                    src="img/icons/tiktok.png"
+                    alt="Image 2"
+                    class="img-fluid"
+                  />
+                </button>
+              </div>
+              <div class="col-4">
+                <button
+                  class="btn btn-primary"
+                  style="
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: #e9e6e0;
+                    padding: 5%;
+                  "
+                >
+                  <img
+                    src="img/icons/linkedIn.png"
+                    alt="Image 3"
+                    class="img-fluid"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <hr />
+        </div>
+        <div
+          class="row align-items-center"
+          style="margin-top: 2%; margin-bottom: 4%"
+        >
+          <div class="col-8">
+            <p
+              style="
+                font-family: Inter;
+                font-size: 16px;
+                font-weight: 500;
+                text-align: left;
+                color: #5c5c5c;
+              "
+            >
+              © Chief Of Stuff 2023 - All rights reserved
+            </p>
+          </div>
+          <div class="col-4 d-flex justify-content-end">
+            <button
+              class="btn btn-primary"
+              style="
+                height: 67px;
+                width: 209px;
+                left: 1183px;
+                top: 24px;
+                border-radius: 16px;
+                padding: 24px 16px 24px 16px;
+                background-color: #ed6838;
+                box-shadow: 0px 4px 16px rgba(251, 97, 42, 0.8);
+                border: none;
+              "
+            >
+              <p style="font-family: Inter; font-size: 16px; font-weight: 600">
+                Purchase Latest Issue
+              </p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
