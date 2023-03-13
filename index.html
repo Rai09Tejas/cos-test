@@ -231,10 +231,13 @@
                       function MyFunction(e) {
                         e.preventDefault();
                         var email = document.getElementById("email").value;
-                        document.getElementById("demo").innerHTML = email;
-                        fetch("http://localhost:5100", {
+                        fetch("https://www.chiefofstuff.org/embed", {
                           method: "POST",
-                          body: JSON.stringify({ email }),
+                          headers: {
+                              "Access-Control-Allow-Origin": "*",
+                              "Content-Type": "text/plain"
+                          },
+                          body: JSON.stringify( email ),
                         }).then((res) => res.json());
                       }
                     </script>
