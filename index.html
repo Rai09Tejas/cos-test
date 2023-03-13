@@ -284,6 +284,7 @@
                     font-family: Merriweather;
                     font-weight: 700;
                     font-size: 24px;
+                    margin-top: 2%;
                   "
                 >
                   Curated
@@ -334,6 +335,7 @@
                     font-family: Merriweather;
                     font-weight: 700;
                     font-size: 24px;
+                    margin-top: 2%;
                   "
                 >
                   Delivered
@@ -384,6 +386,7 @@
                     font-family: Merriweather;
                     font-weight: 700;
                     font-size: 24px;
+                    margin-top: 2%;
                   "
                 >
                   Connected
@@ -431,9 +434,13 @@
                   for(var i=0; i<buttons.length; i++) 
 { buttons[i].style.backgroundColor = '#FFFFFF52'; 
                     buttons[i].style.boxShadow = 'none';} this.style.backgroundColor='#ED6838';
-                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)';              "
+                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)';
+                  
+                  document.getElementById('toggleButtonText1').style.color='#fff';
+                  document.getElementById('toggleButtonText2').style.color='#000';
+                  document.getElementById('toggleButtonText3').style.color='#000';
+                  document.getElementById('toggleButtonText4').style.color='#000';              "
                   style="
-                    width: 12%;
                     border-radius: 16px;
                     margin-right: 5px;
                     padding: 24px 40px 10px 40px;
@@ -444,7 +451,7 @@
                 >
                   <p
                     class="text-nowrap"
-                    id="toggleButtonText"
+                    id="toggleButtonText1"
                     style="
                       font-family: Inter;
                       font-size: 16px;
@@ -461,9 +468,13 @@
                   onclick="document.getElementById('my-iframe').src='components/tabs/articles.html';
                   var buttons = document.querySelectorAll('#toggleButton'); for(var i=0; i<buttons.length; i++) { buttons[i].style.backgroundColor = '#FFFFFF52'; 
                     buttons[i].style.boxShadow = 'none';} this.style.backgroundColor='#ED6838';
-                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)';              "
+                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)';
+                  document.getElementById('toggleButtonText1').style.color='#000';
+                  document.getElementById('toggleButtonText2').style.color='#fff';
+                  document.getElementById('toggleButtonText3').style.color='#000';
+                  document.getElementById('toggleButtonText4').style.color='#000';
+                  "
                   style="
-                    width: 12%;
                     border-radius: 16px;
                     margin-right: 5px;
                     margin-left: 5px;
@@ -474,12 +485,13 @@
                 >
                   <p
                     class="text-nowrap"
-                    id="toggleButtonText"
+                    id="toggleButtonText2"
                     style="
                       font-family: Inter;
                       font-size: 16px;
                       font-weight: 600;
                       max-lines: 1;
+                      color: #000;
                     "
                   >
                     Articles
@@ -491,9 +503,13 @@
                   onclick="document.getElementById('my-iframe').src='components/tabs/magazine.html';
                   var buttons = document.querySelectorAll('#toggleButton'); for(var i=0; i<buttons.length; i++) { buttons[i].style.backgroundColor = '#FFFFFF52'; 
                     buttons[i].style.boxShadow = 'none';} this.style.backgroundColor='#ED6838';
-                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)';              "
+                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)'; 
+                  
+                  document.getElementById('toggleButtonText1').style.color='#000';
+                  document.getElementById('toggleButtonText2').style.color='#000';
+                  document.getElementById('toggleButtonText3').style.color='#fff';
+                  document.getElementById('toggleButtonText4').style.color='#000';             "
                   style="
-                    width: 12%;
                     border-radius: 16px;
                     margin-right: 5px;
                     margin-left: 5px;
@@ -504,12 +520,13 @@
                 >
                   <p
                     class="text-nowrap"
-                    id="toggleButtonText"
+                    id="toggleButtonText3"
                     style="
                       font-family: Inter;
                       font-size: 16px;
                       font-weight: 600;
                       max-lines: 1;
+                      color: #000;
                     "
                   >
                     Other Stuff
@@ -521,9 +538,13 @@
                   onclick="document.getElementById('my-iframe').src='components/tabs/our_story.html';
                   var buttons = document.querySelectorAll('#toggleButton'); for(var i=0; i<buttons.length; i++) { buttons[i].style.backgroundColor = '#FFFFFF52'; 
                     buttons[i].style.boxShadow = 'none';} this.style.backgroundColor='#ED6838';
-                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)';              "
+                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)'; 
+                  
+                  document.getElementById('toggleButtonText1').style.color='#000';
+                  document.getElementById('toggleButtonText2').style.color='#000';
+                  document.getElementById('toggleButtonText3').style.color='#000';
+                  document.getElementById('toggleButtonText4').style.color='#fff';             "
                   style="
-                    width: 12%;
                     border-radius: 16px;
                     margin-left: 5px;
                     padding: 24px 40px 10px 40px;
@@ -533,12 +554,13 @@
                 >
                   <p
                     class="text-nowrap"
-                    id="toggleButtonText"
+                    id="toggleButtonText4"
                     style="
                       font-family: Inter;
                       font-size: 16px;
                       font-weight: 600;
                       max-lines: 1;
+                      color: #000;
                     "
                   >
                     Our Story
