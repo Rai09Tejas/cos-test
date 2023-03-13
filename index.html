@@ -34,6 +34,10 @@
   </head>
   <body style="background-color: #f1efea">
     <div class="container-fluid" style="width: fit-content">
+
+
+
+      <!-- HEADER SECTION-->
       <div class="container-fluid" style="height: 30%">
         <div class="row align-items-center" style="padding: 2%">
           <div class="col-8">
@@ -71,6 +75,10 @@
           </div>
         </div>
       </div>
+
+
+
+      <!-- FORM FIELD SECTION-->
       <div
         class="container-fluid"
         style="
@@ -81,6 +89,11 @@
           flex-direction: column;
           align-content: center;
           margin-top: 5%;
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            #fccdbc 0%,
+            #f1efea 100%
+          );
         "
       >
         <div class="row d-flex justify-content-center align-items-center">
@@ -91,7 +104,9 @@
               class="img-fluid"
             />
           </div>
-          <div class="col-md-6 d-flex justify-content-center">
+          <div
+            class="col-md-6 bg-image bg-position-bottom d-flex justify-content-center"
+          >
             <div
               style="
                 display: flex;
@@ -101,6 +116,18 @@
               "
               class="text-center"
             >
+              <iframe
+                src="components/bg_ellipse.html"
+                frameborder="0"
+                style="
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  z-index: -1;
+                "
+              ></iframe>
               <p>
                 <span
                   style="font-family: Inter; font-weight: 300; font-size: 54px"
@@ -128,16 +155,25 @@
                 "
               >
                 Whether it’s a cheeky fun fact, deep dive into emerging tech, or
-                a profile about a changemaker - Chief of Stuff is the place to
-                discover what’s new, novel, or next.
+                a profile about a changemaker -          
+                <span style="
+                font-family: Inter;
+                font-weight: 700;
+                font-size: 24px;
+                max-lines: 3;
+              ">Chief of Stuff is the place to
+                discover what’s new, novel, or next.</span>
               </p>
+
+              <!-- form -->
               <div
                 style="
                   height: 158px;
                   width: 100%;
-                  background-color: #cccccc8a;
+                  background-color: #FFFFFF8A;
                   border-radius: 16px;
                   padding: 24px;
+                  margin-top: 3%;
                 "
               >
                 <div
@@ -176,7 +212,7 @@
                         "
                       />
                     </div>
-                    <div class="col-md-2 d-flex justify-content-center">
+                    <div class="col-md-2 d-flex justify-content-end">
                       <button
                         class="btn btn-primary position-relative"
                         style="
@@ -204,6 +240,10 @@
           </div>
         </div>
       </div>
+
+
+
+      <!-- Curated SECTION -->
       <div class="row d-flex" style="margin: 3%">
         <div class="col-md-4">
           <div
@@ -356,6 +396,11 @@
           </div>
         </div>
       </div>
+
+
+
+
+      <!-- TABS Section-->
       <div class="container-fluid">
         <div
           class="container-fluid align-content-center justify-content-center"
@@ -373,18 +418,26 @@
               <div class="row-md-12">
                 <button
                   class="btn btn-primary"
+                  id="toggleButton"
+                  onclick="document.getElementById('my-iframe').src='components/tabs/magazine.html';
+                  var buttons = document.querySelectorAll('#toggleButton'); 
+                  for(var i=0; i<buttons.length; i++) 
+{ buttons[i].style.backgroundColor = '#FFFFFF52'; 
+                    buttons[i].style.boxShadow = 'none';} this.style.backgroundColor='#ED6838';
+                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)';              "
                   style="
                     width: 12%;
                     border-radius: 16px;
                     margin-right: 5px;
                     padding: 24px 40px 10px 40px;
-                    background-color: #ed6838;
+                    background-color: #ED6838;
                     box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
                     border: none;
                   "
                 >
                   <p
                     class="text-nowrap"
+                    id="toggleButtonText"
                     style="
                       font-family: Inter;
                       font-size: 16px;
@@ -397,19 +450,24 @@
                 </button>
                 <button
                   class="btn btn-primary"
+                  id="toggleButton"
+                  onclick="document.getElementById('my-iframe').src='components/tabs/articles.html';
+                  var buttons = document.querySelectorAll('#toggleButton'); for(var i=0; i<buttons.length; i++) { buttons[i].style.backgroundColor = '#FFFFFF52'; 
+                    buttons[i].style.boxShadow = 'none';} this.style.backgroundColor='#ED6838';
+                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)';              "
                   style="
                     width: 12%;
                     border-radius: 16px;
                     margin-right: 5px;
                     margin-left: 5px;
                     padding: 24px 40px 10px 40px;
-                    background-color: #ed6838;
-                    box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
+                    background-color: #FFFFFF52;
                     border: none;
                   "
                 >
                   <p
                     class="text-nowrap"
+                    id="toggleButtonText"
                     style="
                       font-family: Inter;
                       font-size: 16px;
@@ -422,19 +480,24 @@
                 </button>
                 <button
                   class="btn btn-primary"
+                  id="toggleButton"
+                  onclick="document.getElementById('my-iframe').src='components/tabs/magazine.html';
+                  var buttons = document.querySelectorAll('#toggleButton'); for(var i=0; i<buttons.length; i++) { buttons[i].style.backgroundColor = '#FFFFFF52'; 
+                    buttons[i].style.boxShadow = 'none';} this.style.backgroundColor='#ED6838';
+                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)';              "
                   style="
                     width: 12%;
                     border-radius: 16px;
                     margin-right: 5px;
                     margin-left: 5px;
                     padding: 24px 40px 10px 40px;
-                    background-color: #ed6838;
-                    box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
+                    background-color: #FFFFFF52;
                     border: none;
                   "
                 >
                   <p
                     class="text-nowrap"
+                    id="toggleButtonText"
                     style="
                       font-family: Inter;
                       font-size: 16px;
@@ -447,18 +510,23 @@
                 </button>
                 <button
                   class="btn btn-primary"
+                  id="toggleButton"
+                  onclick="document.getElementById('my-iframe').src='components/tabs/our_story.html';
+                  var buttons = document.querySelectorAll('#toggleButton'); for(var i=0; i<buttons.length; i++) { buttons[i].style.backgroundColor = '#FFFFFF52'; 
+                    buttons[i].style.boxShadow = 'none';} this.style.backgroundColor='#ED6838';
+                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)';              "
                   style="
                     width: 12%;
                     border-radius: 16px;
                     margin-left: 5px;
                     padding: 24px 40px 10px 40px;
-                    background-color: #ed6838;
-                    box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
+                    background-color: #FFFFFF52;
                     border: none;
                   "
                 >
                   <p
                     class="text-nowrap"
+                    id="toggleButtonText"
                     style="
                       font-family: Inter;
                       font-size: 16px;
@@ -472,17 +540,24 @@
               </div>
             </div>
             <div
-              class="col-md-6"
+              class="col-md-12"
               style="margin-top: 2%; background-color: #e9e6e0"
             >
               <iframe
-                src="https://www.example.com"
-                style="width: max-content"
+                src="components/tabs/magazine.html"
+                id="my-iframe"
+                width="100%"
+                height="800px"
               ></iframe>
             </div>
           </div>
         </div>
       </div>
+
+
+
+
+      <!-- REAL CONTENT REAL VOICE SECTION-->
       <div
         class="container-fluid align-items-center"
         style="background-color: #ffffff; padding: 5%"
@@ -655,6 +730,9 @@
         </div>
       </div>
     </div>
+
+
+
 
     <!-- Footer-->
     <footer

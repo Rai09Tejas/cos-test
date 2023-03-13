@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Merriweather"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"
+    />
+    <title>Articles</title>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #e9e6e0;
+        padding-top: 3%;
+        height: 800px;
+      "
+    >
+      <h1
+        style="
+          font-family: Merriweather;
+          font-size: 54px;
+          font-weight: 700;
+          text-align: left;
+          color: #1a1a17;
+        "
+      >
+        Quarterly All Hands
+      </h1>
+      <p
+        style="
+          font-family: Inter;
+          font-size: 24px;
+          font-weight: 400;
+          text-align: left;
+          color: #5c5c5c;
+          margin-right: 2%;
+        "
+      >
+        The Quarterly All Hands is designed to be enjoyed at your leisure -
+        while at lunch, riding the train, as a break from your feed, or when
+        you're bored. Wherever you are, we hope you find inspiration, get lost
+        in the pages, and discover something new.
+      </p>
+      <div style="display: flex; flex-direction: row">
+        <div
+          class="col-md-6"
+          style="
+            height: 550px;
+            width: 550px;
+            left: 0px;
+            top: 0px;
+            border-radius: 16px;
+            padding: 80px 146px 80px 146px;
+            background-color: #f1efea;
+          "
+        >
+          <div
+            id="myCarousel"
+            class="carousel slide custom-carousel"
+            data-bs-ride="carousel"
+          >
+            <div
+              class="carousel-inner"
+              style="
+                mix-blend-mode: normal;
+                filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.4));
+              "
+            >
+              <div class="carousel-item active" style="border-radius: 16px">
+                <img
+                  src="../../img/images/mag.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item" style="border-radius: 16px">
+                <img
+                  src="../../img/images/mag.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item" style="border-radius: 16px">
+                <img
+                  src="../../img/images/mag.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+          <div class="carousel-indicators" style="height: 16px; width: 16px; left: 56px; top: 0px;">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+        
+        </div>
+        <div
+          class="col-md-6"
+          style="
+          width: 50%;
+          align-self: center;
+            justify-self: end;
+            height: fit-content;
+            border-radius: 16px;
+            padding: 2%;
+            background: radial-gradient(
+              51.18% 72.12% at 23.39% 47.87%,
+              rgba(255, 204, 77, 0.64) 0%,
+              #f1efea 100%
+            );
+            margin-left: 6%;
+            mix-blend-mode: normal;
+            border: 2px solid rgba(0, 0, 0, 0.12);
+          "
+        >
+          <div class="row">
+            <div class="col">
+              <h1
+                style="
+                  font-family: Merriweather;
+                  font-size: 40px;
+                  font-weight: 700;
+                  text-align: left;
+                "
+              >
+                Read it
+              </h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p
+                style="
+                  font-family: Inter;
+                  font-size: 24px;
+                  font-weight: 400;
+                  text-align: left;
+                  color: #46443B;
+                "
+              >
+                The Second Issue takes inspiration from Chief of Stuff’s
+                spiritual home of Greece, celebrates Innovators, and explores
+                New Worlds.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button
+                onclick="window.open('https://chiefofstuff.gumroad.com/l/lrswn', '_blank')"
+                style="
+                  height: 67px;
+                  width: 544px;
+                  left: 0px;
+                  top: 200px;
+                  border-radius: 16px;
+                  padding: 24px 16px 24px 16px;
+                  border: none;
+                  background: #ed6838;
+                  box-shadow: 0px 4px 16px rgba(251, 97, 42, 0.8);
+                "
+              >
+                <text
+                  style="
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-align: center;
+                    color: white;
+                  "
+                  >Subscribe Today!</text
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
