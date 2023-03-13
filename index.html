@@ -34,9 +34,6 @@
   </head>
   <body style="background-color: #f1efea">
     <div class="container-fluid" style="width: fit-content">
-
-
-
       <!-- HEADER SECTION-->
       <div class="container-fluid" style="height: 30%">
         <div class="row align-items-center" style="padding: 2%">
@@ -75,8 +72,6 @@
           </div>
         </div>
       </div>
-
-
 
       <!-- FORM FIELD SECTION-->
       <div
@@ -155,14 +150,17 @@
                 "
               >
                 Whether it’s a cheeky fun fact, deep dive into emerging tech, or
-                a profile about a changemaker -          
-                <span style="
-                font-family: Inter;
-                font-weight: 700;
-                font-size: 24px;
-                max-lines: 3;
-              ">Chief of Stuff is the place to
-                discover what’s new, novel, or next.</span>
+                a profile about a changemaker -
+                <span
+                  style="
+                    font-family: Inter;
+                    font-weight: 700;
+                    font-size: 24px;
+                    max-lines: 3;
+                  "
+                  >Chief of Stuff is the place to discover what’s new, novel, or
+                  next.</span
+                >
               </p>
 
               <!-- form -->
@@ -170,7 +168,7 @@
                 style="
                   height: 158px;
                   width: 100%;
-                  background-color: #FFFFFF8A;
+                  background-color: #ffffff8a;
                   border-radius: 16px;
                   padding: 24px;
                   margin-top: 3%;
@@ -189,7 +187,7 @@
                     style="
                       font-family: Merriweather;
                       font-weight: 700;
-                      font-size: 24px;
+                      font-size: 1.1rem;
                     "
                   >
                     Say hello to stuff!
@@ -199,6 +197,7 @@
                       <input
                         type="text"
                         class="form-control"
+                        id="email"
                         style="
                           border-radius: 16px;
                           background: #ffffff;
@@ -215,6 +214,7 @@
                     <div class="col-md-2 d-flex justify-content-end">
                       <button
                         class="btn btn-primary position-relative"
+                        onclick="MyFunction(event)"
                         style="
                           border-radius: 16px;
                           padding: 24px;
@@ -226,6 +226,18 @@
                         <i class="bi bi-arrow-right"></i>
                       </button>
                     </div>
+
+                    <script>
+                      function MyFunction(e) {
+                        e.preventDefault();
+                        var email = document.getElementById("email").value;
+                        document.getElementById("demo").innerHTML = email;
+                        fetch("http://localhost:5100", {
+                          method: "POST",
+                          body: JSON.stringify({ email }),
+                        }).then((res) => res.json());
+                      }
+                    </script>
                   </div>
                 </div>
               </div>
@@ -240,8 +252,6 @@
           </div>
         </div>
       </div>
-
-
 
       <!-- Curated SECTION -->
       <div class="row d-flex" style="margin: 3%">
@@ -397,9 +407,6 @@
         </div>
       </div>
 
-
-
-
       <!-- TABS Section-->
       <div class="container-fluid">
         <div
@@ -430,7 +437,7 @@
                     border-radius: 16px;
                     margin-right: 5px;
                     padding: 24px 40px 10px 40px;
-                    background-color: #ED6838;
+                    background-color: #ed6838;
                     box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
                     border: none;
                   "
@@ -461,7 +468,7 @@
                     margin-right: 5px;
                     margin-left: 5px;
                     padding: 24px 40px 10px 40px;
-                    background-color: #FFFFFF52;
+                    background-color: #ffffff52;
                     border: none;
                   "
                 >
@@ -491,7 +498,7 @@
                     margin-right: 5px;
                     margin-left: 5px;
                     padding: 24px 40px 10px 40px;
-                    background-color: #FFFFFF52;
+                    background-color: #ffffff52;
                     border: none;
                   "
                 >
@@ -520,7 +527,7 @@
                     border-radius: 16px;
                     margin-left: 5px;
                     padding: 24px 40px 10px 40px;
-                    background-color: #FFFFFF52;
+                    background-color: #ffffff52;
                     border: none;
                   "
                 >
@@ -553,9 +560,6 @@
           </div>
         </div>
       </div>
-
-
-
 
       <!-- REAL CONTENT REAL VOICE SECTION-->
       <div
@@ -646,8 +650,6 @@
         <div
           class="container"
           style="
-            height: 254px;
-            width: 1280px;
             border-radius: 16px;
             padding: 24px;
             background: radial-gradient(
@@ -660,9 +662,8 @@
             border-radius: 16px;
           "
         >
-          <!-- Add content here -->
 
-          <div class="container" style="height: 254px; border-radius: 16px">
+          <div class="container" style="border-radius: 16px">
             <div class="container">
               <div class="row">
                 <div class="col-12">
@@ -671,7 +672,6 @@
                     style="
                       font-family: Merriweather;
                       font-size: 54px;
-                      line-height: 68px;
                     "
                   >
                     Peep the playlist
@@ -687,13 +687,11 @@
                   >
                     A curated audio experience to pair with our magazine
                   </p>
-                  <div class="row">
+                  <div class="row" style="margin-top: 4rem;">
                     <div class="col-md-2">
                       <button
-                        class="btn btn-primary w-100 h-100"
+                        class="btn btn-primary"
                         style="
-                          width: 200px;
-                          height: 72px;
                           border: 0.8px solid #090909;
                           background-color: #ffffff;
                         "
@@ -701,16 +699,15 @@
                         <img
                           src="img/icons/music.png"
                           alt="Image description"
-                          class="img-fluid"
+                          class="img"
+                          height="40rem"
                         />
                       </button>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3 justify-content-start" >
                       <button
-                        class="btn btn-primary w-100 h-100"
+                        class="btn btn-primary"
                         style="
-                          width: 200px;
-                          height: 72px;
                           border: 0.8px solid #090909;
                           background-color: #ffffff;
                         "
@@ -718,7 +715,8 @@
                         <img
                           src="img/icons/spotify.png"
                           alt="Image description"
-                          class="img-fluid"
+                          class="img"
+                          height="40rem"
                         />
                       </button>
                     </div>
@@ -730,9 +728,6 @@
         </div>
       </div>
     </div>
-
-
-
 
     <!-- Footer-->
     <footer
@@ -746,7 +741,7 @@
               class="text-left"
               style="
                 font-family: Merriweather;
-                font-size: 24px;
+                font-size: 1.5rem;
                 font-weight: 700;
               "
             >
