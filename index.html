@@ -214,21 +214,12 @@
                         "
                       />
                     </div>
-                    <div id="custom-substack-embed"></div>
 
-                    <script>
-                      window.CustomSubstackWidget = {
-                        
-                        substackUrl: "https://chiefofstuff.org/embed",
-                        placeholder: "example@gmail.com",
-                        buttonText: "Subscribe",
-                        theme: "purple"
-                      };
-                    </script>
+                    
                     <div class="col-md-2 d-flex justify-content-end">
                       <button
                         class="btn btn-primary position-relative"
-                        
+                        id="custom-substack-embed"
                         style="
                           border-radius: 16px;
                           padding: 24px;
@@ -240,6 +231,15 @@
                         <i class="bi bi-arrow-right"></i>
                       </button>
                     </div>
+                    <script>
+                      window.CustomSubstackWidget = {
+                        
+                        substackUrl: "https://chiefofstuff.org/embed",
+                        placeholder: "example@gmail.com",
+                        buttonText: "Subscribe",
+                        theme: "purple"
+                      };
+                    </script>
 
                     <script>
                       function MyFunction(e) {
