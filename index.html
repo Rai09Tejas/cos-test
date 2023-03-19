@@ -196,7 +196,7 @@
 
                   <!-- <iframe src="https://www.chiefofstuff.org/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe> -->
                   <div class="row d-flex justify-content-center">
-                    <div class="col-md-10 d-flex justify-content-center">
+                    <!-- <div class="col-md-10 d-flex justify-content-center">
                       <input
                         type="text"
                         class="form-control"
@@ -213,8 +213,18 @@
                           font-weight: 400;
                         "
                       />
-                    </div>
-                    <div class="col-md-2 d-flex justify-content-end">
+                    </div> -->
+                    <div id="custom-substack-embed"></div>
+
+                    <script>
+                      window.CustomSubstackWidget = {
+                        substackUrl: "https://chiefofstuff.org/embed",
+                        placeholder: "example@gmail.com",
+                        buttonText: "Subscribe",
+                        theme: "purple"
+                      };
+                    </script>
+                    <!-- <div class="col-md-2 d-flex justify-content-end">
                       <button
                         class="btn btn-primary position-relative"
                         onclick="MyFunction(event)"
@@ -228,7 +238,7 @@
                       >
                         <i class="bi bi-arrow-right"></i>
                       </button>
-                    </div>
+                    </div> -->
 
                     <script>
                       function MyFunction(e) {
