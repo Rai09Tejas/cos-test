@@ -195,8 +195,8 @@
                   </h1>
 
                   <!-- <iframe src="https://www.chiefofstuff.org/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe> -->
-                  <div class="row d-flex justify-content-center">
-                    <div class="col-md-10 d-flex justify-content-center">
+                  <div class="row d-flex justify-content-center" style="width: 100%;">
+                    <!-- <div class="col-md-10 d-flex justify-content-center">
                       <input
                         type="text"
                         class="form-control"
@@ -219,7 +219,7 @@
                     <div class="col-md-2 d-flex justify-content-end">
                       <button
                         class="btn btn-primary position-relative"
-                        id="custom-substack-embed"
+                        
                         style="
                           border-radius: 16px;
                           padding: 24px;
@@ -230,29 +230,22 @@
                       >
                         <i class="bi bi-arrow-right"></i>
                       </button>
-                    </div>
+                    </div> -->
+                    <div class="my-div" style="align-self: center;width: 500px" id="custom-substack-embed" ></div>
                     <script>
                       window.CustomSubstackWidget = {
-                        
                         substackUrl: "gideonwislang.substack.com",
-                        theme: "orange"
+                        placeholder: "chief@email.com",
+                        theme: "custom",
+                        colors: {
+                          primary: "#FB612A",
+                          input: "#FFFFFF",
+                          email: "#000000",
+                          text: "#FFFFFF",
+                        }
                       };
                     </script>
-
-                    <script>
-                      function MyFunction(e) {
-                        e.preventDefault();
-                        var email = document.getElementById("email").value;
-                        fetch("https://chiefofstuff.org/embed", {
-                          method: "POST",
-                          headers: {
-                              "Access-Control-Allow-Origin": "*",
-                              "Content-Type": "text/plain"
-                          },
-                          body: JSON.stringify( email ),
-                        }).then((res) => res.json());
-                      }
-                    </script>
+                    <script src="https://substackapi.com/widget.js" async></script>
                   </div>
                 </div>
               </div>
