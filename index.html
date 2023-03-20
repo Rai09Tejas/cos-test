@@ -37,7 +37,7 @@
   <body style="background-color: #f1efea">
     <div class="container-fluid" style="width: fit-content">
       <!-- HEADER SECTION-->
-      <div class="container-fluid" style="height: 30%">
+      <div class="container" style="height: 30%">
         <div class="row align-items-center" style="padding: 2%">
           <div class="col-8">
             <p
@@ -91,7 +91,14 @@
         "
       >
         <div class="row d-flex justify-content-center align-items-center ">
-          <div class="col-md-3 d-flex" style="height: 70%">
+          <div class="col-md-3 d-block d-sm-none" style="height: 70%">
+            <img
+              src="img/images/comb.png"
+              alt="your image"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-3 d-none d-sm-block" style="height: 70%">
             <img
               src="img/images/left.png"
               alt="your image"
@@ -192,45 +199,11 @@
 
                   <!-- <iframe src="https://www.chiefofstuff.org/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe> -->
                   <div class="row d-flex justify-content-center" style="width: 100%;">
-                    <!-- <div class="col-md-10 d-flex justify-content-center">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="email"
-                        style="
-                          border-radius: 16px;
-                          background: #ffffff;
-                          border: none;
-                        "
-                        placeholder="chief@email.com"
-                        style="
-                          font-family: Avenir;
-                          font-size: 16px;
-                          font-weight: 400;
-                        "
-                      />
-                    </div>
-
                     
-                    <div class="col-md-2 d-flex justify-content-end">
-                      <button
-                        class="btn btn-primary position-relative"
-                        
-                        style="
-                          border-radius: 16px;
-                          padding: 24px;
-                          background: #fb612a;
-                          box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
-                          border: none;
-                        "
-                      >
-                        <i class="bi bi-arrow-right"></i>
-                      </button>
-                    </div> -->
                     <div class="my-div" style="align-self: center;width: 500px" id="custom-substack-embed" ></div>
                     <script>
                       window.CustomSubstackWidget = {
-                        substackUrl: "chiefofstuff.substack.com",
+                        substackUrl: "thechiefofstuff.substack.com",
                         placeholder: "chief@email.com",
                         theme: "custom",
                         colors: {
@@ -247,7 +220,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 d-flex justify-content-end" style="height: 60%">
+          <div class="col-md-3 d-none d-sm-block justify-content-end" style="height: 60%">
             <img
               src="img/images/right.png"
               alt="your image"
@@ -689,7 +662,7 @@
         
         </div>
         <div
-          class="container"
+          class="container d-none d-sm-block"
           style="
             border-radius: 16px;
             padding: 24px;
@@ -706,7 +679,7 @@
 
           <div class="container" style="border-radius: 16px">
             <div class="container">
-              <div class="row">
+              <div class="row ">
                 <div class="col-12">
                   <h1
                     class="fw-bold text-left"
