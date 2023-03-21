@@ -23,180 +23,155 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <title>Articles</title>
   </head>
   <body>
-    <div
-      style="
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        background-color: #e9e6e0;
-        padding-top: 3%;
-        height: 800px;
-      "
-    >
-      <h1
-        style="
-          font-family: Merriweather;
-          font-size: 54px;
-          font-weight: 700;
-          text-align: left;
-          color: #1a1a17;
-        "
-      >
-        Quarterly All Hands
-      </h1>
-      <p
-        style="
-          font-family: Inter;
-          font-size: 24px;
-          font-weight: 400;
-          text-align: left;
-          color: #5c5c5c;
-          margin-right: 2%;
-        "
-      >
-        The Quarterly All Hands is designed to be enjoyed at your leisure -
-        while at lunch, riding the train, as a break from your feed, or when
-        you're bored. Wherever you are, we hope you find inspiration, get lost
-        in the pages, and discover something new.
-      </p>
-      <div style="display: flex; flex-direction: row">
-        <div
-          class="col-md-6"
-          style="
-            height: 550px;
-            width: 550px;
-            left: 0px;
-            top: 0px;
-            border-radius: 16px;
-            padding: 80px 146px 80px 146px;
-            background-color: #f1efea;
-          "
-        >
-          <div
-            id="myCarousel"
-            class="carousel slide custom-carousel"
-            data-bs-ride="carousel"
-          >
-            <div
-              class="carousel-inner"
-              style="
-                mix-blend-mode: normal;
-                filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.4));
-              "
-            >
-              <div class="carousel-item active" style="border-radius: 16px">
-                <img
-                  src="../../img/images/mag.png"
-                  class="d-block w-100"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item" style="border-radius: 16px">
-                <img
-                  src="../../img/images/mag.png"
-                  class="d-block w-100"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item" style="border-radius: 16px">
-                <img
-                  src="../../img/images/mag.png"
-                  class="d-block w-100"
-                  alt="..."
-                />
-              </div>
+    <div class="container-fluid " >
+    <div class="row" style="height: 1200px;background-color: #F1EFEA;">
+      <div class="col-md-7" >
+        <div class="column d-flex flex-column align-items-center  justify-content-center">
+          <div class="col-md-6" style="height: 100%;width: 100%;align-items: center ;">
+            <!-- Element 1: Container with image and zoom button -->
+            <div class="position-relative" >
+              <img src="../../img/images/mag1.png" class="img-fluid" id="mag-head" alt="Image" style="height: 50vh;padding: 5%;margin-left: 20%;margin-bottom: 5%; align-self: center;">
+              <button type="button" class="btn position-absolute bottom-0 end-0" style="height: 56px;
+              width: 56px;
+              border-radius: 16px;
+              padding: 12px;
+              background-color: #FAF8F4;
+              border: none;">
+              <img src="../../img/icons/zoom.png" class="img-fluid" alt="Image">  
+            </button>
             </div>
           </div>
-          <div class="carousel-indicators" style="height: 16px; width: 16px; left: 56px; top: 0px;">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <div class="col-md-6">
+            <!-- Element 2: Row of 2 image buttons -->
+            <div class="d-flex justify-content-center" style="margin-top: 10%;margin-bottom: 10%;padding: 10%;">
+              <button class="btn " id="mag1" ><div class="col" id="mag1-div" style=" width: 12vw; border: none;
+                border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
+                  <img src="../../img/images/mag1.png" class="img-fluid" id="mag1-img" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
+                </div></button>
+              <button class="btn " id="mag2"><div class="col" id="mag2-div" style=" width: 12vw; border: none;
+                border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
+                  <img src="../../img/images/mag2.png" class="img-fluid" id="mag2-img" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
+                </div></button>
+              <button class="btn " id="mag3"><div class="col" id="mag3-div"  style=" width: 12vw; border: none;
+                border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
+                  <img src="../../img/images/mag3.png" class="img-fluid" id="mag3-img" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
+                </div></button>
+              <button  class="btn " id="mag4"><div class="col" id="mag4-div" style=" width: 12vw; border: none;
+                border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
+                  <img src="../../img/images/mag4.png" class="img-fluid" id="mag4-img" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
+                </div></button>
+            </div>
           </div>
-        
+          <script>
+            $(document).ready(function() {
+              $('#mag1').click(function() {
+                $('#mag-head').attr('src', '../../img/images/mag1.png');
+              });
+              $('#mag2').click(function() {
+                $('#mag-head').attr('src', '../../img/images/mag2.png');
+              });
+              $('#mag3').click(function() {
+                $('#mag-head').attr('src', '../../img/images/mag3.png');
+              });
+              $('#mag4').click(function() {
+                $('#mag-head').attr('src', '../../img/images/mag4.png');
+              });
+            });
+
+
+          </script>
         </div>
-        <div
-          class="col-md-6"
-          style="
-          width: 50%;
-          align-self: center;
-            justify-self: end;
-            height: fit-content;
-            border-radius: 16px;
-            padding: 2%;
-            background: radial-gradient(
-              51.18% 72.12% at 23.39% 47.87%,
-              rgba(255, 204, 77, 0.64) 0%,
-              #f1efea 100%
-            );
-            margin-left: 6%;
-            mix-blend-mode: normal;
-            border: 2px solid rgba(0, 0, 0, 0.12);
-          "
-        >
-          <div class="row">
-            <div class="col">
-              <h1
-                style="
-                  font-family: Merriweather;
-                  font-size: 40px;
-                  font-weight: 700;
-                  text-align: left;
-                "
-              >
-                Read it
-              </h1>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <p
-                style="
-                  font-family: Inter;
-                  font-size: 24px;
-                  font-weight: 400;
-                  text-align: left;
-                  color: #46443B;
-                "
-              >
-                The Second Issue takes inspiration from Chief of Stuff’s
-                spiritual home of Greece, celebrates Innovators, and explores
-                New Worlds.
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <button
+      </div>
+      <div class="col-md-5" style="padding-left: 5%;">
+        <ul class="nav nav-tabs" id="myTab" >
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="this-issue-tab" data-bs-toggle="tab" data-bs-target="#this-issue" type="button" role="tab" aria-controls="this-issue" aria-selected="true">
+              
+              <h1 class="text1" style="font-family: Inter;
+                font-size: 80%;
+                font-weight: 700;color: black;">This Issue</h1>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="highlights-tab" data-bs-toggle="tab" data-bs-target="#highlights" type="button" role="tab" aria-controls="highlights" aria-selected="false"><h1 class="text1" style="font-family: Inter;
+              font-size: 80%;
+              font-weight: 700;color: black;">HighLights</h1></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false"><h1 class="text1" style="font-family: Inter;
+              font-size: 80%;
+              font-weight: 700;color: black;">About</h1></button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="this-issue" role="tabpanel" aria-labelledby="this-issue-tab">
+            <div class="row">
+              <div class="col" style="padding-top: 10%;">
+                <h1 class="text1" style="font-family: Merriweather;
+                font-size: 54px;
+                font-weight: 700;">Issue #3</h1>
+                <p class="text2" style="
+                font-family: Inter;
+                font-size: 24px;
+                font-weight: 400;
+                margin-top: 5%;">Our Third Issue is centered around exploration and people. We ventured all over, from Sweden to Brazil, in search of the people who are reinventing old systems, questioning the status quo, and protecting fundamental values. We asked a ton of questions and we are certain that the answers among these pages will surprise and delight you.</p>
+                <button class="btn btn1" style="
+                height: 77px;
+                width: 35vw;
+                border-radius: 16px;
+                padding: 24px 16px 24px 16px;
+                background: #ED6838;
+                box-shadow: 0px 4px 16px rgba(251, 97, 42, 0.8);
+                border-radius: 16px;margin-top: 5%;"
                 onclick="window.open('https://app.gumroad.com/checkout?product=lrswn&quantity=1&offer_code=welcome', '_blank')"
-                style="
-                  width:90%;
-                  border-radius: 16px;
-                  padding: 24px 16px 24px 16px;
-                  border: none;
-                  background: #ed6838;
-                  box-shadow: 0px 4px 16px rgba(251, 97, 42, 0.8);
-                "
-              >
-                <text
-                  style="
-                    font-family: Inter;
-                    font-size: 16px;
-                    font-weight: 600;
-                    text-align: center;
-                    color: white;
-                  "
-                  >Subscribe Today!</text
                 >
-              </button>
+                <p class="text1" style="font-family: Inter;
+                  font-size: 100%;
+                  font-weight: 700;
+                  color: white;
+                  ">Get Now!</p></button>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="highlights" role="tabpanel" aria-labelledby="highlights-tab">
+            <div class="row">
+              <div class="col" style="padding-top: 10%;">
+                <h1 class="text1" style="font-family: Merriweather;
+                font-size: 54px;
+                font-weight: 700;">The Quarterly All Hands</h1>
+                <p class="text2" style="
+                font-family: Inter;
+                font-size: 24px;
+                font-weight: 400;
+                margin-top: 5%;">The Quarterly All Hands is designed to be enjoyed at your leisure - while at lunch, riding the train, as a break from your feed, or when you're bored. Wherever you are, we hope you find inspiration, get lost in the pages, and discover something new.</p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+            <div class="row">
+              <div class="col" style="padding-top: 10%;">
+                <h1 class="text1" style="font-family: Merriweather;
+                font-size: 54px;
+                font-weight: 700;">The Quarterly All Hands</h1>
+                <p class="text2" style="
+                font-family: Inter;
+                font-size: 24px;
+                font-weight: 400;
+                margin-top: 5%;">The Quarterly All Hands is designed to be enjoyed at your leisure - while at lunch, riding the train, as a break from your feed, or when you're bored. Wherever you are, we hope you find inspiration, get lost in the pages, and discover something new.</p>
+                
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+  </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
