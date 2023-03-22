@@ -37,14 +37,14 @@
   <body style="background-color: #E9E6E0">
     <div class="container-fluid" style="width: fit-content">
       <!-- HEADER SECTION-->
-      <div class="container-fluid" style="height: 30%">
+      <div class="container-fluid p-md-3 d-none d-sm-block" style="height: 30%">
         <div class="row align-items-center" style="padding: 2%">
           <div class="col-6">
             <p
               class="m-0"
               style="
                 font-family: Merriweather;
-                font-size: 1.5em;
+                font-size: 2vw;
                 font-weight: 700;
               "
               ;
@@ -72,10 +72,193 @@
           </div>
         </div>
       </div>
+      <div class="container d-block d-sm-none " style="height: 30%;margin-top: 2%;">
+        <div class="row align-items-center" >
+          <div class="col-8">
+            <p class="d-flex align-content-center"
+              style="
+                font-family: Merriweather;
+                font-size: 6vw;
+                font-weight: 700;
+                margin-top: 5%;
+              "
+              ;
+            >
+              Chief of Stuff
+            </p>
+          </div>
+          <div class="col-4 d-flex justify-content-end">
+            
+              <button 
+              class="nav-link" 
+              onclick="window.open('https://app.gumroad.com/checkout?product=lrswn&quantity=1&offer_code=welcome', '_blank')" 
+              style="border-radius: 16px;
+              padding: 20%;
+              padding-top: 10%;
+              padding-bottom: 10%;
+              background: #ED6838;
+              box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
+              border-radius: 16px;
+              border: none;
+              color: white;
+              font-size: 16px;
+              font-weight: bold;
+              cursor: pointer;" type="button" >Purchase</button>
+            </button>
+          </div>
+        </div>
+      </div>
 
-      <!-- FORM FIELD SECTION-->
+      <!-- FORM FIELD SECTION Mobile Only-->
       <div
-        class="container-fluid hidden-md-down"
+        class="container-fluid hidden-md-down d-block d-sm-none"
+        style="
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          margin-top: 5%;
+          border: none;
+          background: radial-gradient(50% 50% at 50% 50%, #FCCDBC 0%, #E9E6E0 100%),radial-gradient(circle at 95.23% 40%, rgba(237, 104, 56, 0.72) 0%, rgba(255, 204, 77, 0.72) 100%);
+        "
+      >
+        <div class="row d-flex justify-content-center align-items-center ">
+          <div class="col-md-3 d-block d-sm-none" >
+            <img
+              src="img/images/comb.png"
+              alt="your image"
+              class="img-fluid"
+              
+            />
+          </div>
+          
+          <div
+            class="col-md-6 bg-image bg-position-bottom d-flex justify-content-center"
+          >
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-self: center;
+                height: 100%;
+                width: 100%;
+              "
+              class="text-center"
+            >
+              <iframe
+                src="components/bg_ellipse.html"
+                frameborder="0"
+                style="
+                  position: fixed;
+                  width: 100%;
+                  height: 100%;
+                  z-index: -1;
+                "
+              ></iframe>
+              <p
+                  style="font-family: Inter; font-weight: 300; font-size: 6vw;margin-bottom: 0%;"
+                  >Your source for
+                </p>
+              <p>
+                
+                <span
+                  style="
+                    font-family: Merriweather;
+                    font-weight: 700;
+                    font-size: 6vw;
+                  "
+                  >‘informative’
+                </span>
+                <span
+                  style="font-family: Inter; font-weight: 300; font-size: 6vw"
+                  >stuff</span
+                >
+              </p>
+              <p
+                style="
+                  font-family: Inter;
+                  font-weight: 400;
+                  font-size: 4vw;
+                  max-lines: 3;
+                  padding-left: 3%;
+                  padding-right: 3%;
+                "
+              >
+                Whether it’s a cheeky fun fact, deep dive into emerging tech, or
+                a profile about a changemaker -
+                <span
+                  style="
+                    font-family: Inter;
+                    font-weight: 700;
+                    font-size: 4vw;
+                    max-lines: 3;
+                  "
+                  >Chief of Stuff is the place to discover what’s new, novel, or
+                  next.</span
+                >
+              </p>
+
+              <!-- form -->
+              <div
+                style="
+                  width: 100%;
+                  background-color: #ffffff8a;
+                  border-radius: 16px;
+                  padding: 24px;
+                  margin-top: 3%;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-self: center;
+                  "
+                  class="text-start"
+                >
+                  <h1
+                    style="
+                      font-family: Merriweather;
+                      font-weight: 700;
+                      font-size: 4vw;
+                    "
+                  >
+                    Say hello to stuff!
+                  </h1>
+
+                  <!-- <iframe src="https://www.chiefofstuff.org/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe> -->
+                  <div class="row d-flex justify-content-center align-content-center" style="width: 100%;">
+                    
+                    <div class="my-div"  id="custom-substack-embed" ></div>
+                    <script>
+                      window.CustomSubstackWidget = {
+                        substackUrl: "thechiefofstuff.substack.com",
+                        placeholder: "chief@email.com",
+                        theme: "custom",
+                        colors: {
+                          primary: "#FB612A",
+                          input: "#FFFFFF",
+                          email: "#000000",
+                          text: "#FFFFFF",
+                        }
+                      };
+                    </script>
+                    <script src="https://substackapi.com/widget.js" async></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+
+
+      <!-- FORM FIELD SECTION  DESKTOP ONly-->
+
+      <div
+        class="container-fluid hidden-md-down d-none d-sm-block"
         style="
           position: relative;
           padding: 80px 48px 80px 48px;
@@ -87,13 +270,7 @@
         "
       >
         <div class="row d-flex justify-content-center align-items-center ">
-          <div class="col-md-3 d-block d-sm-none" style="height: 70%">
-            <img
-              src="img/images/comb.png"
-              alt="your image"
-              class="img-fluid"
-            />
-          </div>
+          
           <div class="col-md-3 d-none d-sm-block" style="height: 70%">
             <img
               src="img/images/left.png"
@@ -216,18 +393,22 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 d-none d-sm-block justify-content-end align-content-end" style="height: 90%">
+          <div class="col-md-3 justify-content-end align-content-end">
             <img
               src="img/images/right.png"
               alt="your image"
               class="img-fluid"
+               style="height: 100%"
             />
           </div>
         </div>
       </div>
 
+
+
+
       <!-- Curated SECTION -->
-      <div class="row d-flex m-sm-2 m-md-3 m-lg-3" style="color: white;">
+      <div class="row d-flex m-sm-2 m-md-3 m-lg-3" style="color: white;margin-top: 10%;">
         <div class="col-md-4">
           <div
             class="my-element text-start"
@@ -254,6 +435,7 @@
               </button>
               <div class="col">
                 <p
+                class="d-none d-sm-block"
                   style="
                     font-family: Merriweather;
                     font-weight: 700;
@@ -263,13 +445,35 @@
                 >
                   Curated
                 </p>
+
+                <p
+                class=" d-block d-sm-none"
+                  style="
+                    font-family: Merriweather;
+                    font-weight: 700;
+                    font-size: 5vw;
+                    margin-top: 2%;
+                  "
+                >
+                  Curated
+                </p>
               </div>
               <div class="col">
-                <p class="text-break"
+                <p class="text-break d-none d-sm-block"
                   style="
                     font-family: Inter;
                     font-weight: 500;
                     font-size: 1vw;
+                  "
+                >
+                  A vast selection of innovative & inspirational stuff
+                </p>
+
+                <p class="text-break d-block d-sm-none"
+                  style="
+                    font-family: Inter;
+                    font-weight: 500;
+                    font-size: 4vw;
                   "
                 >
                   A vast selection of innovative & inspirational stuff
@@ -303,6 +507,7 @@
               </button>
               <div class="col">
                 <p
+                class="d-none d-sm-block"
                   style="
                     font-family: Merriweather;
                     font-weight: 700;
@@ -312,13 +517,35 @@
                 >
                   Delivered
                 </p>
+
+                <p
+                class=" d-block d-sm-none"
+                  style="
+                    font-family: Merriweather;
+                    font-weight: 700;
+                    font-size: 5vw;
+                    margin-top: 2%;
+                  "
+                >
+                  Delivered
+                </p>
               </div>
               <div class="col">
-                <p class="text-break"
+                <p class="text-break d-none d-sm-block"
                   style="
                     font-family: Inter;
                     font-weight: 500;
                     font-size: 1vw;
+                  "
+                >
+                Hot, fresh & hand delivered right in your inbox on a recurring basis
+                </p>
+
+                <p class="text-break d-block d-sm-none"
+                  style="
+                    font-family: Inter;
+                    font-weight: 500;
+                    font-size: 4vw;
                   "
                 >
                 Hot, fresh & hand delivered right in your inbox on a recurring basis
@@ -352,6 +579,7 @@
               </button>
               <div class="col">
                 <p
+                class="d-none d-sm-block"
                   style="
                     font-family: Merriweather;
                     font-weight: 700;
@@ -362,13 +590,36 @@
                 >
                   Connected
                 </p>
+
+                <p
+                  class=" d-block d-sm-none"
+                  style="
+                    font-family: Merriweather;
+                    font-weight: 700;
+                    font-size: 5vw;
+                    margin-top: 2%;
+                    
+                  "
+                >
+                  Connected
+                </p>
               </div>
               <div class="col">
-                <p class="text-break"
+                <p class="text-break d-none d-sm-block"
                   style="
                     font-family: Inter;
                     font-weight: 500;
                     font-size: 1vw;
+                  "
+                >
+                  Join a community of awesome like minded people
+                </p>
+
+                <p class="text-break d-block d-sm-none"
+                  style="
+                    font-family: Inter;
+                    font-weight: 500;
+                    font-size: 4vw;
                   "
                 >
                   Join a community of awesome like minded people
@@ -387,12 +638,12 @@
             margin-top: 8%;
             margin-bottom: 5%;
             padding-top: 3%;
-            padding-bottom: 3%;
+            padding-bottom: 10%;
           "
         >
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" style="border-radius: 16px;
+            <button class="nav-link active" id="pills-home-tab-m" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" style="border-radius: 16px;
             padding: 24px 40px 24px 40px;
             background: #ED6838;
             box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
@@ -405,7 +656,7 @@
             margin-right: 10px;margin-bottom: 10px;">The Magazine</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" style="border-radius: 16px;
+            <button class="nav-link" id="pills-profile-tab-m" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" style="border-radius: 16px;
             padding: 24px 40px 24px 40px;
             background: #ED6838;
             box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
@@ -418,7 +669,7 @@
             margin-right: 10px;margin-bottom: 10px;" aria-controls="pills-profile" aria-selected="false">Articles</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" style="border-radius: 16px;
+            <button class="nav-link" id="pills-contact-tab-m" data-bs-toggle="pill" data-bs-target="#pills-contact" style="border-radius: 16px;
             padding: 24px 40px 24px 40px;
             background: #ED6838;
             box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
@@ -431,15 +682,15 @@
             margin-right: 10px;margin-bottom: 10px;" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Our Story</button>
           </li>
         </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0"><div class="container-fluid " >
+        <div class="tab-content" id="pills-tabContent-m">
+          <div class="tab-pane fade show active" id="pills-home-m" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0"><div class="container-fluid " >
             <div class="row" style="background-color: #F1EFEA;">
               <div class="col-md-7" >
                 <div class="column d-flex flex-column align-items-center  justify-content-center">
                   <div class="col-md-6" style="height: 100%;width: 100%;align-items: center ;">
                     <!-- Element 1: Container with image and zoom button -->
                     <div class="position-relative" >
-                      <img src="img/images/mag1.png" class="img-fluid" id="mag-head1x" alt="Image" style="height: 50vh;padding: 5%;margin-bottom: 5%; align-self: center;">
+                      <img src="img/images/mag1.png" class="img-fluid" id="mag-head-m" alt="Image" style="height: 50vh;padding: 5%;margin-bottom: 5%; align-self: center;">
                       <button type="button" class="btn position-absolute bottom-0 end-0" style="height: 56px;
                       width: 56px;
                       border-radius: 16px;
@@ -454,37 +705,37 @@
                   <div class="col-md-6">
                     <!-- Element 2: Row of 2 image buttons -->
                     <div class="d-flex justify-content-center" style="margin-top: 10%;margin-bottom: 10%;padding: 10%;">
-                      <button class="btn " id="mag11" ><div class="col" id="mag1-div" style=" width: 12vw; border: none;
+                      <button class="btn " id="mag1-m" ><div class="col" id="mag1-div-m" style=" width: 12vw; border: none;
                         border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
-                          <img src="img/images/mag1.png" class="img-fluid" id="mag1-img" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
+                          <img src="img/images/mag1.png" class="img-fluid" id="mag-img-m" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
                         </div></button>
-                      <button class="btn " id="mag12"><div class="col" id="mag2-div" style=" width: 12vw; border: none;
+                      <button class="btn " id="mag2-m"><div class="col" id="mag2-div-m" style=" width: 12vw; border: none;
                         border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
-                          <img src="img/images/mag2.png" class="img-fluid" id="mag2-img" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
+                          <img src="img/images/mag2.png" class="img-fluid" id="mag2-img-m" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
                         </div></button>
-                      <button class="btn " id="mag13"><div class="col" id="mag3-div"  style=" width: 12vw; border: none;
+                      <button class="btn " id="mag3-m"><div class="col" id="mag3-div-m"  style=" width: 12vw; border: none;
                         border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
-                          <img src="img/images/mag3.png" class="img-fluid" id="mag3-img" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
+                          <img src="img/images/mag3.png" class="img-fluid" id="mag3-img-m" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
                         </div></button>
-                      <button  class="btn " id="mag14"><div class="col" id="mag4-div" style=" width: 12vw; border: none;
+                      <button  class="btn " id="mag4-m"><div class="col" id="mag4-div-m" style=" width: 12vw; border: none;
                         border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
-                          <img src="img/images/mag4.png" class="img-fluid" id="mag4-img" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
+                          <img src="img/images/mag4.png" class="img-fluid" id="mag4-img-m" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
                         </div></button>
                     </div>
                   </div>
                   <script>
                     $(document).ready(function() {
-                      $('#mag11').click(function() {
-                        $('#mag-head').attr('src', 'img/images/mag1.png');
+                      $('#mag1-m').click(function() {
+                        $('#mag-head-m').attr('src', 'img/images/mag1.png');
                       });
-                      $('#mag12').click(function() {
-                        $('#mag-head').attr('src', 'img/images/mag2.png');
+                      $('#mag2-m').click(function() {
+                        $('#mag-head-m').attr('src', 'img/images/mag2.png');
                       });
-                      $('#mag13').click(function() {
-                        $('#mag-head').attr('src', 'img/images/mag3.png');
+                      $('#mag3-m').click(function() {
+                        $('#mag-head-m').attr('src', 'img/images/mag3.png');
                       });
-                      $('#mag14').click(function() {
-                        $('#mag-head1').attr('src', 'img/images/mag4.png');
+                      $('#mag4-m').click(function() {
+                        $('#mag-head-m').attr('src', 'img/images/mag4.png');
                       });
                     });
         
@@ -666,7 +917,7 @@
       </div>
         </div>
 
-        
+
 
       <!-- TABS Section  desktop ONLY-->
 
@@ -683,7 +934,7 @@
           >
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" style="border-radius: 16px;
+              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home-d" type="button" role="tab" aria-controls="pills-home" aria-selected="true" style="border-radius: 16px;
               padding: 24px 40px 24px 40px;
               background: #ED6838;
               box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
@@ -696,7 +947,7 @@
               margin-right: 10px;">The Magazine</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" style="border-radius: 16px;
+              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile-d" type="button" role="tab" style="border-radius: 16px;
               padding: 24px 40px 24px 40px;
               background: #ED6838;
               box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
@@ -709,7 +960,7 @@
               margin-right: 10px;" aria-controls="pills-profile" aria-selected="false">Articles</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" style="border-radius: 16px;
+              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact-d" style="border-radius: 16px;
               padding: 24px 40px 24px 40px;
               background: #ED6838;
               box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
@@ -723,21 +974,21 @@
             </li>
           </ul>
           <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0"><div class="container-fluid " >
+            <div class="tab-pane fade show active" id="pills-home-d" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0"><div class="container-fluid " >
               <div class="row" style="background-color: #F1EFEA;">
                 <div class="col-md-7" >
                   <div class="column d-flex flex-column align-items-center  justify-content-center">
                     <div class="col-md-6" style="height: 100%;width: 100%;align-items: center ;">
                       <!-- Element 1: Container with image and zoom button -->
                       <div class="position-relative" >
-                        <img src="img/images/mag1.png" class="img-fluid" id="mag-head" alt="Image" style="height: 50vh;padding: 5%;margin-left: 20%;margin-bottom: 5%; align-self: center;">
+                        <img src="img/images/mag1.png" class="img-fluid1" id="mag-head-d" alt="Image" style="height: 50vh;padding: 5%;margin-left: 20%;margin-bottom: 5%; align-self: center;">
                         <button type="button" class="btn position-absolute bottom-0 end-0" style="height: 56px;
                         width: 56px;
                         border-radius: 16px;
                         padding: 12px;
                         background-color: #FAF8F4;
                         border: none;">
-                        <img src="img/icons/zoom.png" class="img-fluid" alt="Image" data-toggle="modal" data-target="#imageModal">  
+                        <img src="img/icons/zoom.png" class="img-fluid" alt="Image" data-toggle="modal" data-target="#imageModal" onclick="window.open(imageSrc,'_blank');">  
                         
                       </button>
                       </div>
@@ -745,37 +996,42 @@
                     <div class="col-md-6">
                       <!-- Element 2: Row of 2 image buttons -->
                       <div class="d-flex justify-content-center" style="margin-top: 10%;margin-bottom: 10%;padding: 10%;">
-                        <button class="btn " id="mag1" ><div class="col" id="mag1-div" style=" width: 12vw; border: none;
+                        <button class="btn " id="mag1-d" ><div class="col" id="mag1-div" style=" width: 12vw; border: none;
                           border-radius: 16px;background-color: #E9E5DE;padding: 10%;margin-bottom: 2%;">
                             <img src="img/images/mag1.png" class="img-fluid" id="mag1-img" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
                           </div></button>
-                        <button class="btn " id="mag2"><div class="col" id="mag2-div" style=" width: 12vw; border: none;
+                        <button class="btn " id="mag2-d"><div class="col" id="mag2-div" style=" width: 12vw; border: none;
                           border-radius: 16px;background-color: #E9E5DE;padding: 10%;margin-bottom: 2%;">
                             <img src="img/images/mag2.png" class="img-fluid" id="mag2-img" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
                           </div></button>
-                        <button class="btn " id="mag3"><div class="col" id="mag3-div"  style=" width: 12vw; border: none;
+                        <button class="btn " id="mag3-d"><div class="col" id="mag3-div"  style=" width: 12vw; border: none;
                           border-radius: 16px;background-color: #E9E5DE;padding: 10%;margin-bottom: 2%;">
                             <img src="img/images/mag3.png" class="img-fluid" id="mag3-img" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
                           </div></button>
-                        <button  class="btn " id="mag4"><div class="col" id="mag4-div" style=" width: 12vw; border: none;
+                        <button  class="btn " id="mag4-d"><div class="col" id="mag4-div" style=" width: 12vw; border: none;
                           border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
                             <img src="img/images/mag4.png" class="img-fluid" id="mag4-img" alt="Your Image"  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
                           </div></button>
                       </div>
                     </div>
                     <script>
+                      var imageSrc = "img/images/mag1.png";
                       $(document).ready(function() {
-                        $('#mag1').click(function() {
-                          $('#mag-head').attr('src', 'img/images/mag1.png');
+                        $('#mag1-d').click(function() {
+                          $('#mag-head-d').attr('src', 'img/images/mag1.png');
+                          imageSrc = "img/images/mag1.png";
                         });
-                        $('#mag2').click(function() {
-                          $('#mag-head').attr('src', 'img/images/mag2.png');
+                        $('#mag2-d').click(function() {
+                          $('#mag-head-d').attr('src', 'img/images/mag2.png');
+                          imageSrc = "img/images/mag2.png";
                         });
-                        $('#mag3').click(function() {
-                          $('#mag-head').attr('src', 'img/images/mag3.png');
+                        $('#mag3-d').click(function() {
+                          $('#mag-head-d').attr('src', 'img/images/mag3.png');
+                          imageSrc = "img/images/mag3.png";
                         });
-                        $('#mag4').click(function() {
-                          $('#mag-head').attr('src', 'img/images/mag4.png');
+                        $('#mag4-d').click(function() {
+                          $('#mag-head-d').attr('src', 'img/images/mag4.png');
+                          imageSrc = "img/images/mag4.png";
                         });
                       });
           
@@ -868,7 +1124,7 @@
                 </div>
               </div>
             </div></div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0"><div
+            <div class="tab-pane fade" id="pills-profile-d" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0"><div
               style="
                 display: flex;
                 flex-direction: column;
@@ -881,7 +1137,7 @@
               <h1
                 style="
                   font-family: Merriweather;
-                  font-size: 54px;
+                  font-size: 5vw;
                   font-weight: 700;
                   text-align: left;
                   color: #1a1a17;
@@ -892,7 +1148,7 @@
               <p
                 style="
                   font-family: Inter;
-                  font-size: 24px;
+                  font-size: 2vw;
                   font-weight: 400;
                   text-align: left;
                   color: #5c5c5c;
@@ -906,7 +1162,7 @@
                 style="width: 100%; align-self: center;margin-top: 3%;"
               />
             </div></div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0"><div
+            <div class="tab-pane fade" id="pills-contact-d" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0"><div
               style="
                 display: flex;
                 flex-direction: row;
@@ -942,7 +1198,6 @@
                   font-weight: 400;
                   text-align: left;
                   color: #5c5c5c;
-                  margin-left: 3%;
                   padding: 2%;
                 "
               >
@@ -960,7 +1215,7 @@
       <div class="container  d-none d-sm-block" style="padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
         <div class="row">
           <div class="col-12">
-            <p class="text" style="font-family: Merriweather;font-size: 32px;font-weight: 700;margin-bottom: 2%;">Previous Issues</p>
+            <p class="text" style="margin-bottom: 5%;font-family: Merriweather;font-size: 32px;font-weight: 700;margin-bottom: 2%;">Previous Issues</p>
           </div>
           <div class="col-12 " style="margin-top: 5vh;">
             <div class="row align-items-center" >
@@ -1022,7 +1277,7 @@
 
       <div class=" 
       d-block d-sm-none
-      ">
+      " style="margin-top: 20%;margin-bottom: 10%;">
       
         <div class="col-12">
           <p class="text" style="font-family: Merriweather;font-size: 32px;font-weight: 700;margin-bottom: 2%;">Previous Issues</p>
@@ -1194,7 +1449,7 @@
                     A curated audio experience to pair with our magazine
                   </p>
                   <div class="row" style="margin-top: 4rem;">
-                    <div class="col-md-2">
+                    <div class="col">
                       <button
                         class="btn btn-primary"
                         style="
@@ -1210,7 +1465,7 @@
                         />
                       </button>
                     </div>
-                    <div class="col-md-3 justify-content-start" >
+                    <div class="col justify-content-start" >
                       <button
                         class="btn btn-primary"
                         style="
