@@ -39,7 +39,7 @@
       <!-- HEADER SECTION-->
       <div class="container-fluid" style="height: 30%">
         <div class="row align-items-center" style="padding: 2%">
-          <div class="col-8">
+          <div class="col-6">
             <p
               class="m-0"
               style="
@@ -52,7 +52,7 @@
               Chief of Stuff
             </p>
           </div>
-          <div class="col-4 d-flex justify-content-end">
+          <div class="col-6 d-flex justify-content-end">
             <button
               class="btn btn-primary"
               onclick="window.open('https://app.gumroad.com/checkout?product=lrswn&quantity=1&offer_code=welcome', '_blank')"
@@ -131,9 +131,9 @@
                   style="
                     font-family: Merriweather;
                     font-weight: 700;
-                    font-size: 4.5em;
+                    font-size: 3em;
                   "
-                  >‘informative
+                  >‘informative’
                 </span>
                 <span
                   style="font-family: Inter; font-weight: 300; font-size: 3.5rem"
@@ -664,145 +664,7 @@
             </p>
           </div>
             
-          </div></div>
-        </div>
-          </div>
-        </div>
-          <!-- <div class="col">
-            <div class="col">
-              <div class="row-md-12">
-                <button
-                  class="btn btn-primary"
-                  id="toggleButton"
-                  onclick="document.getElementById('my-iframe').src='components/tabs/magazine.html';
-                  var buttons = document.querySelectorAll('#toggleButton'); 
-                  for(var i=0; i<buttons.length; i++) 
-{ buttons[i].style.backgroundColor = '#FFFFFF52'; 
-                    buttons[i].style.boxShadow = 'none';} this.style.backgroundColor='#ED6838';
-                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)';
-                  
-                  document.getElementById('toggleButtonText1').style.color='#fff';
-                  document.getElementById('toggleButtonText2').style.color='#000';
-                  document.getElementById('toggleButtonText4').style.color='#000';              "
-                  style="
-                    border-radius: 16px;
-                    margin-right: 5px;
-                    padding: 24px 40px 10px 40px;
-                    background-color: #ed6838;
-                    box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
-                    border: none;
-                  "
-                >
-                  <p
-                    class="text-nowrap"
-                    id="toggleButtonText1"
-                    style="
-                      font-family: Inter;
-                      font-size: 16px;
-                      font-weight: 600;
-                      max-lines: 1;
-                    "
-                  >
-                   The Magazine
-                  </p>
-                </button>
-                <button
-                  class="btn btn-primary"
-                  id="toggleButton"
-                  onclick="document.getElementById('my-iframe').src='components/tabs/articles.html';
-                  var buttons = document.querySelectorAll('#toggleButton'); for(var i=0; i<buttons.length; i++) { buttons[i].style.backgroundColor = '#FFFFFF52'; 
-                    buttons[i].style.boxShadow = 'none';} this.style.backgroundColor='#ED6838';
-                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)';
-                  document.getElementById('toggleButtonText1').style.color='#000';
-                  document.getElementById('toggleButtonText2').style.color='#fff';
-                  document.getElementById('toggleButtonText4').style.color='#000';
-                  var myDiv = document.getElementById('bottom-content');
-                  myDiv.style.height = '800px';
-
-
-                  "
-                  style="
-                    border-radius: 16px;
-                    margin-right: 5px;
-                    margin-left: 5px;
-                    padding: 24px 40px 10px 40px;
-                    background-color: #ffffff52;
-                    border: none;
-                  "
-                >
-                  <p
-                    class="text-nowrap"
-                    id="toggleButtonText2"
-                    style="
-                      font-family: Inter;
-                      font-size: 16px;
-                      font-weight: 600;
-                      max-lines: 1;
-                      color: #000;
-                    "
-                  >
-                    Articles
-                  </p>
-                </button>
-                 
-                <button
-                  class="btn btn-primary"
-                  id="toggleButton"
-                  onclick="document.getElementById('my-iframe').src='components/tabs/our_story.html';
-                  var buttons = document.querySelectorAll('#toggleButton'); for(var i=0; i<buttons.length; i++) { buttons[i].style.backgroundColor = '#FFFFFF52'; 
-                    buttons[i].style.boxShadow = 'none';} this.style.backgroundColor='#ED6838';
-                  this.style.boxShadow='0px 0px 12px rgba(251, 97, 42, 0.4)'; 
-                  
-                  document.getElementById('toggleButtonText1').style.color='#000';
-                  document.getElementById('toggleButtonText2').style.color='#000';
-                  document.getElementById('toggleButtonText4').style.color='#fff';             "
-                  style="
-                    border-radius: 16px;
-                    margin-left: 5px;
-                    padding: 24px 40px 10px 40px;
-                    background-color: #ffffff52;
-                    border: none;
-                  "
-                >
-                  <p
-                    class="text-nowrap"
-                    id="toggleButtonText4"
-                    style="
-                      font-family: Inter;
-                      font-size: 16px;
-                      font-weight: 600;
-                      max-lines: 1;
-                      color: #000;
-                    "
-                  >
-                    Our Story
-                  </p>
-                </button>
-              </div>
-            </div>
-            <div
-            class="col-md-12 " id="bottom-content"
-              style="margin-top: 2%; background-color: #e9e6e0"
-            >
-              <iframe
-                src="components/tabs/magazine.html"
-                id="my-iframe"
-                background-color="#e9e6e0" 
-                style=" height: 100%;width: 100%; "
-              ></iframe>
-              <script>
-                var myIframe = document.getElementById('my-iframe');
-                var iframeDoc = myIframe.contentDocument || myIframe.contentWindow.document;
-                var contentWidth = iframeDoc.documentElement.scrollWidth;
-                var contentHeight = iframeDoc.documentElement.scrollHeight;
-                myIframe.width = contentWidth + 'px';
-                myIframe.height = contentHeight + 'px';
-              </script>
-              
-
-            </div>
-          </div> -->
-        </div>
+          
       </div>
 
 
@@ -811,7 +673,7 @@
       <div class="container  d-none d-sm-block" style="padding-top: 5%;padding-bottom: 5%;">
         <div class="row">
           <div class="col-12">
-            <p class="text" style="font-family: Merriweather;font-size: 32px;font-weight: 700;line-height: 40px;letter-spacing: 0em;text-align: left;">Previous Issues</p>
+            <p class="text" style="font-family: Merriweather;font-size: 32px;font-weight: 700;margin-bottom: 2%;">Previous Issues</p>
           </div>
           <div class="col-12 " style="margin-top: 5vh;">
             <div class="row align-items-center" >
@@ -889,6 +751,9 @@
           </div>
           
         </div>
+        
+      </div>
+      <div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
