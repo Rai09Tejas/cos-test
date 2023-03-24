@@ -1046,7 +1046,159 @@
                 </div>
               </div>
               <div class="col-md-5" style="padding-left: 5%;">
-                
+
+                <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="active" id="magBtn0"
+                    style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;border-bottom: 3px solid black;"
+                    data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-issue"
+                    aria-selected="true">This Issue</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="" id="navBtn1"
+                    style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;"
+                    data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-high"
+                    aria-selected="false">Highlights</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="" id="navBtn2"
+                    style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;"
+                    data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-about"
+                    aria-selected="false">About</button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-issue-tab" tabindex="0">
+                    <div class="row">
+                      <div class="col" style="padding-top: 10%;">
+                        <h1 class="text1" id="magTitle" style="font-family: Merriweather;
+                        font-size: 3vw;
+                        font-weight: 700;">Issue #3</h1>
+                        <p class="text2" id="magDiscription" style="
+                        font-family: Inter;
+                        font-size: 1.5vw;
+                        font-weight: 400;
+                        margin-top: 5%;">Our Third Issue is centered around exploration and people. We ventured all
+                          over, from Sweden to Brazil, in search of the people who are reinventing old systems,
+                          questioning the status quo, and protecting fundamental values. We asked a ton of questions
+                          and
+                          we are certain that the answers among these pages will surprise and delight you.</p>
+                        <button class="btn btn1" id="getNowBtn" style="
+                        height: 77px;
+                        width: 100%;
+                        border-radius: 16px;
+                        padding: 24px 16px 24px 16px;
+                        background: #ED6838;
+                        box-shadow: 0px 4px 16px rgba(251, 97, 42, 0.8);
+                        border-radius: 16px;margin-top: 5%;" onclick="openPaymentWindow()">
+                          <p class="text1" style="font-family: Inter;
+                          font-size: 100%;
+                          font-weight: 700;
+                          color: white;
+                          ">Get Now!</p>
+                        </button>
+                        <script>
+                          var payLink = "https://chiefofstuff.gumroad.com/l/QAHSpring";
+                          function openPaymentWindow() {
+                            window.open(payLink, "_blank");
+                          }
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-high-tab" tabindex="0">...</div>
+                  <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-about-tab" tabindex="0">
+                    <div class="row">
+                      <div class="col" style="padding-top: 10%;">
+                        <h1 class="text1" style="font-family: Merriweather;
+                        font-size: 54px;
+                        font-weight: 700;">The Quarterly All Hands</h1>
+                        <p class="text2" style="
+                        font-family: Inter;
+                        font-size: 24px;
+                        font-weight: 400;
+                        margin-top: 5%;">The Quarterly All Hands is designed to be enjoyed at your leisure - while at
+                          lunch, riding the train, as a break from your feed, or when you're bored. Wherever you are,
+                          we
+                          hope you find inspiration, get lost in the pages, and discover something new.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <script>
+                  const naviItems = document.querySelectorAll('#navItems');
+      
+                  // add a click event listener to each button
+                  naviItems.forEach((naviItem) => {
+                    naviItem.addEventListener('click', () => {
+                      // remove the border from all buttons
+                      naviItems.forEach((item) => {
+                        item.querySelector('button').style.borderBottom = 'none';
+                      });
+                      // add the border to the clicked button
+                      naviItem.querySelector('button').style.borderBottom = '3px solid black';
+                    });
+                  });
+      
+                  </script>
+
+
+
+
+
+
+                <!-- <div class="tab-pane fade" id="pills-profile-d" role="tabpanel" aria-labelledby="pills-profile-tab"
+                  tabindex="0">
+                  <ul class="nav nav-pills nav-justified mb-3" id="myTab">
+                    <li class="nav-item" role="presentation">
+                      <button class="active" id="navBtn0"
+                        style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;border-bottom: 3px solid black;"
+                        data-bs-toggle="pill" data-bs-target="#this-issue" type="button" role="tab"
+                        aria-controls="this-issue" aria-selected="true">This Issue</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="" id="navBtn0"
+                        style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;"
+                        data-bs-toggle="pill" data-bs-target="#highlights" type="button" role="tab"
+                        aria-controls="highlights" aria-selected="true">Highlights</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="" id="navBtn0"
+                        style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;"
+                        data-bs-toggle="pill" data-bs-target="#about" type="button" role="tab" aria-controls="about"
+                        aria-selected="true">About</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="this-issue" role="tabpanel"
+                      aria-labelledby="this-issue-tab">
+                      
+                    </div>
+                    <div class="tab-pane fade" id="highlights" role="tabpanel" aria-labelledby="highlights-tab">
+                      <div class="row">
+                        <div class="col" style="padding-top: 10%;">
+                          <h1 class="text1" style="font-family: Merriweather;
+                          font-size: 54px;
+                          font-weight: 700;">The Quarterly All Hands</h1>
+                          <p class="text2" style="
+                          font-family: Inter;
+                          font-size: 24px;
+                          font-weight: 400;
+                          margin-top: 5%;">The Quarterly All Hands is designed to be enjoyed at your leisure - while at
+                            lunch, riding the train, as a break from your feed, or when you're bored. Wherever you are,
+                            we
+                            hope you find inspiration, get lost in the pages, and discover something new.</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+                      
+                    </div>
+                  </div>
+                </div> -->
               </div>
             </div>
           </div>
