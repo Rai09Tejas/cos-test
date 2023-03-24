@@ -232,7 +232,7 @@
                     font-family: Merriweather;
                     font-weight: 700;
                     font-size: 3vw;
-                  ">‘informative’
+                  ">‘informative/inspirational etc’
               </span>
               <span style="font-family: Inter; font-weight: 300; font-size: 3vw">stuff</span>
             </p>
@@ -273,11 +273,30 @@
                     ">
                   Say hello to stuff!
                 </h1>
+                <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <!-- <iframe src="https://www.chiefofstuff.org/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe> -->
                 <div class="row d-flex justify-content-center align-content-center" style="width: 100%;">
 
-                  <div class="my-div" id="custom-substack-embed"></div>
+
+                  <div class="my-div"></div>
                   <script>
                     window.CustomSubstackWidget = {
                       substackUrl: "thechiefofstuff.substack.com",
@@ -290,8 +309,20 @@
                         text: "#FFFFFF",
                       }
                     };
+
+
+                    const container = document.getElementById('custom-substack-embed');
+
+                    container.addEventListener('click', function () {
+                      var modal = document.getElementById('myModal');
+                      modal.classList.add('show');
+                      modal.style.display = 'block';
+                    });
+
                   </script>
                   <script src="https://substackapi.com/widget.js" async></script>
+
+
                 </div>
               </div>
             </div>
@@ -476,7 +507,7 @@
             padding-top: 3%;
             padding-bottom: 10%;
           ">
-      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <ul class="nav nav-pills mb-3" id="pills-tab2" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="pills-home-tab-m" data-bs-toggle="pill" data-bs-target="#pills-home-m"
             type="button" role="tab" aria-controls="pills-home" aria-selected="false" style="border-radius: 16px;
@@ -873,7 +904,7 @@
               margin-bottom: 5%;
             ">
       <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-        <li class="nav-item" role="presentation" ></li>
+        <li class="nav-item" role="presentation"></li>
         <button class="active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home-d" style="border-radius: 16px;
             background: #ED6838;
             box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
@@ -885,15 +916,14 @@
             color: white;
             font-size: 16px;
             font-weight: bold;
-            cursor: pointer;" type="button" role="tab" aria-controls="pills-contact"
-            aria-selected="false">
-            <h5 class="text-center" id="text1-d">
-              The Magazine</h5>
-          </button>
-          
+            cursor: pointer;" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+          <h5 class="text-center" id="text1-d">
+            The Magazine</h5>
+        </button>
+
         </li>
-        <li class="nav-item" role="presentation" >
-        <button class="" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile-d" style="border-radius: 16px;
+        <li class="nav-item" role="presentation">
+          <button class="" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile-d" style="border-radius: 16px;
             background: #FFFFFF52;
             box-shadow: none;
             border-radius: 16px;padding: 30px;
@@ -904,15 +934,14 @@
             color: black;
             font-size: 16px;
             font-weight: bold;
-            cursor: pointer;" type="button" role="tab" aria-controls="pills-contact"
-            aria-selected="false">
+            cursor: pointer;" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
             <h5 class="text-center" id="text2-d">
               Articles</h5>
           </button>
 
 
         </li>
-        <li class="nav-item" role="presentation" >
+        <li class="nav-item" role="presentation">
           <button class="" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact-d" style="border-radius: 16px;
             background: #FFFFFF52;
             box-shadow: none;
@@ -924,8 +953,7 @@
             color: black;
             font-size: 16px;
             font-weight: bold;
-            cursor: pointer;" type="button" role="tab" aria-controls="pills-contact"
-            aria-selected="false">
+            cursor: pointer;" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
             <h5 class="text-center" id="text3-d">
               Our Story</h5>
           </button>
@@ -1018,56 +1046,46 @@
                 </div>
               </div>
               <div class="col-md-5" style="padding-left: 5%;">
-                <ul class="nav nav-tabs" id="myTab">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link active"
-                      style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
-                      id="this-issue-tab" data-bs-toggle="tab" data-bs-target="#this-issue" type="button" role="tab"
-                      aria-controls="this-issue" aria-selected="true">
-
-                      <h1 class="text1" style="font-family: Inter;
-                          font-size: 1vw;
-                          font-weight: 700;color: black;">This Issue</h1>
-                    </button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link"
-                      style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
-                      id="highlights-tab" data-bs-toggle="tab" data-bs-target="#highlights" type="button" role="tab"
-                      aria-controls="highlights" aria-selected="false">
-                      <h1 class="text1" style="font-family: Inter;
-                        font-size: 1vw;
-                        font-weight: 700;color: black;">HighLights</h1>
-                    </button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link"
-                      style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
-                      id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab"
-                      aria-controls="about" aria-selected="false">
-                      <h1 class="text1" style="font-family: Inter;
-                        font-size: 1vw;
-                        font-weight: 700;color: black;">About</h1>
-                    </button>
-                  </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="this-issue" role="tabpanel"
-                    aria-labelledby="this-issue-tab">
-                    <div class="row">
-                      <div class="col" style="padding-top: 10%;">
-                        <h1 class="text1" id="magTitle" style="font-family: Merriweather;
+                <div class="tab-pane fade" id="pills-profile-d" role="tabpanel" aria-labelledby="pills-profile-tab"
+                  tabindex="0">
+                  <ul class="nav nav-pills nav-justified mb-3" id="myTab">
+                    <li class="nav-item" role="presentation">
+                      <button class="active" id="navBtn0"
+                        style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;border-bottom: 3px solid black;"
+                        data-bs-toggle="pill" data-bs-target="#this-issue" type="button" role="tab"
+                        aria-controls="this-issue" aria-selected="true">This Issue</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="" id="navBtn0"
+                        style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;"
+                        data-bs-toggle="pill" data-bs-target="#highlights" type="button" role="tab"
+                        aria-controls="highlights" aria-selected="true">Highlights</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="" id="navBtn0"
+                        style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;"
+                        data-bs-toggle="pill" data-bs-target="#about" type="button" role="tab" aria-controls="about"
+                        aria-selected="true">About</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="this-issue" role="tabpanel"
+                      aria-labelledby="this-issue-tab">
+                      <div class="row">
+                        <div class="col" style="padding-top: 10%;">
+                          <h1 class="text1" id="magTitle" style="font-family: Merriweather;
                           font-size: 3vw;
                           font-weight: 700;">Issue #3</h1>
-                        <p class="text2" id="magDiscription" style="
+                          <p class="text2" id="magDiscription" style="
                           font-family: Inter;
                           font-size: 1.5vw;
                           font-weight: 400;
                           margin-top: 5%;">Our Third Issue is centered around exploration and people. We ventured all
-                          over, from Sweden to Brazil, in search of the people who are reinventing old systems,
-                          questioning the status quo, and protecting fundamental values. We asked a ton of questions and
-                          we are certain that the answers among these pages will surprise and delight you.</p>
-                        <button class="btn btn1" id="getNowBtn" style="
+                            over, from Sweden to Brazil, in search of the people who are reinventing old systems,
+                            questioning the status quo, and protecting fundamental values. We asked a ton of questions
+                            and
+                            we are certain that the answers among these pages will surprise and delight you.</p>
+                          <button class="btn btn1" id="getNowBtn" style="
                           height: 77px;
                           width: 100%;
                           border-radius: 16px;
@@ -1075,52 +1093,55 @@
                           background: #ED6838;
                           box-shadow: 0px 4px 16px rgba(251, 97, 42, 0.8);
                           border-radius: 16px;margin-top: 5%;" onclick="openPaymentWindow()">
-                          <p class="text1" style="font-family: Inter;
+                            <p class="text1" style="font-family: Inter;
                             font-size: 100%;
                             font-weight: 700;
                             color: white;
                             ">Get Now!</p>
-                        </button>
-                        <script>
-                          var payLink = "https://chiefofstuff.gumroad.com/l/QAHSpring";
-                          function openPaymentWindow() {
-                            window.open(payLink, "_blank");
-                          }
-                        </script>
+                          </button>
+                          <script>
+                            var payLink = "https://chiefofstuff.gumroad.com/l/QAHSpring";
+                            function openPaymentWindow() {
+                              window.open(payLink, "_blank");
+                            }
+                          </script>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="tab-pane fade" id="highlights" role="tabpanel" aria-labelledby="highlights-tab">
-                    <div class="row">
-                      <div class="col" style="padding-top: 10%;">
-                        <h1 class="text1" style="font-family: Merriweather;
+                    <div class="tab-pane fade" id="highlights" role="tabpanel" aria-labelledby="highlights-tab">
+                      <div class="row">
+                        <div class="col" style="padding-top: 10%;">
+                          <h1 class="text1" style="font-family: Merriweather;
                           font-size: 54px;
                           font-weight: 700;">The Quarterly All Hands</h1>
-                        <p class="text2" style="
+                          <p class="text2" style="
                           font-family: Inter;
                           font-size: 24px;
                           font-weight: 400;
                           margin-top: 5%;">The Quarterly All Hands is designed to be enjoyed at your leisure - while at
-                          lunch, riding the train, as a break from your feed, or when you're bored. Wherever you are, we
-                          hope you find inspiration, get lost in the pages, and discover something new.</p>
+                            lunch, riding the train, as a break from your feed, or when you're bored. Wherever you are,
+                            we
+                            hope you find inspiration, get lost in the pages, and discover something new.</p>
 
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
-                    <div class="row">
-                      <div class="col" style="padding-top: 10%;">
-                        <h1 class="text1" style="font-family: Merriweather;
+                    <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+                      <div class="row">
+                        <div class="col" style="padding-top: 10%;">
+                          <h1 class="text1" style="font-family: Merriweather;
                           font-size: 54px;
                           font-weight: 700;">The Quarterly All Hands</h1>
-                        <p class="text2" style="
+                          <p class="text2" style="
                           font-family: Inter;
                           font-size: 24px;
                           font-weight: 400;
                           margin-top: 5%;">The Quarterly All Hands is designed to be enjoyed at your leisure - while at
-                          lunch, riding the train, as a break from your feed, or when you're bored. Wherever you are, we
-                          hope you find inspiration, get lost in the pages, and discover something new.</p>
+                            lunch, riding the train, as a break from your feed, or when you're bored. Wherever you are,
+                            we
+                            hope you find inspiration, get lost in the pages, and discover something new.</p>
 
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1175,7 +1196,7 @@
               <div class="container-fluid  d-none d-sm-block"
                 style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
                 <div class="row">
-                  
+
                   <div class="col-12 " style="margin-top: 5vh;">
                     <div class="row align-items-center" id="articles">
 
@@ -1199,136 +1220,146 @@
 
               </div>
             </div>
-            <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab" tabindex="0"><div class="container-fluid  d-none d-sm-block"
-              style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
-              <div class="row">
-                
-                <div class="col-12 " style="margin-top: 5vh;">
-                  <div class="row align-items-center" id="articles2">
+            <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab" tabindex="0">
+              <div class="container-fluid  d-none d-sm-block"
+                style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+                <div class="row">
 
+                  <div class="col-12 " style="margin-top: 5vh;">
+                    <div class="row align-items-center" id="articles2">
+
+                    </div>
                   </div>
                 </div>
+                <div class="container-fluid"></div>
+                <div class="row">
+                  <div class="col-1"> <button class="d-flex justify-content-end" type="button "
+                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                      <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+                    </button></div>
+                  <div class="col-10"></div>
+                  <div class="col-1"><button class="d-flex justify-content-end" type="button"
+                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                      <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+
+                    </button></div>
+
+                </div>
+
               </div>
-              <div class="container-fluid"></div>
-              <div class="row">
-                <div class="col-1"> <button class="d-flex justify-content-end" type="button "
-                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                    <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
-                  </button></div>
-                <div class="col-10"></div>
-                <div class="col-1"><button class="d-flex justify-content-end" type="button"
-                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                    <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+            </div>
+            <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab" tabindex="0">
+              <div class="container-fluid  d-none d-sm-block"
+                style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+                <div class="row">
 
-                  </button></div>
+                  <div class="col-12 " style="margin-top: 5vh;">
+                    <div class="row align-items-center" id="articles3">
 
-              </div>
-
-            </div></div>
-            <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab" tabindex="0"><div class="container-fluid  d-none d-sm-block"
-              style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
-              <div class="row">
-                
-                <div class="col-12 " style="margin-top: 5vh;">
-                  <div class="row align-items-center" id="articles3">
-
+                    </div>
                   </div>
                 </div>
+                <div class="container-fluid"></div>
+                <div class="row">
+                  <div class="col-1"> <button class="d-flex justify-content-end" type="button "
+                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                      <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+                    </button></div>
+                  <div class="col-10"></div>
+                  <div class="col-1"><button class="d-flex justify-content-end" type="button"
+                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                      <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+
+                    </button></div>
+
+                </div>
+
               </div>
-              <div class="container-fluid"></div>
-              <div class="row">
-                <div class="col-1"> <button class="d-flex justify-content-end" type="button "
-                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                    <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
-                  </button></div>
-                <div class="col-10"></div>
-                <div class="col-1"><button class="d-flex justify-content-end" type="button"
-                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                    <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+            </div>
+            <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab" tabindex="0">
+              <div class="container-fluid  d-none d-sm-block"
+                style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+                <div class="row">
 
-                  </button></div>
+                  <div class="col-12 " style="margin-top: 5vh;">
+                    <div class="row align-items-center" id="articles4">
 
-              </div>
-
-            </div></div>
-            <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab" tabindex="0"><div class="container-fluid  d-none d-sm-block"
-              style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
-              <div class="row">
-                
-                <div class="col-12 " style="margin-top: 5vh;">
-                  <div class="row align-items-center" id="articles4">
-
+                    </div>
                   </div>
                 </div>
+                <div class="container-fluid"></div>
+                <div class="row">
+                  <div class="col-1"> <button class="d-flex justify-content-end" type="button "
+                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                      <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+                    </button></div>
+                  <div class="col-10"></div>
+                  <div class="col-1"><button class="d-flex justify-content-end" type="button"
+                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                      <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+
+                    </button></div>
+
+                </div>
+
               </div>
-              <div class="container-fluid"></div>
-              <div class="row">
-                <div class="col-1"> <button class="d-flex justify-content-end" type="button "
-                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                    <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
-                  </button></div>
-                <div class="col-10"></div>
-                <div class="col-1"><button class="d-flex justify-content-end" type="button"
-                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                    <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+            </div>
+            <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-5-tab" tabindex="0">
+              <div class="container-fluid  d-none d-sm-block"
+                style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+                <div class="row">
 
-                  </button></div>
+                  <div class="col-12 " style="margin-top: 5vh;">
+                    <div class="row align-items-center" id="articles5">
 
-              </div>
-
-            </div></div>
-            <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-5-tab" tabindex="0"><div class="container-fluid  d-none d-sm-block"
-              style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
-              <div class="row">
-                
-                <div class="col-12 " style="margin-top: 5vh;">
-                  <div class="row align-items-center" id="articles5">
-
+                    </div>
                   </div>
                 </div>
+                <div class="container-fluid"></div>
+                <div class="row">
+                  <div class="col-1"> <button class="d-flex justify-content-end" type="button "
+                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                      <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+                    </button></div>
+                  <div class="col-10"></div>
+                  <div class="col-1"><button class="d-flex justify-content-end" type="button"
+                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                      <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+
+                    </button></div>
+
+                </div>
+
               </div>
-              <div class="container-fluid"></div>
-              <div class="row">
-                <div class="col-1"> <button class="d-flex justify-content-end" type="button "
-                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                    <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
-                  </button></div>
-                <div class="col-10"></div>
-                <div class="col-1"><button class="d-flex justify-content-end" type="button"
-                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                    <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+            </div>
+            <div class="tab-pane fade" id="pills-6" role="tabpanel" aria-labelledby="pills-6-tab" tabindex="0">
+              <div class="container-fluid  d-none d-sm-block"
+                style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+                <div class="row">
 
-                  </button></div>
+                  <div class="col-12 " style="margin-top: 5vh;">
+                    <div class="row align-items-center" id="articles6">
 
-              </div>
-
-            </div></div>
-            <div class="tab-pane fade" id="pills-6" role="tabpanel" aria-labelledby="pills-6-tab" tabindex="0"><div class="container-fluid  d-none d-sm-block"
-              style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
-              <div class="row">
-                
-                <div class="col-12 " style="margin-top: 5vh;">
-                  <div class="row align-items-center" id="articles6">
-
+                    </div>
                   </div>
                 </div>
+                <div class="container-fluid"></div>
+                <div class="row">
+                  <div class="col-1"> <button class="d-flex justify-content-end" type="button "
+                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                      <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+                    </button></div>
+                  <div class="col-10"></div>
+                  <div class="col-1"><button class="d-flex justify-content-end" type="button"
+                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                      <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+
+                    </button></div>
+
+                </div>
+
               </div>
-              <div class="container-fluid"></div>
-              <div class="row">
-                <div class="col-1"> <button class="d-flex justify-content-end" type="button "
-                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                    <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
-                  </button></div>
-                <div class="col-10"></div>
-                <div class="col-1"><button class="d-flex justify-content-end" type="button"
-                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                    <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
-
-                  </button></div>
-
-              </div>
-
-            </div></div>
+            </div>
           </div>
 
           <script>
@@ -1347,7 +1378,7 @@
             });
 
 
-            const articles =[
+            const articles = [
               {
 
               }
@@ -1362,20 +1393,20 @@
               const container5 = document.getElementById('articles5');
               const container6 = document.getElementById('articles6');
 
-              var list =[container,container2,container3,container4,container5,container6];
+              var list = [container, container2, container3, container4, container5, container6];
 
               // Loop through the desired number of elements and create them
               for (let i = 0; i < issues.length; i++) {
                 // Create a new div element
-                for(let j=0;j<list.length;j++){
-                const newDiv = document.createElement("div");
+                for (let j = 0; j < list.length; j++) {
+                  const newDiv = document.createElement("div");
 
-                // Set the class and style attributes of the div
-                newDiv.setAttribute("class", "col-3");
-                newDiv.setAttribute("style", "border-radius: 16px; padding: 16px; background: #FAF8F4;margin: 0.5vw;width:20vw");
+                  // Set the class and style attributes of the div
+                  newDiv.setAttribute("class", "col-3");
+                  newDiv.setAttribute("style", "border-radius: 16px; padding: 16px; background: #FAF8F4;margin: 0.5vw;width:20vw");
 
-                // Add the code to the innerHTML of the div
-                newDiv.innerHTML = `
+                  // Add the code to the innerHTML of the div
+                  newDiv.innerHTML = `
                 
           <div class="col">
             <button class="btn btn-light" style="
@@ -1425,9 +1456,9 @@
           </div>
           `;
 
-                // Add the new div to the container element
-                list[j].appendChild(newDiv);
-        }
+                  // Add the new div to the container element
+                  list[j].appendChild(newDiv);
+                }
 
 
               }
@@ -1947,7 +1978,7 @@
             text-align: left;
             padding-left: 2%;
           ">
-        Hear what people have to say Chief of Stuff
+        Hear what people have to say about Chief of Stuff
       </p>
 
 
