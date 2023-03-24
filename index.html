@@ -874,8 +874,8 @@
             ">
       <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class=" active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home-d"
-            type="button" role="tab" aria-controls="pills-home" aria-selected="false" style="border-radius: 16px;
+          <button class=" active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home-d" type="button"
+            role="tab" aria-controls="pills-home" aria-selected="false" style="border-radius: 16px;
             padding: 24px 40px 24px 40px;
             background: #ED6838;
             box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
@@ -891,8 +891,8 @@
           </button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile-d"
-            type="button" role="tab" style="border-radius: 16px;
+          <button class="" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile-d" type="button"
+            role="tab" style="border-radius: 16px;
             padding: 24px 40px 24px 40px;
             background: #FFFFFF52;
             box-shadow: none;
@@ -1016,9 +1016,10 @@
               <div class="col-md-5" style="padding-left: 5%;">
                 <ul class="nav nav-tabs" id="myTab">
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link active" style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"  id="this-issue-tab" data-bs-toggle="tab"
-                      data-bs-target="#this-issue" type="button" role="tab" aria-controls="this-issue"
-                      aria-selected="true">
+                    <button class="nav-link active"
+                      style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
+                      id="this-issue-tab" data-bs-toggle="tab" data-bs-target="#this-issue" type="button" role="tab"
+                      aria-controls="this-issue" aria-selected="true">
 
                       <h1 class="text1" style="font-family: Inter;
                           font-size: 1vw;
@@ -1026,16 +1027,20 @@
                     </button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link" style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"  id="highlights-tab" data-bs-toggle="tab" data-bs-target="#highlights"
-                      type="button" role="tab" aria-controls="highlights" aria-selected="false">
+                    <button class="nav-link"
+                      style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
+                      id="highlights-tab" data-bs-toggle="tab" data-bs-target="#highlights" type="button" role="tab"
+                      aria-controls="highlights" aria-selected="false">
                       <h1 class="text1" style="font-family: Inter;
                         font-size: 1vw;
                         font-weight: 700;color: black;">HighLights</h1>
                     </button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link" style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"  id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button"
-                      role="tab" aria-controls="about" aria-selected="false">
+                    <button class="nav-link"
+                      style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
+                      id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab"
+                      aria-controls="about" aria-selected="false">
                       <h1 class="text1" style="font-family: Inter;
                         font-size: 1vw;
                         font-weight: 700;color: black;">About</h1>
@@ -1058,21 +1063,26 @@
                           over, from Sweden to Brazil, in search of the people who are reinventing old systems,
                           questioning the status quo, and protecting fundamental values. We asked a ton of questions and
                           we are certain that the answers among these pages will surprise and delight you.</p>
-                        <button class="btn btn1" style="
+                        <button class="btn btn1" id="getNowBtn" style="
                           height: 77px;
                           width: 100%;
                           border-radius: 16px;
                           padding: 24px 16px 24px 16px;
                           background: #ED6838;
                           box-shadow: 0px 4px 16px rgba(251, 97, 42, 0.8);
-                          border-radius: 16px;margin-top: 5%;"
-                          onclick="window.open('https://app.gumroad.com/checkout?product=lrswn&quantity=1&offer_code=welcome', '_blank')">
+                          border-radius: 16px;margin-top: 5%;" onclick="openPaymentWindow()">
                           <p class="text1" style="font-family: Inter;
                             font-size: 100%;
                             font-weight: 700;
                             color: white;
                             ">Get Now!</p>
                         </button>
+                        <script>
+                          var payLink = "https://chiefofstuff.gumroad.com/l/QAHSpring";
+                          function openPaymentWindow() {
+                            window.open(payLink, "_blank");
+                          }
+                        </script>
                       </div>
                     </div>
                   </div>
@@ -1117,28 +1127,74 @@
         </div>
         <div class="tab-pane fade" id="pills-profile-d" role="tabpanel" aria-labelledby="pills-profile-tab"
           tabindex="0">
-          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation" id="navItems">
-              <button class="active" id="navBtn0" style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">#thought leadership</button>
+              <button class="active" id="navBtn0"
+                style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;border-bottom: 3px solid black;"
+                data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-home"
+                aria-selected="true">#thought leadership</button>
             </li>
             <li class="nav-item" role="presentation" id="navItems">
-              <button class=""  id="navBtn1" style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"  data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">#engineering</button>
+              <button class="" id="navBtn1"
+                style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
+                data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-profile"
+                aria-selected="false">#engineering</button>
             </li>
             <li class="nav-item" role="presentation" id="navItems">
-              <button class=""  id="navBtn2" style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none" data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">#one on one</button>
+              <button class="" id="navBtn2"
+                style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
+                data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-contact"
+                aria-selected="false">#one on one</button>
             </li>
             <li class="nav-item" role="presentation" id="navItems">
-              <button class=""  id="navBtn3" style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none" data-bs-toggle="pill" data-bs-target="#pills-4" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">#crypto 101</button>
+              <button class="" id="navBtn3"
+                style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
+                data-bs-toggle="pill" data-bs-target="#pills-4" type="button" role="tab" aria-controls="pills-contact"
+                aria-selected="false">#crypto 101</button>
             </li>
             <li class="nav-item" role="presentation" id="navItems">
-              <button class=""  id="navBtn4" style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"  data-bs-toggle="pill" data-bs-target="#pills-5" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">#rest of world</button>
+              <button class="" id="navBtn4"
+                style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
+                data-bs-toggle="pill" data-bs-target="#pills-5" type="button" role="tab" aria-controls="pills-contact"
+                aria-selected="false">#rest of world</button>
             </li>
             <li class="nav-item" role="presentation" id="navItems">
-              <button class="" id="navBtn5"  style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none" data-bs-toggle="pill" data-bs-target="#pills-6" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">#rest of world</button>
+              <button class="" id="navBtn5"
+                style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
+                data-bs-toggle="pill" data-bs-target="#pills-6" type="button" role="tab" aria-controls="pills-contact"
+                aria-selected="false">#rest of world</button>
             </li>
           </ul>
           <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab" tabindex="0">...</div>
+            <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab"
+              tabindex="0">
+              <div class="container-fluid  d-none d-sm-block"
+                style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+                <div class="row">
+                  
+                  <div class="col-12 " style="margin-top: 5vh;">
+                    <div class="row align-items-center" id="articles">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="container-fluid"></div>
+                <div class="row">
+                  <div class="col-1"> <button class="d-flex justify-content-end" type="button "
+                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                      <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+                    </button></div>
+                  <div class="col-10"></div>
+                  <div class="col-1"><button class="d-flex justify-content-end" type="button"
+                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                      <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+
+                    </button></div>
+
+                </div>
+
+              </div>
+            </div>
             <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab" tabindex="0">...</div>
             <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab" tabindex="0">...</div>
             <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab" tabindex="0">...</div>
@@ -1147,24 +1203,74 @@
           </div>
 
           <script>
-            // Get all the tab buttons
-const tabButton = document.querySelectorAll('#navItems');
+            const navItems = document.querySelectorAll('#navItems');
 
-// Add click event listener to each tab button
-for(let i=0;i<tabButton.length;i++){
-  tabButton[i].addEventListener('click', function() {
-    // Remove underline from previously selected button
-    const selectedButton = document.getElementById("navBtn0");
-    if (!selectedButton) {
-      selectedButton.style.textDecoration = 'none';
-    }
-    // Add underline to the currently selected button
-    this.style.textDecoration = 'underline';
-  });
-}
-tabButton.forEach(button => {
-  
-});
+            // add a click event listener to each button
+            navItems.forEach((navItem) => {
+              navItem.addEventListener('click', () => {
+                // remove the border from all buttons
+                navItems.forEach((item) => {
+                  item.querySelector('button').style.borderBottom = 'none';
+                });
+                // add the border to the clicked button
+                navItem.querySelector('button').style.borderBottom = '3px solid black';
+              });
+            });
+
+
+            const articles =[
+              {
+                
+              }
+            ];
+
+
+            document.addEventListener('DOMContentLoaded', function () {
+              const container = document.getElementById('issuesDiv');
+
+              // Loop through the desired number of elements and create them
+              for (let i = 0; i < issues.length; i++) {
+                // Create a new div element
+                const newDiv = document.createElement("div");
+
+                // Set the class and style attributes of the div
+                newDiv.setAttribute("class", "col container");
+                newDiv.setAttribute("style", "margin: 1%;");
+
+                // Add the code to the innerHTML of the div
+                newDiv.innerHTML = `
+            <div class="col" id="issueContainer">
+              <div class="col" style="border-radius: 16px;background-color: #F1EFEA;padding: 10%;">
+                <img src="img/images/mag.png" id="issuesImg" class="img-fluid" alt="Your Image"
+                  style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
+              </div>
+              <div class="col">
+                <p class="text" id="issuesText" style="font-family: Inter;
+                  font-size: 24px;
+                  font-weight: 500;
+                  line-height: 40px;
+                  letter-spacing: 0em;
+                  text-align: left;margin-top: 2%;">Issue #3</p>
+              </div>
+            </div>
+          `;
+
+                // Add the new div to the container element
+                container.appendChild(newDiv);
+
+
+              }
+
+              const images = document.querySelectorAll('#issuesImg');
+              const issueText = document.querySelectorAll('#issuesText');
+
+
+              for (let i = 0; i < images.length; i++) {
+
+                images[i].setAttribute('src', issues[i].cover[0]);
+                issueText[i].innerText = `${issues[i].title}`;
+              }
+            });
           </script>
         </div>
         <div class="tab-pane fade" id="pills-contact-d" role="tabpanel" aria-labelledby="pills-contact-tab"
@@ -1197,7 +1303,11 @@ tabButton.forEach(button => {
                   color: #5c5c5c;
                   padding: 2%;
                 ">
-                Hi, I’m Sarah Maxwell aka the Chief of Stuff! There’s a lot of stuff out there, but what actually matters? This question prompted my curiosity and in August of 2020 I launched Chief of Stuff, a new media platform, that’s your source for useful, entertaining, educational, and inspirational STUFF. In a world filled with noise, our goal is to enable more voices to shine and allow our collective knowledge base to grow. After all, life is about learning and your curiosity is calling! You can read more about 
+                Hi, I’m Sarah Maxwell aka the Chief of Stuff! There’s a lot of stuff out there, but what actually
+                matters? This question prompted my curiosity and in August of 2020 I launched Chief of Stuff, a new
+                media platform, that’s your source for useful, entertaining, educational, and inspirational STUFF. In a
+                world filled with noise, our goal is to enable more voices to shine and allow our collective knowledge
+                base to grow. After all, life is about learning and your curiosity is calling! You can read more about
                 <snap style="color: #ED6838;"> my story here.</snap>
               </p>
             </div>
@@ -1291,7 +1401,7 @@ tabButton.forEach(button => {
 
             </div>
           </div>
-          <div class="carousel-item"  id="issueText-m">
+          <div class="carousel-item" id="issueText-m">
             <div class="row align-items-center">
               <div class="col-xs-6 " style="align-self: center;">
                 <img src="img/images/issue3.png" id="issueImg-m" alt="Image 1" style="height: 60vh;">
@@ -1322,14 +1432,14 @@ tabButton.forEach(button => {
         </button>
       </div>
 
-      
+
 
 
 
     </div>
-    
+
     <script>
-      var issueNo =3;
+      var issueNo = 3;
 
 
       const button1 = document.getElementById('pills-home-tab');
@@ -1398,9 +1508,17 @@ tabButton.forEach(button => {
       //highlights
       const issues = [
         {
-          cover: "img/images/mag.png",
+          cover: [
+            "img/images/Issue1/2.png",
+            "img/images/Issue1/5.png",
+            "img/images/Issue1/6.png",
+            "img/images/Issue1/10.png",
+            "img/images/Issue1/13.png",
+
+          ],
           title: "Issue #1",
           description: "Introducing The Quarterly All Hands, a modern magazine and the next evolution of Chief of Stuff. Its pages are filled with snappy and substantive articles, unique interviews, and insights.",
+          paymentLink: "https://chiefofstuff.gumroad.com/l/QAHSpring",
           highlightContent: [
             {
               title: "One to One",
@@ -1430,9 +1548,17 @@ tabButton.forEach(button => {
           ]
         },
         {
-          cover: "img/images/mag.png",
+          cover: [
+            "img/images/Issue2/7.png",
+            "img/images/Issue2/16.png",
+            "img/images/Issue2/18.png",
+            "img/images/Issue2/26.png",
+            "img/images/Issue2/27.png",
+
+          ],
           title: "Issue #2",
           description: "The Second Issue takes inspiration from Chief of Stuff’s spiritual home of Greece, celebrates Innovators, and explores New Worlds.As you scroll through, I hope you're inspired to explore new places (real and imaginary), connect with more people, and engage your senses in new ways!",
+          paymentLink: "https://chiefofstuff.gumroad.com/l/sgssd",
           highlightContent: [
             {
               title: "Innovations in Ice Cream:",
@@ -1462,9 +1588,17 @@ tabButton.forEach(button => {
           ]
         },
         {
-          cover: "img/images/issue2.png",
+          cover: [
+            "img/images/Issue3/3.png",
+            "img/images/Issue3/7.png",
+            "img/images/Issue3/16.png",
+            "img/images/Issue3/26.png",
+            "img/images/Issue3/27.png",
+
+          ],
           title: "Issue #3",
           description: "Our Third Issue is centered around exploration and people. We ventured all over, from Sweden to Brazil, in search of the people who are reinventing old systems, questioning the status quo, and protecting fundamental values. We asked a ton of questions and we are certain that the answers among these pages will surprise and delight you.",
+          paymentLink: "https://chiefofstuff.gumroad.com/l/lrswn?_gl=1*i76oey*_ga*MTMxMzI2MzQ3MS4xNjU5NTQzMjg2*_ga_6LJN6D94N6*MTY3OTYzMDE2NC41MC4xLjE2Nzk2MzA3MjguMC4wLjA.",
           highlightContent: [
             {
               title: "One on One with Barnaby Barford:",
@@ -1499,9 +1633,17 @@ tabButton.forEach(button => {
           ]
         },
         {
-          cover: "img/images/issue3.png",
+          cover: [
+            "img/images/Issue4/1.png",
+            "img/images/Issue4/2.png",
+            "img/images/Issue4/3.png",
+            "img/images/Issue4/4.png",
+            "img/images/Issue4/5.png",
+
+          ],
           title: "Issue #4",
           description: "Our Fourth Issue examines the tension between artificial intelligence and human originality. We believe that good things take time, but tech can be a helpful asset if used wisely. If innovations make our lives easier, then we can use our resources wisely and dedicate our energy to explore the stuff we love.",
+          paymentLink: "https://chiefofstuff.gumroad.com/l/issuefour",
           highlightContent: [
             {
               title: "Stop to Smell the Roses:",
@@ -1536,20 +1678,20 @@ tabButton.forEach(button => {
           ]
         }
       ];
-      document.addEventListener('DOMContentLoaded', function() {
-      const container = document.getElementById('issuesDiv');
+      document.addEventListener('DOMContentLoaded', function () {
+        const container = document.getElementById('issuesDiv');
 
-      // Loop through the desired number of elements and create them
-      for (let i = 0; i < issues.length; i++) {
-        // Create a new div element
-        const newDiv = document.createElement("div");
+        // Loop through the desired number of elements and create them
+        for (let i = 0; i < issues.length; i++) {
+          // Create a new div element
+          const newDiv = document.createElement("div");
 
-        // Set the class and style attributes of the div
-        newDiv.setAttribute("class", "col container");
-        newDiv.setAttribute("style", "margin: 1%;");
+          // Set the class and style attributes of the div
+          newDiv.setAttribute("class", "col container");
+          newDiv.setAttribute("style", "margin: 1%;");
 
-        // Add the code to the innerHTML of the div
-        newDiv.innerHTML = `
+          // Add the code to the innerHTML of the div
+          newDiv.innerHTML = `
             <div class="col" id="issueContainer">
               <div class="col" style="border-radius: 16px;background-color: #F1EFEA;padding: 10%;">
                 <img src="img/images/mag.png" id="issuesImg" class="img-fluid" alt="Your Image"
@@ -1566,44 +1708,50 @@ tabButton.forEach(button => {
             </div>
           `;
 
-        // Add the new div to the container element
-        container.appendChild(newDiv);
+          // Add the new div to the container element
+          container.appendChild(newDiv);
 
 
-      }
-      
-      const images = document.querySelectorAll('#issuesImg');
-      const issueText = document.querySelectorAll('#issuesText');
+        }
+
+        const images = document.querySelectorAll('#issuesImg');
+        const issueText = document.querySelectorAll('#issuesText');
 
 
-      for (let i = 0; i < images.length; i++) {
-        let j=(issues.length)-i-1;
-        images[i].setAttribute('src', issues[j].cover);
-        issueText[i].innerText=`${issues[j].title}`;
-      }
+        for (let i = 0; i < images.length; i++) {
 
-    
-    const magHead = document.getElementById('mag-head-d');
-    const magHeadBtm =document.getElementById('mag1-img');
-    const magHeadText =document.getElementById('magTitle');
-    const magHeadDisc =document.getElementById('magDiscription');
+          images[i].setAttribute('src', issues[i].cover[0]);
+          issueText[i].innerText = `${issues[i].title}`;
+        }
 
-    for(let i=0;i<images.length;i++){
-      images[i].addEventListener('click', function () {
-        let j=(issues.length)-i-1;
-        issueNo =j;
-        magHead.setAttribute('src',issues[j].cover);
-        magHeadBtm.setAttribute('src',issues[j].cover);
-        magHeadText.innerText=`${issues[j].title}`;
-        magHeadDisc.innerText=`${issues[j].description}`;
 
+        const magHead = document.getElementById('mag-head-d');
+        const magHeadBtm = document.getElementById('mag1-img');
+        const magHeadText = document.getElementById('magTitle');
+        const magHeadDisc = document.getElementById('magDiscription');
+        const getNowBtn = document.getElementById('getNowBtn');
+        var payment = issues[0].paymentLink;
+
+
+        for (let i = 0; i < images.length; i++) {
+          images[i].addEventListener('click', function () {
+            payment = issues[i].paymentLink;
+            payLink = payment;
+
+            issueNo = i;
+            magHead.setAttribute('src', issues[i].cover[0]);
+            magHeadBtm.setAttribute('src', issues[i].cover[0]);
+            magHeadText.innerText = `${issues[i].title}`;
+            magHeadDisc.innerText = `${issues[i].description}`;
+            magHeadDisc.innerText = `${issues[i].description}`;
+
+          });
+        }
       });
-    }
-    });
 
-    
 
-      
+
+
     </script>
 
 
