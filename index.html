@@ -139,21 +139,45 @@
                 "></iframe>
             <p style="font-family: Inter; font-weight: 300; font-size: 6vw;margin-bottom: 0%;">Your source for
             </p>
-            <div class="carousel">
-              <div class="change_outer">
-                <div class="change_inner">
-                  <div style="
+            
+            <div id="myCarousel" class="carousel slide carousel-vertical" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="item active">
+                  <p style="
+                  font-family: Inter;
+                  font-weight: 300;
+                  font-size: 6vw;
+                "><span id="changingWordm" style="
                     font-family: Merriweather;
                     font-weight: 700;
                     font-size: 6vw;
-                  ">‘informative’
-                  </div>
-                  <div>‘informative’
-                  </div>
+                  ">‘informative’</span> stuff</p>
                 </div>
-                <div style="font-family: Inter; font-weight: 300; font-size: 6vw">stuff</div>
               </div>
             </div>
+
+            <script>
+              function changeWord() {
+                var words = ["‘informative’", "‘inspirational’", "‘informative’", "‘inspirational’"];
+                var currentIndex = 0;
+                setInterval(function () {
+                  var element = document.getElementById("changingWordm");
+                  element.style.opacity = 0;
+                  setTimeout(function () {
+                    element.textContent = words[currentIndex];
+                    element.style.opacity = 1;
+                  }, 500);
+                  currentIndex++;
+                  if (currentIndex == words.length) {
+                    currentIndex = 0;
+                  }
+                }, 3000);
+              }
+
+              document.addEventListener("DOMContentLoaded", function (event) {
+                changeWord();
+              });
+            </script>
             <p style="
                   font-family: Inter;
                   font-weight: 400;
