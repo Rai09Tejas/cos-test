@@ -16,9 +16,14 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
 </head>
 
 <body style="background-color: #E9E6E0">
+  <input type="hidden" name="isSubscribed" value="0" id="isSubscribed" />
+
   <div class="container-fluid" style="width: fit-content">
     <!-- HEADER SECTION-->
     <div class="container-fluid p-md-3 d-none d-sm-block" style="height: 30%">
@@ -115,21 +120,21 @@
                 "></iframe>
             <p style="font-family: Inter; font-weight: 300; font-size: 6vw;margin-bottom: 0%;">Your source for
             </p>
-            <div class="carousel"> 
-            <div class="change_outer">
-              <div class="change_inner">
-              <div style="
+            <div class="carousel">
+              <div class="change_outer">
+                <div class="change_inner">
+                  <div style="
                     font-family: Merriweather;
                     font-weight: 700;
                     font-size: 6vw;
                   ">‘informative’
-              </div>
-              <div>‘informative’
+                  </div>
+                  <div>‘informative’
+                  </div>
+                </div>
+                <div style="font-family: Inter; font-weight: 300; font-size: 6vw">stuff</div>
               </div>
             </div>
-              <div style="font-family: Inter; font-weight: 300; font-size: 6vw">stuff</div>
-            </div>
-          </div>
             <p style="
                   font-family: Inter;
                   font-weight: 400;
@@ -234,31 +239,40 @@
             </p>
             <style>
               .carousel-vertical .scrolling-text-container {
-                height: 3em; /* Set the height of the container */
-                overflow: hidden; /* Hide any overflow */
+                height: 3em;
+                /* Set the height of the container */
+                overflow: hidden;
+                /* Hide any overflow */
               }
-            
+
               .carousel-vertical .scrolling-text-container p {
-                margin: 0; /* Remove any margin */
-                padding: 0; /* Remove any padding */
-                line-height: 1em; /* Set the line-height to the same as the height of the container */
-                animation: scroll 3s linear infinite; /* Add the animation */
+                margin: 0;
+                /* Remove any margin */
+                padding: 0;
+                /* Remove any padding */
+                line-height: 1em;
+                /* Set the line-height to the same as the height of the container */
+                animation: scroll 3s linear infinite;
+                /* Add the animation */
               }
-            
+
               @keyframes scroll {
                 0% {
-                  transform: translateY(0); /* Start at the top */
+                  transform: translateY(0);
+                  /* Start at the top */
                 }
+
                 100% {
-                  transform: translateY(-100%); /* Scroll up by the height of the container */
+                  transform: translateY(-100%);
+                  /* Scroll up by the height of the container */
                 }
               }
             </style>
-            
+
             <div id="myCarousel" class="carousel slide carousel-vertical" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="item active">
-                  <p  style="
+                  <p style="
                   font-family: Inter;
                   font-weight: 300;
                   font-size: 3vw;
@@ -270,28 +284,28 @@
                 </div>
               </div>
             </div>
-            
+
             <script>
               function changeWord() {
-  var words = ["‘informative’", "‘inspirational’", "‘informative’","‘inspirational’"];
-  var currentIndex = 0;
-  setInterval(function() {
-    var element = document.getElementById("changingWord");
-    element.style.opacity = 0;
-    setTimeout(function() {
-      element.textContent = words[currentIndex];
-      element.style.opacity = 1;
-    }, 500);
-    currentIndex++;
-    if (currentIndex == words.length) {
-      currentIndex = 0;
-    }
-  }, 3000);
-}
+                var words = ["‘informative’", "‘inspirational’", "‘informative’", "‘inspirational’"];
+                var currentIndex = 0;
+                setInterval(function () {
+                  var element = document.getElementById("changingWord");
+                  element.style.opacity = 0;
+                  setTimeout(function () {
+                    element.textContent = words[currentIndex];
+                    element.style.opacity = 1;
+                  }, 500);
+                  currentIndex++;
+                  if (currentIndex == words.length) {
+                    currentIndex = 0;
+                  }
+                }, 3000);
+              }
 
-document.addEventListener("DOMContentLoaded", function(event) {
-  changeWord();
-});
+              document.addEventListener("DOMContentLoaded", function (event) {
+                changeWord();
+              });
             </script>
             <p style="
                   font-family: Inter;
@@ -386,35 +400,34 @@ document.addEventListener("DOMContentLoaded", function(event) {
                   </div>
 
 
-                  <div id="custom-substack-embed" onclick="
-                  // var modal = document.getElementById('myModal');
-                  // modal.classList.add('show');
-                  // modal.style.display = 'block';
-                  ">
-                    <script>
-                      window.CustomSubstackWidget = {
-                        substackUrl: "thechiefofstuff.substack.com",
-                        placeholder: "chief@email.com",
-                        theme: "custom",
-                        // onSubmit:function(email) {
-                        // var modal = document.getElementById('myModal');
-                        // modal.classList.add('show');
-                        // modal.style.display = 'block';
+                  <div id="custom-substack-embed">
 
-                        // },
-                        colors: {
-                          primary: "#FB612A",
-                          input: "#FFFFFF",
-                          email: "#000000",
-                          text: "#FFFFFF",
-                        }
-                      };
+                  </div>
+
+                  <script>
+                    window.CustomSubstackWidget = {
+                      substackUrl: "thechiefofstuff.substack.com",
+                      placeholder: "chief@email.com",
+                      theme: "custom",
+                      // onSubmit:function(email) {
+                      // var modal = document.getElementById('myModal');
+                      // modal.classList.add('show');
+                      // modal.style.display = 'block';
+
+                      // },
+                      colors: {
+                        primary: "#FB612A",
+                        input: "#FFFFFF",
+                        email: "#000000",
+                        text: "#FFFFFF",
+                      }
+                    };
 
 
-                    </script>
-                    <script src="https://substackapi.com/widget.js" async></script>
+                  </script>
+                  <script src="https://substackapi.com/widget.js" async></script>
 
-                    <script>
+                  <!-- <script>
                       function myFunction(event) {
                         var div = event.currentTarget;
                         var rect = div.getBoundingClientRect();
@@ -426,7 +439,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         }
                       }
                     </script>
-                  </div>
+                   -->
 
 
                 </div>
@@ -1084,7 +1097,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         background-color: #FAF8F4;
                         border: none;">
                         <img src="img/icons/zoom.png" class="img-fluid" alt="Image" data-toggle="modal"
-                          data-target="#imageModal" onclick="window.open(issues[issueNo].cover[imageNo],'_blank');">
+                          data-target="#imageModal" onclick="window.open(issues[issueNo].cover[imgNo],'_blank');">
                         <script>
                           var imageNo = 0;
 
@@ -1130,20 +1143,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
                   <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-issue-tab"
                     tabindex="0">
                     <div class="row">
-                      <div class="col" style="padding-top: 10%;">
-                        <h1 class="text1" id="magTitle" style="font-family: Merriweather;
+                      <h1 class="text1" id="magTitle" style="font-family: Merriweather;
                         font-size: 3vw;
                         font-weight: 700;">Issue #3</h1>
-                        <p class="text2" id="magDiscription" style="
+                      <p class="text2" id="magDiscription" style="
                         font-family: Inter;
                         font-size: 1.5vw;
                         font-weight: 400;
                         margin-top: 5%;">Our Third Issue is centered around exploration and people. We ventured all
-                          over, from Sweden to Brazil, in search of the people who are reinventing old systems,
-                          questioning the status quo, and protecting fundamental values. We asked a ton of questions
-                          and
-                          we are certain that the answers among these pages will surprise and delight you.</p>
-                        <button class="btn btn1" id="getNowBtn" style="
+                        over, from Sweden to Brazil, in search of the people who are reinventing old systems,
+                        questioning the status quo, and protecting fundamental values. We asked a ton of questions
+                        and
+                        we are certain that the answers among these pages will surprise and delight you.</p>
+                      <button class="btn btn1" id="getNowBtn" style="
                         height: 77px;
                         width: 100%;
                         border-radius: 16px;
@@ -1151,328 +1163,329 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         background: #ED6838;
                         box-shadow: 0px 4px 16px rgba(251, 97, 42, 0.8);
                         border-radius: 16px;margin-top: 5%;" onclick="openPaymentWindow()">
-                          <p class="text1" style="font-family: Inter;
+                        <p class="text1" style="font-family: Inter;
                           font-size: 100%;
                           font-weight: 700;
                           color: white;
                           ">Get Now!</p>
-                        </button>
-                        <script>
-                          var payLink = "https://chiefofstuff.gumroad.com/l/QAHSpring";
-                          function openPaymentWindow() {
-                            window.open(payLink, "_blank");
-                          }
-                        </script>
-                      </div>
+                      </button>
+
+                      <script>
+                        var payLink = "https://chiefofstuff.gumroad.com/l/QAHSpring";
+                        console.log($('#isSubscribed').val());
+                        function openPaymentWindow() {
+                          window.open(payLink, "_blank");
+                        }
+
+                      </script>
                     </div>
                   </div>
-                  <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-high-tab" tabindex="0">
-                    <div class="container">
-                      <div class="col">
-                        <p style="
+                </div>
+                <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-high-tab" tabindex="0">
+                  <div class="container">
+                    <div class="col">
+                      <p style="
                         font-family: Inter;
                         font-size: 1.5vw;
                         font-weight: 400;
                         color: #46443B;
                       ">Some of the topics covered in this issue of The Quarterly All Hands</p>
-                      </div>
-                      <ul id="highlightsTab" style="margin: 0%;">
-                        <!-- List items will go here -->
-                      </ul>
                     </div>
+                    <ul id="highlightsTab" style="margin: 0%;">
+                      <!-- List items will go here -->
+                    </ul>
                   </div>
-                  <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-about-tab"
-                    tabindex="0">
-                    <div class="row">
-                      <div class="col" style="padding-top: 10%;">
-                        <h1 class="text1" style="font-family: Merriweather;
+                </div>
+                <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-about-tab" tabindex="0">
+                  <div class="row">
+                    <div class="col" style="padding-top: 10%;">
+                      <h1 class="text1" style="font-family: Merriweather;
                         font-size: 54px;
                         font-weight: 700;">The Quarterly All Hands</h1>
-                        <p class="text2" style="
+                      <p class="text2" style="
                         font-family: Inter;
                         font-size: 24px;
                         font-weight: 400;
                         margin-top: 5%;">The Quarterly All Hands is designed to be enjoyed at your leisure - while at
-                          lunch, riding the train, as a break from your feed, or when you're bored. Wherever you are,
-                          we
-                          hope you find inspiration, get lost in the pages, and discover something new.</p>
+                        lunch, riding the train, as a break from your feed, or when you're bored. Wherever you are,
+                        we
+                        hope you find inspiration, get lost in the pages, and discover something new.</p>
 
-                      </div>
                     </div>
                   </div>
                 </div>
-
-                <script>
-                  const naviItems = document.querySelectorAll('#navIt');
-
-                  // add a click event listener to each button
-                  naviItems.forEach((naviItem) => {
-                    naviItem.addEventListener('click', () => {
-                      // remove the border from all buttons
-                      naviItems.forEach((item) => {
-                        item.querySelector('button').style.borderBottom = 'none';
-                      });
-                      // add the border to the clicked button
-                      naviItem.querySelector('button').style.borderBottom = '3px solid black';
-                    });
-                  });
-                </script>
               </div>
+
+              <script>
+                const naviItems = document.querySelectorAll('#navIt');
+
+                // add a click event listener to each button
+                naviItems.forEach((naviItem) => {
+                  naviItem.addEventListener('click', () => {
+                    // remove the border from all buttons
+                    naviItems.forEach((item) => {
+                      item.querySelector('button').style.borderBottom = 'none';
+                    });
+                    // add the border to the clicked button
+                    naviItem.querySelector('button').style.borderBottom = '3px solid black';
+                  });
+                });
+              </script>
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="pills-profile-d" role="tabpanel" aria-labelledby="pills-profile-tab"
-          tabindex="0">
-          <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation" id="navItems">
-              <button class="active" id="navBtn0"
-                style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;border-bottom: 3px solid black;"
-                data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-home"
-                aria-selected="true">#thought leadership</button>
-            </li>
-            <li class="nav-item" role="presentation" id="navItems">
-              <button class="" id="navBtn1"
-                style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
-                data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-profile"
-                aria-selected="false">#engineering</button>
-            </li>
-            <li class="nav-item" role="presentation" id="navItems">
-              <button class="" id="navBtn2"
-                style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
-                data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-contact"
-                aria-selected="false">#one on one</button>
-            </li>
-            <li class="nav-item" role="presentation" id="navItems">
-              <button class="" id="navBtn3"
-                style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
-                data-bs-toggle="pill" data-bs-target="#pills-4" type="button" role="tab" aria-controls="pills-contact"
-                aria-selected="false">#crypto 101</button>
-            </li>
-            <li class="nav-item" role="presentation" id="navItems">
-              <button class="" id="navBtn4"
-                style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
-                data-bs-toggle="pill" data-bs-target="#pills-5" type="button" role="tab" aria-controls="pills-contact"
-                aria-selected="false">#rest of world</button>
-            </li>
-            <li class="nav-item" role="presentation" id="navItems">
-              <button class="" id="navBtn5"
-                style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
-                data-bs-toggle="pill" data-bs-target="#pills-6" type="button" role="tab" aria-controls="pills-contact"
-                aria-selected="false">#rest of world</button>
-            </li>
-          </ul>
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab"
-              tabindex="0">
-              <div class="container-fluid  d-none d-sm-block"
-                style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
-                <div class="row">
+      </div>
+      <div class="tab-pane fade" id="pills-profile-d" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation" id="navItems">
+            <button class="active" id="navBtn0"
+              style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;border-bottom: 3px solid black;"
+              data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-home"
+              aria-selected="true">#thought leadership</button>
+          </li>
+          <li class="nav-item" role="presentation" id="navItems">
+            <button class="" id="navBtn1"
+              style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
+              data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-profile"
+              aria-selected="false">#engineering</button>
+          </li>
+          <li class="nav-item" role="presentation" id="navItems">
+            <button class="" id="navBtn2"
+              style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
+              data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-contact"
+              aria-selected="false">#one on one</button>
+          </li>
+          <li class="nav-item" role="presentation" id="navItems">
+            <button class="" id="navBtn3"
+              style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
+              data-bs-toggle="pill" data-bs-target="#pills-4" type="button" role="tab" aria-controls="pills-contact"
+              aria-selected="false">#crypto 101</button>
+          </li>
+          <li class="nav-item" role="presentation" id="navItems">
+            <button class="" id="navBtn4"
+              style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
+              data-bs-toggle="pill" data-bs-target="#pills-5" type="button" role="tab" aria-controls="pills-contact"
+              aria-selected="false">#rest of world</button>
+          </li>
+          <li class="nav-item" role="presentation" id="navItems">
+            <button class="" id="navBtn5"
+              style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none"
+              data-bs-toggle="pill" data-bs-target="#pills-6" type="button" role="tab" aria-controls="pills-contact"
+              aria-selected="false">#rest of world</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab"
+            tabindex="0">
+            <div class="container-fluid  d-none d-sm-block"
+              style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+              <div class="row">
 
-                  <div class="col-12 " style="margin-top: 5vh;">
-                    <div class="row align-items-center" id="articles">
+                <div class="col-12 " style="margin-top: 5vh;">
+                  <div class="row align-items-center" id="articles">
 
-                    </div>
                   </div>
                 </div>
-                <div class="container-fluid"></div>
-                <div class="row">
-                  <div class="col-1"> <button class="d-flex justify-content-end" type="button "
-                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                      <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
-                    </button></div>
-                  <div class="col-10"></div>
-                  <div class="col-1"><button class="d-flex justify-content-end" type="button"
-                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                      <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+              </div>
+              <div class="container-fluid"></div>
+              <div class="row">
+                <div class="col-1"> <button class="d-flex justify-content-end" type="button "
+                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                    <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+                  </button></div>
+                <div class="col-10"></div>
+                <div class="col-1"><button class="d-flex justify-content-end" type="button"
+                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                    <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
 
-                    </button></div>
-
-                </div>
+                  </button></div>
 
               </div>
-            </div>
-            <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab" tabindex="0">
-              <div class="container-fluid  d-none d-sm-block"
-                style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
-                <div class="row">
 
-                  <div class="col-12 " style="margin-top: 5vh;">
-                    <div class="row align-items-center" id="articles2">
-
-                    </div>
-                  </div>
-                </div>
-                <div class="container-fluid"></div>
-                <div class="row">
-                  <div class="col-1"> <button class="d-flex justify-content-end" type="button "
-                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                      <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
-                    </button></div>
-                  <div class="col-10"></div>
-                  <div class="col-1"><button class="d-flex justify-content-end" type="button"
-                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                      <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
-
-                    </button></div>
-
-                </div>
-
-              </div>
-            </div>
-            <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab" tabindex="0">
-              <div class="container-fluid  d-none d-sm-block"
-                style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
-                <div class="row">
-
-                  <div class="col-12 " style="margin-top: 5vh;">
-                    <div class="row align-items-center" id="articles3">
-
-                    </div>
-                  </div>
-                </div>
-                <div class="container-fluid"></div>
-                <div class="row">
-                  <div class="col-1"> <button class="d-flex justify-content-end" type="button "
-                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                      <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
-                    </button></div>
-                  <div class="col-10"></div>
-                  <div class="col-1"><button class="d-flex justify-content-end" type="button"
-                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                      <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
-
-                    </button></div>
-
-                </div>
-
-              </div>
-            </div>
-            <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab" tabindex="0">
-              <div class="container-fluid  d-none d-sm-block"
-                style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
-                <div class="row">
-
-                  <div class="col-12 " style="margin-top: 5vh;">
-                    <div class="row align-items-center" id="articles4">
-
-                    </div>
-                  </div>
-                </div>
-                <div class="container-fluid"></div>
-                <div class="row">
-                  <div class="col-1"> <button class="d-flex justify-content-end" type="button "
-                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                      <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
-                    </button></div>
-                  <div class="col-10"></div>
-                  <div class="col-1"><button class="d-flex justify-content-end" type="button"
-                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                      <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
-
-                    </button></div>
-
-                </div>
-
-              </div>
-            </div>
-            <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-5-tab" tabindex="0">
-              <div class="container-fluid  d-none d-sm-block"
-                style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
-                <div class="row">
-
-                  <div class="col-12 " style="margin-top: 5vh;">
-                    <div class="row align-items-center" id="articles5">
-
-                    </div>
-                  </div>
-                </div>
-                <div class="container-fluid"></div>
-                <div class="row">
-                  <div class="col-1"> <button class="d-flex justify-content-end" type="button "
-                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                      <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
-                    </button></div>
-                  <div class="col-10"></div>
-                  <div class="col-1"><button class="d-flex justify-content-end" type="button"
-                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                      <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
-
-                    </button></div>
-
-                </div>
-
-              </div>
-            </div>
-            <div class="tab-pane fade" id="pills-6" role="tabpanel" aria-labelledby="pills-6-tab" tabindex="0">
-              <div class="container-fluid  d-none d-sm-block"
-                style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
-                <div class="row">
-
-                  <div class="col-12 " style="margin-top: 5vh;">
-                    <div class="row align-items-center" id="articles6">
-
-                    </div>
-                  </div>
-                </div>
-                <div class="container-fluid"></div>
-                <div class="row">
-                  <div class="col-1"> <button class="d-flex justify-content-end" type="button "
-                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                      <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
-                    </button></div>
-                  <div class="col-10"></div>
-                  <div class="col-1"><button class="d-flex justify-content-end" type="button"
-                      style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-                      <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
-
-                    </button></div>
-
-                </div>
-
-              </div>
             </div>
           </div>
+          <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab" tabindex="0">
+            <div class="container-fluid  d-none d-sm-block"
+              style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+              <div class="row">
 
-          <script>
-            const navItems = document.querySelectorAll('#navItems');
+                <div class="col-12 " style="margin-top: 5vh;">
+                  <div class="row align-items-center" id="articles2">
 
-            // add a click event listener to each button
-            navItems.forEach((navItem) => {
-              navItem.addEventListener('click', () => {
-                // remove the border from all buttons
-                navItems.forEach((item) => {
-                  item.querySelector('button').style.borderBottom = 'none';
-                });
-                // add the border to the clicked button
-                navItem.querySelector('button').style.borderBottom = '3px solid black';
+                  </div>
+                </div>
+              </div>
+              <div class="container-fluid"></div>
+              <div class="row">
+                <div class="col-1"> <button class="d-flex justify-content-end" type="button "
+                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                    <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+                  </button></div>
+                <div class="col-10"></div>
+                <div class="col-1"><button class="d-flex justify-content-end" type="button"
+                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                    <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+
+                  </button></div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab" tabindex="0">
+            <div class="container-fluid  d-none d-sm-block"
+              style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+              <div class="row">
+
+                <div class="col-12 " style="margin-top: 5vh;">
+                  <div class="row align-items-center" id="articles3">
+
+                  </div>
+                </div>
+              </div>
+              <div class="container-fluid"></div>
+              <div class="row">
+                <div class="col-1"> <button class="d-flex justify-content-end" type="button "
+                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                    <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+                  </button></div>
+                <div class="col-10"></div>
+                <div class="col-1"><button class="d-flex justify-content-end" type="button"
+                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                    <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+
+                  </button></div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab" tabindex="0">
+            <div class="container-fluid  d-none d-sm-block"
+              style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+              <div class="row">
+
+                <div class="col-12 " style="margin-top: 5vh;">
+                  <div class="row align-items-center" id="articles4">
+
+                  </div>
+                </div>
+              </div>
+              <div class="container-fluid"></div>
+              <div class="row">
+                <div class="col-1"> <button class="d-flex justify-content-end" type="button "
+                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                    <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+                  </button></div>
+                <div class="col-10"></div>
+                <div class="col-1"><button class="d-flex justify-content-end" type="button"
+                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                    <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+
+                  </button></div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-5-tab" tabindex="0">
+            <div class="container-fluid  d-none d-sm-block"
+              style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+              <div class="row">
+
+                <div class="col-12 " style="margin-top: 5vh;">
+                  <div class="row align-items-center" id="articles5">
+
+                  </div>
+                </div>
+              </div>
+              <div class="container-fluid"></div>
+              <div class="row">
+                <div class="col-1"> <button class="d-flex justify-content-end" type="button "
+                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                    <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+                  </button></div>
+                <div class="col-10"></div>
+                <div class="col-1"><button class="d-flex justify-content-end" type="button"
+                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                    <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+
+                  </button></div>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-6" role="tabpanel" aria-labelledby="pills-6-tab" tabindex="0">
+            <div class="container-fluid  d-none d-sm-block"
+              style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+              <div class="row">
+
+                <div class="col-12 " style="margin-top: 5vh;">
+                  <div class="row align-items-center" id="articles6">
+
+                  </div>
+                </div>
+              </div>
+              <div class="container-fluid"></div>
+              <div class="row">
+                <div class="col-1"> <button class="d-flex justify-content-end" type="button "
+                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                    <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+                  </button></div>
+                <div class="col-10"></div>
+                <div class="col-1"><button class="d-flex justify-content-end" type="button"
+                    style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+                    <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+
+                  </button></div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <script>
+          const navItems = document.querySelectorAll('#navItems');
+
+          // add a click event listener to each button
+          navItems.forEach((navItem) => {
+            navItem.addEventListener('click', () => {
+              // remove the border from all buttons
+              navItems.forEach((item) => {
+                item.querySelector('button').style.borderBottom = 'none';
               });
+              // add the border to the clicked button
+              navItem.querySelector('button').style.borderBottom = '3px solid black';
             });
+          });
 
 
 
 
-            document.addEventListener('DOMContentLoaded', function () {
-              const container = document.getElementById('articles');
-              const container2 = document.getElementById('articles2');
-              const container3 = document.getElementById('articles3');
-              const container4 = document.getElementById('articles4');
-              const container5 = document.getElementById('articles5');
-              const container6 = document.getElementById('articles6');
+          document.addEventListener('DOMContentLoaded', function () {
+            const container = document.getElementById('articles');
+            const container2 = document.getElementById('articles2');
+            const container3 = document.getElementById('articles3');
+            const container4 = document.getElementById('articles4');
+            const container5 = document.getElementById('articles5');
+            const container6 = document.getElementById('articles6');
 
-              var list = [container, container2, container3, container4, container5, container6];
+            var list = [container, container2, container3, container4, container5, container6];
 
-              // Loop through the desired number of elements and create them
-              for (let i = 0; i < issues.length; i++) {
-                // Create a new div element
-                for (let j = 0; j < list.length; j++) {
-                  const newDiv = document.createElement("div");
+            // Loop through the desired number of elements and create them
+            for (let i = 0; i < issues.length; i++) {
+              // Create a new div element
+              for (let j = 0; j < list.length; j++) {
+                const newDiv = document.createElement("div");
 
-                  // Set the class and style attributes of the div
-                  newDiv.setAttribute("class", "col-3");
-                  newDiv.setAttribute("style", "border-radius: 16px; padding: 16px; background: #FAF8F4;margin: 0.5vw;width:20vw");
+                // Set the class and style attributes of the div
+                newDiv.setAttribute("class", "col-3");
+                newDiv.setAttribute("style", "border-radius: 16px; padding: 16px; background: #FAF8F4;margin: 0.5vw;width:20vw");
 
-                  // Add the code to the innerHTML of the div
-                  newDiv.innerHTML = `
+                // Add the code to the innerHTML of the div
+                newDiv.innerHTML = `
                 
           <div class="col">
             <button class="btn btn-light" style="
@@ -1522,37 +1535,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
           </div>
           `;
 
-                  // Add the new div to the container element
-                  list[j].appendChild(newDiv);
-                }
-
-
+                // Add the new div to the container element
+                list[j].appendChild(newDiv);
               }
 
-              const images = document.querySelectorAll('#issuesImg');
-              const issueText = document.querySelectorAll('#issuesText');
+
+            }
+
+            const images = document.querySelectorAll('#issuesImg');
+            const issueText = document.querySelectorAll('#issuesText');
 
 
-              for (let i = 0; i < images.length; i++) {
+            for (let i = 0; i < images.length; i++) {
 
-                images[i].setAttribute('src', issues[i].cover[0]);
-                issueText[i].innerText = `${issues[i].title}`;
-              }
-            });
-          </script>
-        </div>
-        <div class="tab-pane fade" id="pills-contact-d" role="tabpanel" aria-labelledby="pills-contact-tab"
-          tabindex="0">
-          <div style="
+              images[i].setAttribute('src', issues[i].cover[0]);
+              issueText[i].innerText = `${issues[i].title}`;
+            }
+          });
+        </script>
+      </div>
+      <div class="tab-pane fade" id="pills-contact-d" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+        <div style="
                 display: flex;
                 flex-direction: row;
                 align-items: flex-start;
                 background-color: #F1EFEA;
                 padding-top: 3%;
               ">
-            <img class="img-fluid" src="img/images/ourStory.png" alt="Image" style="width:40vw; align-self: start;" />
-            <div class="col" style="align-self: start;">
-              <h1 style="
+          <img class="img-fluid" src="img/images/ourStory.png" alt="Image" style="width:40vw; align-self: start;" />
+          <div class="col" style="align-self: start;">
+            <h1 style="
                   font-family: Merriweather;
                   font-size: 4em;
                   font-weight: 700;
@@ -1561,9 +1573,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
                   margin-left: 3%;
                   margin-top: 3%;
                 ">
-                A little backstory
-              </h1>
-              <p style="
+              A little backstory
+            </h1>
+            <p style="
                   font-family: Inter;
                   font-size: 24px;
                   font-weight: 400;
@@ -1571,404 +1583,406 @@ document.addEventListener("DOMContentLoaded", function(event) {
                   color: #5c5c5c;
                   padding: 2%;
                 ">
-                Hi, I’m Sarah Maxwell aka the Chief of Stuff! There’s a lot of stuff out there, but what actually
-                matters? This question prompted my curiosity and in August of 2020 I launched Chief of Stuff, a new
-                media platform, that’s your source for useful, entertaining, educational, and inspirational STUFF. In a
-                world filled with noise, our goal is to enable more voices to shine and allow our collective knowledge
-                base to grow. After all, life is about learning and your curiosity is calling! You can read more about
-                <snap style="color: #ED6838;"> my story here.</snap>
-              </p>
-            </div>
-
+              Hi, I’m Sarah Maxwell aka the Chief of Stuff! There’s a lot of stuff out there, but what actually
+              matters? This question prompted my curiosity and in August of 2020 I launched Chief of Stuff, a new
+              media platform, that’s your source for useful, entertaining, educational, and inspirational STUFF. In a
+              world filled with noise, our goal is to enable more voices to shine and allow our collective knowledge
+              base to grow. After all, life is about learning and your curiosity is calling! You can read more about
+              <snap style="color: #ED6838;"> my story here.</snap>
+            </p>
           </div>
+
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Previous Issues Section Desktop Only-->
-    <div class="container-fluid  d-none d-sm-block"
-      style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
-      <div class="row">
-        <div class="col-12">
-          <p class="text"
-            style="margin-bottom: 5%;font-family: Merriweather;font-size: 32px;font-weight: 700;margin-bottom: 2%;">
-            Previous Issues</p>
-        </div>
-        <div class="col-12 " style="margin-top: 5vh;">
-          <div class="row align-items-center" id="issuesDiv">
+  <!-- Previous Issues Section Desktop Only-->
+  <div class="container-fluid  d-none d-sm-block"
+    style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+    <div class="row">
+      <div class="col-12">
+        <p class="text"
+          style="margin-bottom: 5%;font-family: Merriweather;font-size: 32px;font-weight: 700;margin-bottom: 2%;">
+          Previous Issues</p>
+      </div>
+      <div class="col-12 " style="margin-top: 5vh;">
+        <div class="row align-items-center" id="issuesDiv">
 
-          </div>
         </div>
       </div>
-      <div class="container-fluid"></div>
-      <div class="row">
-        <div class="col-1"> <button class="d-flex justify-content-end" type="button "
-            style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-            <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
-          </button></div>
-        <div class="col-10"></div>
-        <div class="col-1"><button class="d-flex justify-content-end" type="button"
-            style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-            <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
+    </div>
+    <div class="container-fluid"></div>
+    <div class="row">
+      <div class="col-1"> <button class="d-flex justify-content-end" type="button "
+          style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+          <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+        </button></div>
+      <div class="col-10"></div>
+      <div class="col-1"><button class="d-flex justify-content-end" type="button"
+          style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+          <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
 
-          </button></div>
-
-      </div>
+        </button></div>
 
     </div>
 
-    <!-- Previous Issues Section Mobile Only-->
-    <div class=" 
+  </div>
+
+  <!-- Previous Issues Section Mobile Only-->
+  <div class=" 
       d-block d-sm-none
       " style="margin-top: 20%;margin-bottom: 10%;">
 
-      <div class="col-12">
-        <p class="text" style="font-family: Merriweather;font-size: 32px;font-weight: 700;margin-bottom: 2%;">Previous
-          Issues</p>
-      </div>
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row">
-              <div class="col-xs-6">
-                <img src="img/images/mag.png" alt="Image 1" style="height: 60vh;">
-                <p class="text" style="font-family: Inter;
+    <div class="col-12">
+      <p class="text" style="font-family: Merriweather;font-size: 32px;font-weight: 700;margin-bottom: 2%;">Previous
+        Issues</p>
+    </div>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-xs-6">
+              <img src="img/images/mag.png" alt="Image 1" style="height: 60vh;">
+              <p class="text" style="font-family: Inter;
                   font-size: 24px;
                   font-weight: 500;
                   line-height: 40px;
                   letter-spacing: 0em;
                   text-align: left;margin-top: 2%;">Issue #4</p>
-              </div>
-
             </div>
+
           </div>
-          <div class="carousel-item ">
-            <div class="row align-items-center">
-              <div class="col-xs-6 " style="align-self: center;">
-                <img src="img/images/mag.png" alt="Image 1" style="height: 60vh;">
-                <p class="text" style="font-family: Inter;
+        </div>
+        <div class="carousel-item ">
+          <div class="row align-items-center">
+            <div class="col-xs-6 " style="align-self: center;">
+              <img src="img/images/mag.png" alt="Image 1" style="height: 60vh;">
+              <p class="text" style="font-family: Inter;
                   font-size: 24px;
                   font-weight: 500;
                   line-height: 40px;
                   letter-spacing: 0em;
                   text-align: left;margin-top: 2%;">Issue #3</p>
-              </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-xs-6">
-                <img src="img/images/issue2.png" alt="Image 1" style="height: 60vh;">
-                <p class="text" style="font-family: Inter;
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-xs-6">
+              <img src="img/images/issue2.png" alt="Image 1" style="height: 60vh;">
+              <p class="text" style="font-family: Inter;
                   font-size: 24px;
                   font-weight: 500;
                   line-height: 40px;
                   letter-spacing: 0em;
                   text-align: left;margin-top: 2%;">Issue #2</p>
-              </div>
-
             </div>
+
           </div>
-          <div class="carousel-item" id="issueText-m">
-            <div class="row align-items-center">
-              <div class="col-xs-6 " style="align-self: center;">
-                <img src="img/images/issue3.png" id="issueImg-m" alt="Image 1" style="height: 60vh;">
-                <p class="text" id="issueText-m" style="font-family: Inter;
+        </div>
+        <div class="carousel-item" id="issueText-m">
+          <div class="row align-items-center">
+            <div class="col-xs-6 " style="align-self: center;">
+              <img src="img/images/issue3.png" id="issueImg-m" alt="Image 1" style="height: 60vh;">
+              <p class="text" id="issueText-m" style="font-family: Inter;
                   font-size: 24px;
                   font-weight: 500;
                   line-height: 40px;
                   letter-spacing: 0em;
                   text-align: left;margin: 2%;">Issue #1</p>
-              </div>
             </div>
           </div>
-
         </div>
 
-
-
       </div>
-      <div class="align-content-start" style="margin-bottom: 5%;">
-        <button class="" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"
-          style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-          <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
-        </button>
-        <button class="" type="button" data-bs-target="#carouselExample" data-bs-slide="next"
-          style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
-          <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
-
-        </button>
-      </div>
-
-
 
 
 
     </div>
+    <div class="align-content-start" style="margin-bottom: 5%;">
+      <button class="" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"
+        style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+        <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
+      </button>
+      <button class="" type="button" data-bs-target="#carouselExample" data-bs-slide="next"
+        style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
+        <span aria-hidden="true"><i class="bi bi-chevron-right text-black"></i></span>
 
-    <script>
-      var issueNo = 0;
-      var imgNo = 0;
+      </button>
+    </div>
 
 
-      const button1 = document.getElementById('pills-home-tab');
-      const button2 = document.getElementById('pills-profile-tab');
-      const button3 = document.getElementById('pills-contact-tab');
 
-      const tabButtons = document.querySelectorAll('.nav-link');
-      const tabContents = document.querySelectorAll('.tab-pane');
 
-      tabButtons.forEach(function (tabButton) {
-        tabButton.addEventListener('click', function () {
-          // deactivate all tab panes
-          tabContents.forEach(function (tabContent) {
-            tabContent.classList.remove('active', 'show');
-          });
 
-          // activate the corresponding tab pane
-          const target = document.querySelector(tabButton.getAttribute('data-bs-target'));
-          target.classList.add('active', 'show');
+  </div>
+
+  <script>
+    var issueNo = 0;
+    var imgNo = 0;
+
+
+    const button1 = document.getElementById('pills-home-tab');
+    const button2 = document.getElementById('pills-profile-tab');
+    const button3 = document.getElementById('pills-contact-tab');
+
+    const tabButtons = document.querySelectorAll('.nav-link');
+    const tabContents = document.querySelectorAll('.tab-pane');
+
+    tabButtons.forEach(function (tabButton) {
+      tabButton.addEventListener('click', function () {
+        // deactivate all tab panes
+        tabContents.forEach(function (tabContent) {
+          tabContent.classList.remove('active', 'show');
         });
+
+        // activate the corresponding tab pane
+        const target = document.querySelector(tabButton.getAttribute('data-bs-target'));
+        target.classList.add('active', 'show');
       });
+    });
 
-      button2.addEventListener('click', function () {
-        document.getElementById('pills-home-tab').style.backgroundColor = '#FFFFFF52';
-        document.getElementById('pills-contact-tab').style.backgroundColor = '#FFFFFF52';
-        document.getElementById('pills-home-tab').style.boxShadow = 'none';
-        document.getElementById('pills-contact-tab').style.boxShadow = 'none';
+    button2.addEventListener('click', function () {
+      document.getElementById('pills-home-tab').style.backgroundColor = '#FFFFFF52';
+      document.getElementById('pills-contact-tab').style.backgroundColor = '#FFFFFF52';
+      document.getElementById('pills-home-tab').style.boxShadow = 'none';
+      document.getElementById('pills-contact-tab').style.boxShadow = 'none';
 
-        this.style.backgroundColor = '#ED6838';
-        this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
+      this.style.backgroundColor = '#ED6838';
+      this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
 
-        document.getElementById('text1-d').style.color = '#000';
-        document.getElementById('text2-d').style.color = '#fff';
-        document.getElementById('text3-d').style.color = '#000';
-      });
-      button1.addEventListener('click', function () {
+      document.getElementById('text1-d').style.color = '#000';
+      document.getElementById('text2-d').style.color = '#fff';
+      document.getElementById('text3-d').style.color = '#000';
+    });
+    button1.addEventListener('click', function () {
 
-        document.getElementById('pills-profile-tab').style.backgroundColor = '#FFFFFF52';
-        document.getElementById('pills-contact-tab').style.backgroundColor = '#FFFFFF52';
-        document.getElementById('pills-profile-tab').style.boxShadow = 'none';
-        document.getElementById('pills-contact-tab').style.boxShadow = 'none';
+      document.getElementById('pills-profile-tab').style.backgroundColor = '#FFFFFF52';
+      document.getElementById('pills-contact-tab').style.backgroundColor = '#FFFFFF52';
+      document.getElementById('pills-profile-tab').style.boxShadow = 'none';
+      document.getElementById('pills-contact-tab').style.boxShadow = 'none';
 
-        this.style.backgroundColor = '#ED6838';
-        this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
+      this.style.backgroundColor = '#ED6838';
+      this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
 
-        document.getElementById('text1-d').style.color = '#fff';
-        document.getElementById('text2-d').style.color = '#000';
-        document.getElementById('text3-d').style.color = '#000';
-      });
-      button3.addEventListener('click', function () {
-        document.getElementById('pills-home-tab').style.backgroundColor = '#FFFFFF52';
-        document.getElementById('pills-profile-tab').style.backgroundColor = '#FFFFFF52';
-        document.getElementById('pills-home-tab').style.boxShadow = 'none';
-        document.getElementById('pills-profile-tab').style.boxShadow = 'none';
+      document.getElementById('text1-d').style.color = '#fff';
+      document.getElementById('text2-d').style.color = '#000';
+      document.getElementById('text3-d').style.color = '#000';
+    });
+    button3.addEventListener('click', function () {
+      document.getElementById('pills-home-tab').style.backgroundColor = '#FFFFFF52';
+      document.getElementById('pills-profile-tab').style.backgroundColor = '#FFFFFF52';
+      document.getElementById('pills-home-tab').style.boxShadow = 'none';
+      document.getElementById('pills-profile-tab').style.boxShadow = 'none';
 
-        this.style.backgroundColor = '#ED6838';
-        this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
+      this.style.backgroundColor = '#ED6838';
+      this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
 
-        document.getElementById('text1-d').style.color = '#000';
-        document.getElementById('text2-d').style.color = '#000';
-        document.getElementById('text3-d').style.color = '#fff';
-      });
-
-
-
-      //highlights
-      const issues = [
-        {
-          cover: [
-            "img/images/Issue1/2.png",
-            "img/images/Issue1/5.png",
-            "img/images/Issue1/6.png",
-            "img/images/Issue1/10.png",
-            "img/images/Issue1/13.png",
-
-          ],
-          title: "Issue #1",
-          description: "Introducing The Quarterly All Hands, a modern magazine and the next evolution of Chief of Stuff. Its pages are filled with snappy and substantive articles, unique interviews, and insights.",
-          paymentLink: "https://chiefofstuff.gumroad.com/l/QAHSpring",
-          highlightContent: [
-            {
-              title: "One to One",
-              description: "I sat down with documentary filmmaker Brent Hodge to hear his experience following the “Most Hated Man in America” for his film Pharma Bro",
-              src: "img/icons/highlights/h2.png",
-            },
-            {
-              title: "Product Overview",
-              description: "A deep dive into sustainable brands that are building a better future - starting with my favorite company, Rent the Runway.",
-              src: "img/icons/highlights/h1.png",
-            },
-            {
-              title: "Decoding Color:",
-              description: "Leading visual merchandiser and color enthusiast Julie Boss kicks off a new series about one of my favorite topics - color!",
-              src: "img/icons/highlights/h3.png",
-            },
-            {
-              title: "The Magic of Mushrooms:",
-              description: "In the Engineering update, I explore how one of the misunderstood organisms in nature could actually save us.",
-              src: "img/icons/highlights/h4.png",
-            },
-            {
-              title: "PLUS:",
-              description: "a compilation of favorite films, restaurants, books, wellness recommendations and so much more!",
-              src: "img/icons/highlights/h5.png",
-            },
-          ]
-        },
-        {
-          cover: [
-            "img/images/Issue2/7.png",
-            "img/images/Issue2/16.png",
-            "img/images/Issue2/18.png",
-            "img/images/Issue2/26.png",
-            "img/images/Issue2/27.png",
-
-          ],
-          title: "Issue #2",
-          description: "The Second Issue takes inspiration from Chief of Stuff’s spiritual home of Greece, celebrates Innovators, and explores New Worlds.As you scroll through, I hope you're inspired to explore new places (real and imaginary), connect with more people, and engage your senses in new ways!",
-          paymentLink: "https://chiefofstuff.gumroad.com/l/sgssd",
-          highlightContent: [
-            {
-              title: "Innovations in Ice Cream:",
-              description: "I sat down with Tyler Malek, the co-founder of Salt & Straw to discuss their novel creation, Culinary Perfume, to learn how our sense of smell has the power to unlock an entire new way to experience food.",
-              src: "img/icons/highlights/h6.png",
-            },
-            {
-              title: "Meet Me in the Metaverse:",
-              description: "I chat with Carmen Lambrianos about developments in Web3 and the unexpected group that’s pioneering the future.",
-              src: "img/icons/highlights/h7.png",
-            },
-            {
-              title: "Escape to the Islands:",
-              description: "Our “hero” story, featuring the beautiful artwork of Rachael Gan, explores my favorite hidden gems in the Cycladic Islands.",
-              src: "img/icons/highlights/h8.png",
-            },
-            {
-              title: "The Unexpected Alchemist:",
-              description: "In my One on One, ceramist and sculptor Zoe Lloyd talks about how her unique process allows her pieces to literally defy gravity.",
-              src: "img/icons/highlights/h2.png",
-            },
-            {
-              title: "Looking Ahead:",
-              description: "As you plan out Fall, Connor Swenson offers wisdom on how to gracefully ease back into school/work/life mode.",
-              src: "img/icons/highlights/h9.png",
-            },
-          ]
-        },
-        {
-          cover: [
-            "img/images/Issue3/3.png",
-            "img/images/Issue3/7.png",
-            "img/images/Issue3/16.png",
-            "img/images/Issue3/26.png",
-            "img/images/Issue3/27.png",
-
-          ],
-          title: "Issue #3",
-          description: "Our Third Issue is centered around exploration and people. We ventured all over, from Sweden to Brazil, in search of the people who are reinventing old systems, questioning the status quo, and protecting fundamental values. We asked a ton of questions and we are certain that the answers among these pages will surprise and delight you.",
-          paymentLink: "https://chiefofstuff.gumroad.com/l/lrswn?_gl=1*i76oey*_ga*MTMxMzI2MzQ3MS4xNjU5NTQzMjg2*_ga_6LJN6D94N6*MTY3OTYzMDE2NC41MC4xLjE2Nzk2MzA3MjguMC4wLjA.",
-          highlightContent: [
-            {
-              title: "One on One with Barnaby Barford:",
-              description: "The acclaimed artist gives us insight into his new book addressing the complex nature of the most unassuming, yet most representative of all fruits... the apple.",
-              src: "img/icons/highlights/h2.png",
-            },
-            {
-              title: "Crypto 101: Bitcoin and Beyond:",
-              description: "We explain the fundamentals of crypto and what’s necessary for this new financial system to properly function in a modern world.",
-              src: "img/icons/highlights/h7.png",
-            },
-            {
-              title: "Innovations in Salt:",
-              description: "Ingrid and Niklas Mun̈ch, the duo behind ALLTGOTT salt infusions, show us how one little jar can enhance more than just flavor.",
-              src: "img/icons/highlights/h6.png",
-            },
-            {
-              title: "Decoding Color:",
-              description: "Julie Boss explores how color makes us feel, the psychology of color and how you can discover your power color!",
-              src: "img/icons/highlights/h3.png",
-            },
-            {
-              title: "Rest of World - The Hidden Gems of Brazil:",
-              description: "In this new series we uncover what makes a country like Brazil truly shine.",
-              src: "img/icons/highlights/h8.png",
-            },
-            {
-              title: "Holiday Stuff Special:",
-              description: "Just in time for Christmas. Here you can find our tips for thriving this holiday season, gift inspo and exclusive, festive party hacks and more!",
-              src: "img/icons/highlights/h10.png",
-            },
-
-          ]
-        },
-        {
-          cover: [
-            "img/images/Issue4/1.png",
-            "img/images/Issue4/2.png",
-            "img/images/Issue4/3.png",
-            "img/images/Issue4/4.png",
-            "img/images/Issue4/5.png",
-
-          ],
-          title: "Issue #4",
-          description: "Our Fourth Issue examines the tension between artificial intelligence and human originality. We believe that good things take time, but tech can be a helpful asset if used wisely. If innovations make our lives easier, then we can use our resources wisely and dedicate our energy to explore the stuff we love.",
-          paymentLink: "https://chiefofstuff.gumroad.com/l/issuefour",
-          highlightContent: [
-            {
-              title: "Stop to Smell the Roses:",
-              description: "The history of the English rose and the man behind the bouquet.",
-              src: "img/icons/highlights/h8.png",
-            },
-            {
-              title: "One on One with Hiroko Imada:",
-              description: "The acclaimed artist and teacher discusses the unique practice of Japanese woodblock printing.",
-              src: "img/icons/highlights/h2.png",
-            },
-            {
-              title: "Humans vs. Machines:",
-              description: "A look at ChatGPT and the impact of generative AI.",
-              src: "img/icons/highlights/h4.png",
-            },
-            {
-              title: "Decoding Color:",
-              description: "Special guest Allison Holman explains 12-season Color Analysis and how to embrace your natural beauty.",
-              src: "img/icons/highlights/h3.png",
-            },
-            {
-              title: "Rise & Shine:",
-              description: "Introducing new products and brands that are reinventing our morning routines.",
-              src: "img/icons/highlights/h1.png",
-            },
-            {
-              title: "Find Your Flock:",
-              description: "How to cultivate connection through passions, hobbies, and interests.",
-              src: "img/icons/highlights/h9.png",
-            },
-          ]
-        }
-      ];
+      document.getElementById('text1-d').style.color = '#000';
+      document.getElementById('text2-d').style.color = '#000';
+      document.getElementById('text3-d').style.color = '#fff';
+    });
 
 
 
+    //highlights
+    const issues = [
+      {
+        cover: [
+          "img/images/Issue1/2.png",
+          "img/images/Issue1/5.png",
+          "img/images/Issue1/6.png",
+          "img/images/Issue1/10.png",
+          "img/images/Issue1/13.png",
+
+        ],
+        title: "Issue #1",
+        description: "Introducing The Quarterly All Hands, a modern magazine and the next evolution of Chief of Stuff. Its pages are filled with snappy and substantive articles, unique interviews, and insights.",
+        paymentLink: "https://chiefofstuff.gumroad.com/l/QAHSpring",
+        highlightContent: [
+          {
+            title: "One to One",
+            description: "I sat down with documentary filmmaker Brent Hodge to hear his experience following the “Most Hated Man in America” for his film Pharma Bro",
+            src: "img/icons/highlights/h2.png",
+          },
+          {
+            title: "Product Overview",
+            description: "A deep dive into sustainable brands that are building a better future - starting with my favorite company, Rent the Runway.",
+            src: "img/icons/highlights/h1.png",
+          },
+          {
+            title: "Decoding Color:",
+            description: "Leading visual merchandiser and color enthusiast Julie Boss kicks off a new series about one of my favorite topics - color!",
+            src: "img/icons/highlights/h3.png",
+          },
+          {
+            title: "The Magic of Mushrooms:",
+            description: "In the Engineering update, I explore how one of the misunderstood organisms in nature could actually save us.",
+            src: "img/icons/highlights/h4.png",
+          },
+          {
+            title: "PLUS:",
+            description: "a compilation of favorite films, restaurants, books, wellness recommendations and so much more!",
+            src: "img/icons/highlights/h5.png",
+          },
+        ]
+      },
+      {
+        cover: [
+          "img/images/Issue2/7.png",
+          "img/images/Issue2/16.png",
+          "img/images/Issue2/18.png",
+          "img/images/Issue2/26.png",
+          "img/images/Issue2/27.png",
+
+        ],
+        title: "Issue #2",
+        description: "The Second Issue takes inspiration from Chief of Stuff’s spiritual home of Greece, celebrates Innovators, and explores New Worlds.As you scroll through, I hope you're inspired to explore new places (real and imaginary), connect with more people, and engage your senses in new ways!",
+        paymentLink: "https://chiefofstuff.gumroad.com/l/sgssd",
+        highlightContent: [
+          {
+            title: "Innovations in Ice Cream:",
+            description: "I sat down with Tyler Malek, the co-founder of Salt & Straw to discuss their novel creation, Culinary Perfume, to learn how our sense of smell has the power to unlock an entire new way to experience food.",
+            src: "img/icons/highlights/h6.png",
+          },
+          {
+            title: "Meet Me in the Metaverse:",
+            description: "I chat with Carmen Lambrianos about developments in Web3 and the unexpected group that’s pioneering the future.",
+            src: "img/icons/highlights/h7.png",
+          },
+          {
+            title: "Escape to the Islands:",
+            description: "Our “hero” story, featuring the beautiful artwork of Rachael Gan, explores my favorite hidden gems in the Cycladic Islands.",
+            src: "img/icons/highlights/h8.png",
+          },
+          {
+            title: "The Unexpected Alchemist:",
+            description: "In my One on One, ceramist and sculptor Zoe Lloyd talks about how her unique process allows her pieces to literally defy gravity.",
+            src: "img/icons/highlights/h2.png",
+          },
+          {
+            title: "Looking Ahead:",
+            description: "As you plan out Fall, Connor Swenson offers wisdom on how to gracefully ease back into school/work/life mode.",
+            src: "img/icons/highlights/h9.png",
+          },
+        ]
+      },
+      {
+        cover: [
+          "img/images/Issue3/3.png",
+          "img/images/Issue3/7.png",
+          "img/images/Issue3/16.png",
+          "img/images/Issue3/26.png",
+          "img/images/Issue3/27.png",
+
+        ],
+        title: "Issue #3",
+        description: "Our Third Issue is centered around exploration and people. We ventured all over, from Sweden to Brazil, in search of the people who are reinventing old systems, questioning the status quo, and protecting fundamental values. We asked a ton of questions and we are certain that the answers among these pages will surprise and delight you.",
+        paymentLink: "https://chiefofstuff.gumroad.com/l/lrswn?_gl=1*i76oey*_ga*MTMxMzI2MzQ3MS4xNjU5NTQzMjg2*_ga_6LJN6D94N6*MTY3OTYzMDE2NC41MC4xLjE2Nzk2MzA3MjguMC4wLjA.",
+        highlightContent: [
+          {
+            title: "One on One with Barnaby Barford:",
+            description: "The acclaimed artist gives us insight into his new book addressing the complex nature of the most unassuming, yet most representative of all fruits... the apple.",
+            src: "img/icons/highlights/h2.png",
+          },
+          {
+            title: "Crypto 101: Bitcoin and Beyond:",
+            description: "We explain the fundamentals of crypto and what’s necessary for this new financial system to properly function in a modern world.",
+            src: "img/icons/highlights/h7.png",
+          },
+          {
+            title: "Innovations in Salt:",
+            description: "Ingrid and Niklas Mun̈ch, the duo behind ALLTGOTT salt infusions, show us how one little jar can enhance more than just flavor.",
+            src: "img/icons/highlights/h6.png",
+          },
+          {
+            title: "Decoding Color:",
+            description: "Julie Boss explores how color makes us feel, the psychology of color and how you can discover your power color!",
+            src: "img/icons/highlights/h3.png",
+          },
+          {
+            title: "Rest of World - The Hidden Gems of Brazil:",
+            description: "In this new series we uncover what makes a country like Brazil truly shine.",
+            src: "img/icons/highlights/h8.png",
+          },
+          {
+            title: "Holiday Stuff Special:",
+            description: "Just in time for Christmas. Here you can find our tips for thriving this holiday season, gift inspo and exclusive, festive party hacks and more!",
+            src: "img/icons/highlights/h10.png",
+          },
+
+        ]
+      },
+      {
+        cover: [
+          "img/images/Issue4/1.png",
+          "img/images/Issue4/2.png",
+          "img/images/Issue4/3.png",
+          "img/images/Issue4/4.png",
+          "img/images/Issue4/5.png",
+
+        ],
+        title: "Issue #4",
+        description: "Our Fourth Issue examines the tension between artificial intelligence and human originality. We believe that good things take time, but tech can be a helpful asset if used wisely. If innovations make our lives easier, then we can use our resources wisely and dedicate our energy to explore the stuff we love.",
+        paymentLink: "https://chiefofstuff.gumroad.com/l/issuefour",
+        highlightContent: [
+          {
+            title: "Stop to Smell the Roses:",
+            description: "The history of the English rose and the man behind the bouquet.",
+            src: "img/icons/highlights/h8.png",
+          },
+          {
+            title: "One on One with Hiroko Imada:",
+            description: "The acclaimed artist and teacher discusses the unique practice of Japanese woodblock printing.",
+            src: "img/icons/highlights/h2.png",
+          },
+          {
+            title: "Humans vs. Machines:",
+            description: "A look at ChatGPT and the impact of generative AI.",
+            src: "img/icons/highlights/h4.png",
+          },
+          {
+            title: "Decoding Color:",
+            description: "Special guest Allison Holman explains 12-season Color Analysis and how to embrace your natural beauty.",
+            src: "img/icons/highlights/h3.png",
+          },
+          {
+            title: "Rise & Shine:",
+            description: "Introducing new products and brands that are reinventing our morning routines.",
+            src: "img/icons/highlights/h1.png",
+          },
+          {
+            title: "Find Your Flock:",
+            description: "How to cultivate connection through passions, hobbies, and interests.",
+            src: "img/icons/highlights/h9.png",
+          },
+        ]
+      }
+    ];
 
 
-      document.addEventListener('DOMContentLoaded', function () {
 
 
-        const con = document.getElementById('magImages');
-        console.log(issues[issueNo].cover.length);
 
-        for (let i = 0; i < issues[issueNo].cover.length; i++) {
-          // Create a new div element
-          const newDiv = document.createElement("button");
+    document.addEventListener('DOMContentLoaded', function () {
+      const magHead = document.getElementById('mag-head-d');
 
-          // Set the class and style attributes of the div
-          newDiv.setAttribute("class", "btn");
-          newDiv.setAttribute("id", "mag-d");
 
-          // Add the code to the innerHTML of the div
-          newDiv.innerHTML = `
+
+      const con = document.getElementById('magImages');
+      console.log(issues[issueNo].cover.length);
+
+      for (let i = 0; i < issues[issueNo].cover.length; i++) {
+        // Create a new div element
+        const newDiv = document.createElement("button");
+
+        // Set the class and style attributes of the div
+        newDiv.setAttribute("class", "btn");
+        newDiv.setAttribute("id", "mag-d");
+
+        // Add the code to the innerHTML of the div
+        newDiv.innerHTML = `
           <div class="col" id="mag1-div" style=" width:10vw; border: none;
                           border-radius: 16px;background-color: #E9E5DE;padding: 10%;margin-bottom: 2%;">
                           <img src="img/images/mag1.png" class="img-fluid" id="mag-img" alt="Your Image"
@@ -1976,44 +1990,48 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         </div>
         `;
 
-          // Add the new div to the container element
-          con.appendChild(newDiv);
-        }
-        const im = document.querySelectorAll('#mag-img');
-        const im2 = document.querySelectorAll('#mag-head-d');
-        im2[0].setAttribute('src', issues[issueNo].cover[0]);
+        // Add the new div to the container element
+        con.appendChild(newDiv);
+      }
+      const imagenn = document.querySelectorAll('#mag-img');
+      const im2 = document.querySelectorAll('#mag-head-d');
+
+      magHead.setAttribute('src', issues[issueNo].cover[0]);
 
 
-        for (let i = 0; i < issues[issueNo].cover.length; i++) {
-          im[i].setAttribute('src', issues[issueNo].cover[i]);
+      for (let i = 0; i < issues[issueNo].cover.length; i++) {
+        imagenn[i].setAttribute('src', issues[issueNo].cover[i]);
 
-        }
+      }
 
-        for (let i = 0; i < im.length; i++) {
-          im[i].addEventListener('click', function () {
-            imageNo = i;
-          })
-        }
+      for (let i = 0; i < imagenn.length; i++) {
+        imagenn[i].addEventListener('click', function () {
+          magHead.setAttribute('src', issues[issueNo].cover[i]);
 
+          imgNo = i;
 
-
-
-        const contain = document.getElementById('highlightsTab');
-
+        })
+      }
 
 
 
 
-        for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
-          // Create a new div element
-          const newDiv = document.createElement("div");
+      const contain = document.getElementById('highlightsTab');
 
-          // Set the class and style attributes of the div
-          newDiv.setAttribute("class", "container");
-          newDiv.setAttribute("style", "border-radius: 16px; padding: 2px; background: #FAF8F4;margin: 0.5vw;width:100%");
 
-          // Add the code to the innerHTML of the div
-          newDiv.innerHTML = `
+
+
+
+      for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+        // Create a new div element
+        const newDiv = document.createElement("div");
+
+        // Set the class and style attributes of the div
+        newDiv.setAttribute("class", "container");
+        newDiv.setAttribute("style", "border-radius: 16px; padding: 2px; background: #FAF8F4;margin: 0.5vw;width:100%");
+
+        // Add the code to the innerHTML of the div
+        newDiv.innerHTML = `
 
 <div class="row" style="width:100%">
 <div class="col-md-4 d-flex align-items-center justify-content-center" >
@@ -2044,38 +2062,38 @@ margin-top: 2%;
 </div>
 `;
 
-          // Add the new div to the container element
-          contain.appendChild(newDiv);
-        }
+        // Add the new div to the container element
+        contain.appendChild(newDiv);
+      }
 
-        const image = document.querySelectorAll('#highIm');
-        const highText = document.querySelectorAll('#highText');
-        const highSubText = document.querySelectorAll('#highSubText');
+      const image = document.querySelectorAll('#highIm');
+      const highText = document.querySelectorAll('#highText');
+      const highSubText = document.querySelectorAll('#highSubText');
 
-        console.log('=========issueNo down');
-        console.log(issueNo);
+      console.log('=========issueNo down');
+      console.log(issueNo);
 
-        for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
-          console.log(issues[issueNo].highlightContent[i].src);
-          image[i].setAttribute('src', issues[issueNo].highlightContent[i].src);
-          console.log(image[i].src);;
-          highText[i].innerText = `${issues[issueNo].highlightContent[i].title}`;
-          highSubText[i].innerText = `${issues[issueNo].highlightContent[i].description}`;
-        }
+      for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+        console.log(issues[issueNo].highlightContent[i].src);
+        image[i].setAttribute('src', issues[issueNo].highlightContent[i].src);
+        console.log(image[i].src);;
+        highText[i].innerText = `${issues[issueNo].highlightContent[i].title}`;
+        highSubText[i].innerText = `${issues[issueNo].highlightContent[i].description}`;
+      }
 
-        const container = document.getElementById('issuesDiv');
+      const container = document.getElementById('issuesDiv');
 
-        // Loop through the desired number of elements and create them
-        for (let i = 0; i < issues.length; i++) {
-          // Create a new div element
-          const newDiv = document.createElement("div");
+      // Loop through the desired number of elements and create them
+      for (let i = 0; i < issues.length; i++) {
+        // Create a new div element
+        const newDiv = document.createElement("div");
 
-          // Set the class and style attributes of the div
-          newDiv.setAttribute("class", "col container");
-          newDiv.setAttribute("style", "margin: 1%;");
+        // Set the class and style attributes of the div
+        newDiv.setAttribute("class", "col container");
+        newDiv.setAttribute("style", "margin: 1%;");
 
-          // Add the code to the innerHTML of the div
-          newDiv.innerHTML = `
+        // Add the code to the innerHTML of the div
+        newDiv.innerHTML = `
             <div class="col" id="issueContainer">
               <div class="col" style="border-radius: 16px;background-color: #F1EFEA;padding: 10%;">
                 <img src="img/images/mag.png" id="issuesImg" class="img-fluid" alt="Your Image"
@@ -2092,62 +2110,61 @@ margin-top: 2%;
             </div>
           `;
 
-          // Add the new div to the container element
-          container.appendChild(newDiv);
+        // Add the new div to the container element
+        container.appendChild(newDiv);
 
 
-        }
+      }
 
-        const images = document.querySelectorAll('#issuesImg');
-        const issueText = document.querySelectorAll('#issuesText');
-
-
-        for (let i = 0; i < images.length; i++) {
-
-          images[i].setAttribute('src', issues[i].cover[0]);
-          issueText[i].innerText = `${issues[i].title}`;
-        }
+      const images = document.querySelectorAll('#issuesImg');
+      const issueText = document.querySelectorAll('#issuesText');
 
 
-        const magHead = document.getElementById('mag-head-d');
-        const magHeadText = document.getElementById('magTitle');
-        const magHeadDisc = document.getElementById('magDiscription');
-        const getNowBtn = document.getElementById('getNowBtn');
-        var payment = issues[0].paymentLink;
+      for (let i = 0; i < images.length; i++) {
+
+        images[i].setAttribute('src', issues[i].cover[0]);
+        issueText[i].innerText = `${issues[i].title}`;
+      }
 
 
-        for (let i = 0; i < images.length; i++) {
-          images[i].addEventListener('click', function () {
-            payment = issues[i].paymentLink;
-            payLink = payment;
-
-            issueNo = i;
-            magHead.setAttribute('src', issues[i].cover[0]);
-            magHeadText.innerText = `${issues[i].title}`;
-            magHeadDisc.innerText = `${issues[i].description}`;
-            magHeadDisc.innerText = `${issues[i].description}`;
-            console.log(issueNo);
+      const magHeadText = document.getElementById('magTitle');
+      const magHeadDisc = document.getElementById('magDiscription');
+      const getNowBtn = document.getElementById('getNowBtn');
+      var payment = issues[0].paymentLink;
 
 
+      for (let i = 0; i < images.length; i++) {
+        images[i].addEventListener('click', function () {
+          payment = issues[i].paymentLink;
+          payLink = payment;
 
-            
-        const con = document.getElementById('magImages');
-        console.log(issues[issueNo].cover.length);
-        while (con.firstChild) {
-              console.log('removed');
-              con.removeChild(con.firstChild);
-            }
+          issueNo = i;
+          magHead.setAttribute('src', issues[i].cover[0]);
+          magHeadText.innerText = `${issues[i].title}`;
+          magHeadDisc.innerText = `${issues[i].description}`;
+          magHeadDisc.innerText = `${issues[i].description}`;
+          console.log(issueNo);
 
-        for (let i = 0; i < issues[issueNo].cover.length; i++) {
-          // Create a new div element
-          const newDiv = document.createElement("button");
 
-          // Set the class and style attributes of the div
-          newDiv.setAttribute("class", "btn");
-          newDiv.setAttribute("id", "mag-d");
 
-          // Add the code to the innerHTML of the div
-          newDiv.innerHTML = `
+
+          const con = document.getElementById('magImages');
+          console.log(issues[issueNo].cover.length);
+          while (con.firstChild) {
+            console.log('removed');
+            con.removeChild(con.firstChild);
+          }
+
+          for (let i = 0; i < issues[issueNo].cover.length; i++) {
+            // Create a new div element
+            const newDiv = document.createElement("button");
+
+            // Set the class and style attributes of the div
+            newDiv.setAttribute("class", "btn");
+            newDiv.setAttribute("id", "mag-d");
+
+            // Add the code to the innerHTML of the div
+            newDiv.innerHTML = `
           <div class="col" id="mag1-div" style=" width:10vw; border: none;
                           border-radius: 16px;background-color: #E9E5DE;padding: 10%;margin-bottom: 2%;">
                           <img src="img/images/mag1.png" class="img-fluid" id="mag-im" alt="Your Image"
@@ -2155,53 +2172,53 @@ margin-top: 2%;
                         </div>
         `;
 
-          // Add the new div to the container element
-          con.appendChild(newDiv);
-        }
-        const im = document.querySelectorAll('#mag-im');
-        const im2 = document.querySelectorAll('#mag-head-d');
-        magHead.setAttribute('src', issues[issueNo].cover[0]);
+            // Add the new div to the container element
+            con.appendChild(newDiv);
+          }
+          const im = document.querySelectorAll('#mag-im');
+          const im2 = document.querySelectorAll('#mag-head-d');
+          magHead.setAttribute('src', issues[issueNo].cover[0]);
 
 
 
-        for (let i = 0; i < issues[issueNo].cover.length; i++) {
-          im[i].setAttribute('src', issues[issueNo].cover[i]);
+          for (let i = 0; i < issues[issueNo].cover.length; i++) {
+            im[i].setAttribute('src', issues[issueNo].cover[i]);
 
-        }
+          }
 
-        for (let i = 0; i < im.length; i++) {
-          im[i].addEventListener('click', function () {
-            
-            magHead.setAttribute('src', issues[issueNo].cover[i]);
-            
-            
-          })
-        }
+          for (let i = 0; i < im.length; i++) {
+            im[i].addEventListener('click', function () {
 
+              magHead.setAttribute('src', issues[issueNo].cover[i]);
+              imgNo = i;
 
-
-
-
-
-            const contain = document.getElementById('highlightsTab');
-            while (contain.firstChild) {
-              console.log('removed');
-              contain.removeChild(contain.firstChild);
-            }
+            })
+          }
 
 
 
 
-            for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
-              // Create a new div element
-              const newDiv = document.createElement("div");
 
-              // Set the class and style attributes of the div
-              newDiv.setAttribute("class", "container-fluid");
-              newDiv.setAttribute("style", "border-radius: 16px; padding: 2px; background: #FAF8F4;margin: 0.5vw;width:100%");
 
-              // Add the code to the innerHTML of the div
-              newDiv.innerHTML = `
+          const contain = document.getElementById('highlightsTab');
+          while (contain.firstChild) {
+            console.log('removed');
+            contain.removeChild(contain.firstChild);
+          }
+
+
+
+
+          for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+            // Create a new div element
+            const newDiv = document.createElement("div");
+
+            // Set the class and style attributes of the div
+            newDiv.setAttribute("class", "container-fluid");
+            newDiv.setAttribute("style", "border-radius: 16px; padding: 2px; background: #FAF8F4;margin: 0.5vw;width:100%");
+
+            // Add the code to the innerHTML of the div
+            newDiv.innerHTML = `
 
   <div class="row" style="width:100%">
 <div class="col-md-4 d-flex align-items-center justify-content-center" >
@@ -2232,195 +2249,195 @@ margin-top: 2%;
 </div>
 `;
 
-              // Add the new div to the container element
-              contain.appendChild(newDiv);
-            }
+            // Add the new div to the container element
+            contain.appendChild(newDiv);
+          }
 
-            const image = document.querySelectorAll('#highIm');
-            const highText = document.querySelectorAll('#highText');
-            const highSubText = document.querySelectorAll('#highSubText');
+          const image = document.querySelectorAll('#highIm');
+          const highText = document.querySelectorAll('#highText');
+          const highSubText = document.querySelectorAll('#highSubText');
 
-            console.log('=========issueNo down');
-            console.log(issueNo);
+          console.log('=========issueNo down');
+          console.log(issueNo);
 
-            for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+          for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
 
-              image[i].setAttribute('src', issues[issueNo].highlightContent[i].src);
-              highText[i].innerText = `${issues[issueNo].highlightContent[i].title}`;
-              highSubText[i].innerText = `${issues[issueNo].highlightContent[i].description}`;
-            }
-
-
-
-          });
-        }
+            image[i].setAttribute('src', issues[issueNo].highlightContent[i].src);
+            highText[i].innerText = `${issues[issueNo].highlightContent[i].title}`;
+            highSubText[i].innerText = `${issues[issueNo].highlightContent[i].description}`;
+          }
 
 
 
-
-
-
-
-      });
-
-
-
-
-    </script>
+        });
+      }
 
 
 
 
 
 
-    <!-- REAL CONTENT REAL VOICE SECTION-->
-    <div class="container-fluid align-items-center" style="background-color: #ffffff; padding: 5%">
-      <h1 class="fw-bold" style="
+
+    });
+
+
+
+
+  </script>
+
+
+
+
+
+
+  <!-- REAL CONTENT REAL VOICE SECTION-->
+  <div class="container-fluid align-items-center" style="background-color: #ffffff; padding: 5%">
+    <h1 class="fw-bold" style="
             font-family: Merriweather;
             font-size: 54px;
             text-align: left;
             padding-left: 2%;
           ">
-        Real content, real voices
-      </h1>
-      <p class="fs-5" style="
+      Real content, real voices
+    </h1>
+    <p class="fs-5" style="
             font-family: Inter;
             font-size: 24px;
             font-weight: 400;
             text-align: left;
             padding-left: 2%;
           ">
-        Hear what people have to say about Chief of Stuff
-      </p>
+      Hear what people have to say about Chief of Stuff
+    </p>
 
 
-      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="width: 100%;">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="3000">
-            <div class="container-fluid" style="width: 100%; padding: 0%; margin-top: 5%; margin-bottom: 5%">
-              <div class="row">
-                <div class="col-md-4">
-                  <img src="img/images/car1.png" alt="your image" class="img-fluid rounded-3 p-5">
-                </div>
-                <div class="col-md-6 d-flex flex-column justify-content-center" style="justify-self: flex-start;">
-                  <h1 class="fw mb-0" style="
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="width: 100%;">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <div class="container-fluid" style="width: 100%; padding: 0%; margin-top: 5%; margin-bottom: 5%">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="img/images/car1.png" alt="your image" class="img-fluid rounded-3 p-5">
+              </div>
+              <div class="col-md-6 d-flex flex-column justify-content-center" style="justify-self: flex-start;">
+                <h1 class="fw mb-0" style="
                     font-family: Merriweather;
                     font-size: 5em;
                     font-weight: 900;
                   ">“</h1>
-                  <h1 class="fw mb-0" style="
+                <h1 class="fw mb-0" style="
                     font-family: Inter;
                     font-size: 2.5vw;
                     font-weight: 500;
                     
                   ">Chief of Stuff is a breathe of fresh air for my inbox. I love it!</h1>
-                  <h1 class="fw mb-0" style="
+                <h1 class="fw mb-0" style="
                     font-family: Inter;
                     font-size: 1.5em;
                     font-weight: 400;
                     margin-top: 2%;
                   ">- Kaezel</h1>
-                </div>
               </div>
-
             </div>
+
           </div>
-          <div class="carousel-item" data-bs-interval="3000">
-            <div class="container-fluid" style="width: 100%; padding: 0%; margin-top: 5%; margin-bottom: 5%">
-              <div class="row">
-                <div class="col-md-4">
-                  <img src="img/images/car2.png" alt="your image" class="img-fluid rounded-3 p-5">
-                </div>
-                <div class="col-md-6 d-flex flex-column justify-content-center" style="justify-self: flex-start;">
-                  <h1 class="fw mb-0" style="
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <div class="container-fluid" style="width: 100%; padding: 0%; margin-top: 5%; margin-bottom: 5%">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="img/images/car2.png" alt="your image" class="img-fluid rounded-3 p-5">
+              </div>
+              <div class="col-md-6 d-flex flex-column justify-content-center" style="justify-self: flex-start;">
+                <h1 class="fw mb-0" style="
                     font-family: Merriweather;
                     font-size: 5em;
                     font-weight: 900;
                   ">“</h1>
-                  <h1 class="fw mb-0" style="
+                <h1 class="fw mb-0" style="
                     font-family: Inter;
                     font-size: 2.5vw;
                     font-weight: 500;
                     
                   ">Chief of Stuff is fantastic and the storytelling is excellent. Explaining a complicated tech
-                    concept like NFTs to someone like me is no small feat - so thank you!</h1>
-                  <h1 class="fw mb-0" style="
+                  concept like NFTs to someone like me is no small feat - so thank you!</h1>
+                <h1 class="fw mb-0" style="
                     font-family: Inter;
                     font-size: 1.5em;
                     font-weight: 400;
                     margin-top: 2%;
                   ">- Jessica</h1>
-                </div>
               </div>
-
             </div>
+
           </div>
-          <div class="carousel-item" data-bs-interval="3000">
-            <div class="container-fluid" style="width: 100%; padding: 0%; margin-top: 5%; margin-bottom: 5%">
-              <div class="row">
-                <div class="col-md-4">
-                  <img src="img/images/car3.png" alt="your image" class="img-fluid rounded-3 p-5">
-                </div>
-                <div class="col-md-6 d-flex flex-column justify-content-center" style="justify-self: flex-start;">
-                  <h1 class="fw mb-0" style="
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <div class="container-fluid" style="width: 100%; padding: 0%; margin-top: 5%; margin-bottom: 5%">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="img/images/car3.png" alt="your image" class="img-fluid rounded-3 p-5">
+              </div>
+              <div class="col-md-6 d-flex flex-column justify-content-center" style="justify-self: flex-start;">
+                <h1 class="fw mb-0" style="
                     font-family: Merriweather;
                     font-size: 5em;
                     font-weight: 900;
                   ">“</h1>
-                  <h1 class="fw mb-0" style="
+                <h1 class="fw mb-0" style="
                     font-family: Inter;
                     font-size: 2.5vw;
                     font-weight: 500;
                     
                   ">Thank you for tackling such an important topic!</h1>
-                  <h1 class="fw mb-0" style="
+                <h1 class="fw mb-0" style="
                     font-family: Inter;
                     font-size: 1.5em;
                     font-weight: 400;
                     margin-top: 2%;
                   ">- Lily</h1>
-                </div>
               </div>
-
             </div>
+
           </div>
-          <div class="carousel-item" data-bs-interval="3000">
-            <div class="container-fluid" style="width: 100%; padding: 0%; margin-top: 5%; margin-bottom: 5%">
-              <div class="row">
-                <div class="col-md-4">
-                  <img src="img/images/car4.png" alt="your image" class="img-fluid rounded-3 p-5">
-                </div>
-                <div class="col-md-6 d-flex flex-column justify-content-center" style="justify-self: flex-start;">
-                  <h1 class="fw mb-0" style="
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <div class="container-fluid" style="width: 100%; padding: 0%; margin-top: 5%; margin-bottom: 5%">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="img/images/car4.png" alt="your image" class="img-fluid rounded-3 p-5">
+              </div>
+              <div class="col-md-6 d-flex flex-column justify-content-center" style="justify-self: flex-start;">
+                <h1 class="fw mb-0" style="
                     font-family: Merriweather;
                     font-size: 5em;
                     font-weight: 900;
                   ">“</h1>
-                  <h1 class="fw mb-0" style="
+                <h1 class="fw mb-0" style="
                     font-family: Inter;
                     font-size: 2.5vw;
                     font-weight: 500;
                     
                   ">I love the variety and mix of topics that Chief of Stuff covers - it's always so interesting!</h1>
-                  <h1 class="fw mb-0" style="
+                <h1 class="fw mb-0" style="
                     font-family: Inter;
                     font-size: 1.5em;
                     font-weight: 400;
                     margin-top: 2%;
                   ">- Matt</h1>
-                </div>
               </div>
-
             </div>
+
           </div>
         </div>
-
       </div>
 
-
-
-
     </div>
+
+
+
+
+  </div>
   </div>
 
   <!-- Footer-->
@@ -2495,11 +2512,26 @@ margin-top: 2%;
 
       </div>
     </div>
+
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      setInterval(function () {
+        $('.custom-substack-widget').find(':submit').click(function () {
+          $('#isSubscribed').val('1');
+          $('#myModal').modal('show');
+        })
+      }, 1000);
+
+    });
+  </script>
+
 </body>
 
 </html>
