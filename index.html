@@ -1708,6 +1708,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     <script>
       var issueNo = 0;
+      var imgNo = 0;
 
 
       const button1 = document.getElementById('pills-home-tab');
@@ -2109,7 +2110,6 @@ margin-top: 2%;
 
 
         const magHead = document.getElementById('mag-head-d');
-        const magHeadBtm = document.getElementById('mag1-img');
         const magHeadText = document.getElementById('magTitle');
         const magHeadDisc = document.getElementById('magDiscription');
         const getNowBtn = document.getElementById('getNowBtn');
@@ -2123,11 +2123,63 @@ margin-top: 2%;
 
             issueNo = i;
             magHead.setAttribute('src', issues[i].cover[0]);
-            magHeadBtm.setAttribute('src', issues[i].cover[0]);
             magHeadText.innerText = `${issues[i].title}`;
             magHeadDisc.innerText = `${issues[i].description}`;
             magHeadDisc.innerText = `${issues[i].description}`;
             console.log(issueNo);
+
+
+
+            
+        const con = document.getElementById('magImages');
+        console.log(issues[issueNo].cover.length);
+        while (con.firstChild) {
+              console.log('removed');
+              con.removeChild(con.firstChild);
+            }
+
+        for (let i = 0; i < issues[issueNo].cover.length; i++) {
+          // Create a new div element
+          const newDiv = document.createElement("button");
+
+          // Set the class and style attributes of the div
+          newDiv.setAttribute("class", "btn");
+          newDiv.setAttribute("id", "mag-d");
+
+          // Add the code to the innerHTML of the div
+          newDiv.innerHTML = `
+          <div class="col" id="mag1-div" style=" width:10vw; border: none;
+                          border-radius: 16px;background-color: #E9E5DE;padding: 10%;margin-bottom: 2%;">
+                          <img src="img/images/mag1.png" class="img-fluid" id="mag-im" alt="Your Image"
+                            style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));"/>
+                        </div>
+        `;
+
+          // Add the new div to the container element
+          con.appendChild(newDiv);
+        }
+        const im = document.querySelectorAll('#mag-im');
+        const im2 = document.querySelectorAll('#mag-head-d');
+        magHead.setAttribute('src', issues[issueNo].cover[0]);
+
+
+
+        for (let i = 0; i < issues[issueNo].cover.length; i++) {
+          im[i].setAttribute('src', issues[issueNo].cover[i]);
+
+        }
+
+        for (let i = 0; i < im.length; i++) {
+          im[i].addEventListener('click', function () {
+            
+            magHead.setAttribute('src', issues[issueNo].cover[i]);
+            
+            
+          })
+        }
+
+
+
 
 
 
