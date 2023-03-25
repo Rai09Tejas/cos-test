@@ -115,16 +115,21 @@
                 "></iframe>
             <p style="font-family: Inter; font-weight: 300; font-size: 6vw;margin-bottom: 0%;">Your source for
             </p>
-            <p>
-
-              <span style="
+            <div class="carousel"> 
+            <div class="change_outer">
+              <div class="change_inner">
+              <div style="
                     font-family: Merriweather;
                     font-weight: 700;
                     font-size: 6vw;
                   ">‘informative’
-              </span>
-              <span style="font-family: Inter; font-weight: 300; font-size: 6vw">stuff</span>
-            </p>
+              </div>
+              <div>‘informative’
+              </div>
+            </div>
+              <div style="font-family: Inter; font-weight: 300; font-size: 6vw">stuff</div>
+            </div>
+          </div>
             <p style="
                   font-family: Inter;
                   font-weight: 400;
@@ -227,16 +232,67 @@
                 "></iframe>
             <p style="font-family: Inter; font-weight: 300; font-size: 3vw">Your source for
             </p>
-            <p>
-
-              <span style="
+            <style>
+              .carousel-vertical .scrolling-text-container {
+                height: 3em; /* Set the height of the container */
+                overflow: hidden; /* Hide any overflow */
+              }
+            
+              .carousel-vertical .scrolling-text-container p {
+                margin: 0; /* Remove any margin */
+                padding: 0; /* Remove any padding */
+                line-height: 1em; /* Set the line-height to the same as the height of the container */
+                animation: scroll 3s linear infinite; /* Add the animation */
+              }
+            
+              @keyframes scroll {
+                0% {
+                  transform: translateY(0); /* Start at the top */
+                }
+                100% {
+                  transform: translateY(-100%); /* Scroll up by the height of the container */
+                }
+              }
+            </style>
+            
+            <div id="myCarousel" class="carousel slide carousel-vertical" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="item active">
+                  <p  style="
+                  font-family: Inter;
+                  font-weight: 300;
+                  font-size: 3vw;
+                "><span id="changingWord" style="
                     font-family: Merriweather;
                     font-weight: 700;
                     font-size: 3vw;
-                  ">‘informative/inspirational etc’
-              </span>
-              <span style="font-family: Inter; font-weight: 300; font-size: 3vw">stuff</span>
-            </p>
+                  ">‘informative’</span> stuff</p>
+                </div>
+              </div>
+            </div>
+            
+            <script>
+              function changeWord() {
+  var words = ["‘informative’", "‘inspirational’", "‘informative’","‘inspirational’"];
+  var currentIndex = 0;
+  setInterval(function() {
+    var element = document.getElementById("changingWord");
+    element.style.opacity = 0;
+    setTimeout(function() {
+      element.textContent = words[currentIndex];
+      element.style.opacity = 1;
+    }, 500);
+    currentIndex++;
+    if (currentIndex == words.length) {
+      currentIndex = 0;
+    }
+  }, 3000);
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  changeWord();
+});
+            </script>
             <p style="
                   font-family: Inter;
                   font-weight: 400;
