@@ -22,6 +22,7 @@
 </head>
 
 <body style="background-color: #E9E6E0">
+  <input type="hidden" name="isMobModal" value="false" id="isMobModal" />
   <input type="hidden" name="isSubscribed" value="0" id="isSubscribed" />
 
   <div class="container-fluid" style="width: fit-content">
@@ -158,6 +159,7 @@
             </div>
 
             <script>
+
               function changeWordm() {
                 var wordsm  = ["‘informative’", "‘inspirational’", "‘informative’", "‘inspirational’"];
                 var currentIndex = 0;
@@ -177,6 +179,8 @@
 
               document.addEventListener("DOMContentLoaded", function (event) {
                 changeWordm();
+                
+                $('#isMobModal').val('true');
               });
             </script>
             <p style="
@@ -221,8 +225,58 @@
 
                 <!-- <iframe src="https://www.chiefofstuff.org/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe> -->
                 <div class="row d-flex justify-content-center align-content-center" style="width: 100%;">
+                  <div class="modal fade" id="myModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close" id="closeBtn" data-bs-dismiss="modal"
+                            aria-label="Close" onclick="
+                      var modal = document.getElementById('myModal2');
+                  modal.classList.remove('show');
+                      "></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="col">
+                            <img class="img-fluid" src="img/images/dialog.png" alt="dialog img" />
+                            <p class="text-center" style="
+                          font-family: Inter;
+                          font-weight: 500;
+                          font-size: 5vw;
+                        ">Check your <span style="
+                          font-family: Merriweather;
+                          font-weight: 900;
+                          font-size: 5vw;
+                        ">inbox</span> </p>
+                            <p class="text-center" style="
+                          font-family: Inter;
+                          font-weight: 500;
+                          font-size: 3vw;
+                        ">Confirm your mail, your curiosity is calling </p>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn " id="okBtn" data-bs-dismiss="modal" style="border-radius: 16px;
+                        padding: 5%;
+                        padding-top: 2%;
+                        padding-bottom: 2%;
+                        background: #ED6838;
+                        box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
+                        border-radius: 16px;
+                        border: none;
+                        color: white;
+                        font-size: 16px;
+                        font-weight: bold;
+                        cursor: pointer;" data-bs-dismiss="modal" onclick="
+                        var modal = document.getElementById('myModal2');
+                        modal.classList.remove('show');
+                        ">Ok</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                  <div class="my-div" id="custom-substack-embed"></div>
+                  <div id="custom-substack-embed"></div>
                   <script>
                     window.CustomSubstackWidget = {
                       substackUrl: "thechiefofstuff.substack.com",
@@ -236,6 +290,8 @@
                         text: "#FFFFFF",
                       }
                     };
+
+                    
                   </script>
                   <script src="https://substackapi.com/widget.js" async></script>
                 </div>
@@ -409,16 +465,16 @@
                             <p class="text-center" style="
                           font-family: Inter;
                           font-weight: 500;
-                          font-size: 1.5vw;
+                          font-size: 2.5vw;
                         ">Check your <span style="
                           font-family: Merriweather;
                           font-weight: 900;
-                          font-size: 1.5vw;
+                          font-size: 2.5vw;
                         ">inbox</span> </p>
                             <p class="text-center" style="
                           font-family: Inter;
                           font-weight: 500;
-                          font-size: 1vw;
+                          font-size: 2vw;
                         ">Confirm your mail, your curiosity is calling </p>
                           </div>
                         </div>
@@ -461,6 +517,7 @@
                         text: "#FFFFFF",
                       }
                     };
+                    $('#isMobModal').val('false');
 
 
                   </script>
@@ -2931,10 +2988,22 @@ Real content, real voices
     $(document).ready(function () {
 
       setInterval(function () {
-        $('.custom-substack-widget').find(':submit').click(function () {
+        var isMobModal = ($('#isMobModal').val() === 'true');
+        console.log($('#isMobModal').val());
+if (isMobModal) {
+  // do something if isSubscribed is true
+  $('.custom-substack-widget').find(':submit').click(function () {
+          $('#isSubscribed').val('1');
+          $('#myModal2').modal('show');
+        })
+} else {
+  // do something else if isSubscribed is false
+  $('.custom-substack-widget').find(':submit').click(function () {
           $('#isSubscribed').val('1');
           $('#myModal').modal('show');
         })
+}
+        
       }, 1000);
 
     });
