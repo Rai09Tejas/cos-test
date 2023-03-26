@@ -929,7 +929,7 @@
                   <div class="tab-pane fade" id="highlights2" role="tabpanel" aria-labelledby="highlights-tab">
                     <!-- fbeshgfbhgsevh svhgfvhds gv hdvshf Here is the-->
                     
-                      <ul id="highlightsTab2" style="margin: 0;">
+                      <ul id="highlightsTab2" style="padding-left: 0;padding-top: 2vw;">
                         <!-- List items will go here -->
                       </ul>
                   </div>
@@ -2226,54 +2226,59 @@ margin-top: 2%;
 
 const c2 = document.getElementById('highlightsTab2');
 
-
-
-
-
 for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
   // Create a new div element
   const newDiv = document.createElement("div");
 
-  // Set the class and style attributes of the div
-  newDiv.setAttribute("class", "container-fluid");
-  newDiv.setAttribute("style", "border-radius: 16px; padding: 2px; padding-top:10px; padding-bottom:10px; background: #FAF8F4;width:100");
+                  // Set the class and style attributes of the div
+                  newDiv.setAttribute("class", "col");
+                  newDiv.setAttribute("style", "border-radius: 16px; padding: 12px;padding-bottom:0px;padding-top:12px; background: #FAF8F4;margin: 1vw;width:100%");
 
-  // Add the code to the innerHTML of the div
-  newDiv.innerHTML = `
-
-<div class="row" style="width:100%">
-<div class="col-md-2 " >
-
-<button class="btn btn-light" style="
+                  // Add the code to the innerHTML of the div
+                  newDiv.innerHTML = `
+          
+    <div class="row">
+      <div class="col-3">
+      <button class="btn btn-light" style="
+            width: 54px;
+            height: 54px;
+            background-color:#ED683866;
             border: none;
-            background-color: #ED683866;
             border-radius: 16px;
           ">
-        <img src="img/images/car4.png" alt="yourimage" style="width: 5vw; height: 5vw" id="highIm2" />
+        <img src="img/icons/arti.png" alt="image-description-here" style="width: 100%; " id="highIm2" />
       </button>
-</div>
-<div class="col-md-10" >
+      </div>
+      <div class="col-9">
+      <div class="col">
+        
 
-<h1 id="highText2" class="fw mb-0" style="
-font-family: Merriweather;
-font-size: 1vw;
-font-weight: 700;
+        <p id="highText2" class=" d-block d-sm-none" style="
+              font-family: Merriweather;
+              font-weight: 700;
+              font-size: 3vw;
+            ">
+            Stop to Smell the Roses:
+        </p>
+      </div>
+      <div class="col">
 
-">I love the variety and mix of topics that Chief of Stuff covers - it's always so interesting!</h1>
-<h1 id="highSubText2" class="fw mb-0" style="
-color:#000000B8;
-font-family: Inter;
-font-size: 1vw;
-font-weight: 400;
-margin-top: 2%;
-">- Matt</h1>
-</div>
-</div>
-`;
+        <p id="highSubText2" class="text-break d-block d-sm-none" style="
+              font-family: Inter;
+              font-weight: 500;
+              font-size: 2.5vw;
+            ">
+            The history of the English rose and the man behind the bouquet.
+        </p>
+      </div>
+      </div>
+    </div>
+    `;
 
-  // Add the new div to the container element
-  c2.appendChild(newDiv);
-}
+                  // Add the new div to the container element
+                  c2.appendChild(newDiv);
+                }
+
 
 const image2 = document.querySelectorAll('#highIm2');
 const highText2 = document.querySelectorAll('#highText2');
