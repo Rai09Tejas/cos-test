@@ -703,13 +703,6 @@
       </div>
     </div>
 
-
-
-
-
-
-
-
     <!-- TABS Section  MOBILE ONLY-->
     <div class="container-fluid align-content-center justify-content-center  d-block d-sm-none" style="
             background-color: #F1EFEA;
@@ -863,9 +856,6 @@
                         document.querySelector('#mag-head-m').src = imageSrc2;
                       });
                     });
-
-
-
                   </script>
                 </div>
                 <button class="btn btn1" style="
@@ -885,26 +875,23 @@
                 </button>
               </div>
 
-              <div class="col-md-5" style="padding-left: 5%;margin-top: 5%;">
-                <ul class="nav nav-tabs" id="myTab">
+              <div class="col-md-5" style="padding-left: 5%;margin-top: 10%; padding: 0;">
+                <ul class="nav nav-pills nav-justified" id="myTab">
                   <li class="nav-item" role="presentation">
-
-                    <button class="active" id="this-issue-tab2"
-                      style="font-family: Inter; font-size: 3vw; font-weight: 600;text-align: center; color: #000000;border:none;"
+                    <button class="active" id="tab2"
+                      style="font-family: Inter; font-size: 4vw; font-weight: 600;text-align: center; color: #000000;border:none;border-bottom: 2px solid black;"
                       data-bs-toggle="pill" data-bs-target="#this-issue2" type="button" role="tab"
                       aria-controls="pills-high" aria-selected="false">This Issue</button>
                   </li>
                   <li class="nav-item" role="presentation">
-
-                    <button class="" id="highlights-tab2"
-                      style="font-family: Inter; font-size: 3vw; font-weight: 600;text-align: center; color: #000000;border:none;"
+                    <button class="" id="tab2"
+                      style="font-family: Inter; font-size: 4vw; font-weight: 600;text-align: center; color: #000000;border:none;"
                       data-bs-toggle="pill" data-bs-target="#highlights2" type="button" role="tab"
                       aria-controls="pills-high" aria-selected="false">Highlights</button>
                   </li>
                   <li class="nav-item" role="presentation">
-
-                    <button class="" id="about-tab2"
-                      style="font-family: Inter; font-size: 3vw; font-weight: 600;text-align: center; color: #000000;border:none;"
+                    <button class="" id="tab2"
+                      style="font-family: Inter; font-size: 4vw; font-weight: 600;text-align: center; color: #000000;border:none;"
                       data-bs-toggle="pill" data-bs-target="#about2" type="button" role="tab" aria-controls="pills-high"
                       aria-selected="false">About</button>
                   </li>
@@ -941,15 +928,13 @@
                     <div class="row">
                       <div class="col" style="padding-top: 10%;">
                         <h1 class="text1" style="font-family: Merriweather;
-                        font-size: 20px;
+                        font-size: 8vw;
                         font-weight: 700;">The Quarterly All Hands</h1>
                         <p class="text2" style="
                         font-family: Inter;
-                        font-size: 16px;
+                        font-size: 4vw;
                         font-weight: 400;
-                        margin-top: 5%;">The Quarterly All Hands is designed to be enjoyed at your leisure - while at
-                          lunch, riding the train, as a break from your feed, or when you're bored. Wherever you are, we
-                          hope you find inspiration, get lost in the pages, and discover something new.</p>
+                        margin-top: 5%;">The Quarterly All Hands is designed to be enjoyed at your leisure - while at lunch, riding the train, as a break from your feed, or when you're bored. Wherever you are, we hope you find inspiration, get lost in the pages, and discover something new.</p>
 
                       </div>
                     </div>
@@ -960,11 +945,11 @@
           </div>
         </div>
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-          <div class="nav nav-pills mb-3 d-flex" style="height: 5vh;overflow-x: auto; overflow-y: hidden;">
+          <div class="nav nav-pills nav-justified mb-3 d-flex" style="height: 5vh;overflow-x: auto; overflow-y: hidden;">
             <ul class="nav nav-pills  " id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation" id="navItems2">
                 <button class="active" id="navBtnm"
-                  style="font-family: Inter; font-size: 3vw; font-weight: 600;text-align: center; color: #000000;border:none;border-bottom: 3px solid black;"
+                  style="font-family: Inter; font-size: 3vw; font-weight: 600;text-align: center; color: #000000;border:none;border-bottom: 2px solid black;"
                   data-bs-toggle="pill" data-bs-target="#pills-1mob" type="button" role="tab" aria-controls="pills-home"
                   aria-selected="true">#thought leadership</button>
                 <button class="" id="navBtnm"
@@ -992,15 +977,28 @@
           <script>
             const navItems2 = document.querySelectorAll('#navBtnm');
 
+// add a click event listener to each button
+navItems2.forEach((navItem) => {
+  navItem.addEventListener('click', () => {
+    // remove the border from all buttons
+    navItems2.forEach((item) => {
+      item.style.borderBottom = 'none';
+    });
+    // add the border to the clicked button
+    navItem.style.borderBottom = '2px solid black';
+  });
+});
+const magItems = document.querySelectorAll('#tab2');
+
             // add a click event listener to each button
-            navItems2.forEach((navItem) => {
+            magItems.forEach((navItem) => {
               navItem.addEventListener('click', () => {
                 // remove the border from all buttons
-                navItems2.forEach((item) => {
+                magItems.forEach((item) => {
                   item.style.borderBottom = 'none';
                 });
                 // add the border to the clicked button
-                navItem.style.borderBottom = '3px solid black';
+                navItem.style.borderBottom = '2px solid black';
               });
             });
 
@@ -1904,7 +1902,6 @@
       document.getElementById('text2-d').style.color = '#000';
       document.getElementById('text3-d').style.color = '#fff';
     });
-
     //highlights
     const issues = [
       {
