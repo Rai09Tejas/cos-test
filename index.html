@@ -40,7 +40,7 @@
         </div>
         <div class="col-6 d-flex justify-content-end">
 
-          <button class="nav-link" onclick="window.open(linkMob, '_blank')" style="border-radius: 16px;
+          <button class="" onclick="window.open(linkMob, '_blank')" style="border-radius: 16px;
               padding: 24px 40px 24px 40px;
               background: #ED6838;
               box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
@@ -69,7 +69,7 @@
         </div>
         <div class="col-4 d-flex justify-content-end">
 
-          <button class="nav-link" onclick="window.open(linkDesktop, '_blank')" style="border-radius: 16px;
+          <button class="" onclick="window.open(linkDesktop, '_blank')" style="border-radius: 16px;
               padding: 20%;
               padding-top: 10%;
               padding-bottom: 10%;
@@ -154,12 +154,14 @@
                   font-family: Inter;
                   font-weight: 300;
                   font-size: 6vw;
+                  
                 "><span id="changingWordm" style="
                     font-family: Merriweather;
                     font-weight: 700;
                     font-size: 6vw;
                     display: inline-block;
                     width: 42vw;
+                    text-align: right;
                   ">‘informative’</span> stuff</p>
                 </div>
               </div>
@@ -168,7 +170,7 @@
             <script>
 
               function changeWordm() {
-                var wordsm = ["‘informative’", "‘inspirational’", "‘informative’", "‘inspirational’"];
+                var wordsm = ["‘informative’", "‘interesting’", "‘innovative’", "‘inspirational’"];
                 var currentIndex = 0;
                 setInterval(function () {
                   var element = document.getElementById("changingWordm");
@@ -385,7 +387,8 @@
                     font-weight: 700;
                     font-size: 3vw;
                     display: inline-block;
-                    width: 21vw;
+                    width: 22vw;
+                    
                   ">‘informative’</span> stuff</p>
                 </div>
               </div>
@@ -393,7 +396,7 @@
 
             <script>
               function changeWord() {
-                var words = ["‘informative’", "‘inspirational’", "‘informative’", "‘inspirational’"];
+                var words = ["‘informative’", "‘interesting’", "‘innovative’", "‘inspirational’"];
                 var currentIndex = 0;
                 setInterval(function () {
                   var element = document.getElementById("changingWord");
@@ -737,7 +740,7 @@
               The Magazine</p>
           </button>
         </li>
-        <li class="nav-item" role="presentation">
+        <li class="nav-item d-none" role="presentation">
           <button class="" id="pills-profile-tab-m" data-bs-toggle="pill" data-bs-target="#pills-profile"
             type="button" role="tab" style="border-radius: 16px;
             padding: 30px;
@@ -774,7 +777,7 @@
             margin-right: 10px;margin-bottom: 10px;" type="button" role="tab" aria-controls="pills-contact"
             aria-selected="false">
             <p id="text3">
-              Our Story</p>
+              My Story</p>
           </button>
         </li>
       </ul>
@@ -949,7 +952,7 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        <div class="tab-pane fade  d-none" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
           
             <ul class="nav nav-pills nav-justified " id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation" id="navItems2">
@@ -1124,7 +1127,7 @@
                 ">You can read more about <span style="
                   font-weight: 600;
                   text-align: left;
-                  color: #ED6838;">my story here.</span> </p>
+                  color: #ED6838;" onclick="window.open('https://adelebarlow.com/blog/chief-of-stuff-sarah-maxwell','black');">my story here.</span> </p>
                 </p>
               </div>
             </div>
@@ -1136,6 +1139,7 @@
 
 
   <script>
+
     const button1m = document.getElementById('pills-home-tab-m');
     const button2m = document.getElementById('pills-profile-tab-m');
     const button3m = document.getElementById('pills-contact-tab-m');
@@ -1228,7 +1232,7 @@
               The Magazine</h5>
           </button>
         </li>
-        <li class="nav-item" role="presentation">
+        <li class="nav-item  d-none" role="presentation">
           <button class="" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile-d" style="border-radius: 16px;
             background: #FFFFFF52;
             box-shadow: none;
@@ -1259,7 +1263,7 @@
             font-weight: bold;
             cursor: pointer;" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
             <h5 class="text-center" id="text3-d">
-              Our Story</h5>
+              My Story</h5>
           </button>
         </li>
 
@@ -1302,17 +1306,17 @@
               <div class="col-md-5" style="height: 60vw;padding-left: 5%;">
                 <ul class="nav nav-pills nav-justified mb-3" id="pills-tabs2" role="tablist">
                   <li class="nav-item" role="presentation" id="navIt"><button class="active" id="magBtn0" style="font-family: Inter; font-size: 1vw; 
-                  font-weight: 600;text-align: center; color: #000000;border:none;border-bottom: 3px solid black;"
+                  font-weight: 600;text-align: center; color: #000000;border:none;border-bottom: 3px solid black;background-color: #F1EFEA;"
                       data-bs-toggle="pill" data-bs-target="#pills-issues" type="button" role="tab"
                       aria-controls="pills-issue" aria-selected="true">This Issue</button></li>
 
                   <li class="nav-item" role="presentation" id="navIt"><button class="" id="navBtn1"
-                      style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;"
+                      style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;background-color: #F1EFEA;"
                       data-bs-toggle="pill" data-bs-target="#pills-highlight" type="button" role="tab"
                       aria-controls="pills-high" aria-selected="false">Highlights</button></li>
 
                   <li class="nav-item" role="presentation" id="navIt"><button class="" id="navBtn2"
-                      style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;"
+                      style="font-family: Inter; font-size: 1vw; font-weight: 600;text-align: center; color: #000000;border:none;background-color: #F1EFEA;"
                       data-bs-toggle="pill" data-bs-target="#pills-aboutsect" type="button" role="tab"
                       aria-controls="pills-about" aria-selected="false">About</button></li>
                 </ul>
@@ -1323,15 +1327,11 @@
                       <h1 class="text1 mt-5" id="magTitle"
                         style="font-family: Merriweather; font-size: 3vw; font-weight: 700;">Issue #4</h1>
                       <p class="text2" id="magDiscription"
-                        style="font-family: Inter; font-size: 1.5vw; font-weight: 400; margin-top: 5%;">Our Fourth Issue
-                        examines the tension between artificial intelligence and human originality. We believe that good
-                        things take time, but tech can be a helpful asset if used wisely. If innovations make our lives
-                        easier, then we can use our resources wisely and dedicate our energy to explore the stuff we
-                        love.</p><button class="btn btn1" id="getNowBtn"
-                        style="height: 77px; width: 100%; border-radius: 16px; padding: 24px 16px 24px 16px; background: #ED6838; box-shadow: 0px 4px 16px rgba(251, 97, 42, 0.8); border-radius: 16px;margin-top: 5%;"
+                        style="font-family: Inter; font-size: 1.5vw; font-weight: 400; margin-top: 5%;">...</p><button class="btn btn1" id="getNowBtn"
+                        style="width: 100%; border-radius: 16px; padding: 24px 16px 24px 2px; background: #ED6838; box-shadow: 0px 4px 16px rgba(251, 97, 42, 0.8); border-radius: 16px;margin-top: 5%;"
                         onclick="openPaymentWindow()">
-                        <p class="text1" style="font-family: Inter; font-size: 100%; font-weight: 700; color: white;">
-                          Get It Now!</p>
+                        <h1 class="text1" style="font-family: Inter; font-size: 1.5vw; font-weight: 700; color: white;padding: 0;margin: 0;">
+                          Get It Now!</h1>
                       </button>
                       <script>
                         var payLink = "https://chiefofstuff.gumroad.com/l/QAHSpring";
@@ -1385,7 +1385,7 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="pills-profile-d" role="tabpanel" aria-labelledby="pills-profile-tab"
+        <div class="tab-pane fade  d-none" id="pills-profile-d" role="tabpanel" aria-labelledby="pills-profile-tab"
           tabindex="0">
           <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation" id="navItems">
@@ -1716,7 +1716,7 @@
             padding: 2%;
           ">You can read more about
                 <snap style="
-                font-weight: 600;color: #ED6838;"> my story here.</snap>
+                font-weight: 600;color: #ED6838;cursor: pointer;"  onclick="window.open('https://adelebarlow.com/blog/chief-of-stuff-sarah-maxwell','black');" > my story here.</snap>
               </p>
               </p>
             </div>
@@ -1745,7 +1745,7 @@
       </div>
     </div>
     <div class="container-fluid"></div>
-    <div class="row">
+    <div class="row d-none" >
       <div class="col-1"> <button class="d-flex justify-content-end" type="button "
           style="border: none; border-radius: 16px; padding: 16px; background: #FAF8F4; ">
           <span aria-hidden="true"><i class="bi bi-chevron-left text-black"></i></span>
@@ -1844,7 +1844,7 @@
   </div>
 
   <script>
-    var issueNo = 0;
+    var issueNo = 3;
     var imgNo = 0;
 
     const button1 = document.getElementById('pills-home-tab');
@@ -1920,7 +1920,7 @@
         ],
         title: "Issue #1",
         description: "Introducing The Quarterly All Hands, a modern magazine and the next evolution of Chief of Stuff. Its pages are filled with snappy and substantive articles, unique interviews, and insights.",
-        paymentLink: "https://chiefofstuff.gumroad.com/l/QAHSpring",
+        paymentLink: "https://app.gumroad.com/checkout?product=QAHSpring&quantity=1&code=welcome",
         highlightContent: [
           {
             title: "One to One",
@@ -2083,6 +2083,13 @@
     ];
 
     document.addEventListener('DOMContentLoaded', function () {
+      const mag = document.getElementById('magDiscription');
+      const mag22 = document.getElementById('magTitle');
+      mag22.textContent = issues[issueNo].title;
+      mag.textContent = issues[issueNo].description;
+
+
+
       const magHead = document.getElementById('mag-head-d');
 
       const con = document.getElementById('magImages');
@@ -2304,9 +2311,9 @@
 
 
       for (let i = 0; i < images.length; i++) {
-
-        images[i].setAttribute('src', issues[i].cover[0]);
-        issueText[i].innerText = `${issues[i].title}`;
+        let j = images.length-i-1;
+        images[i].setAttribute('src', issues[j].cover[0]);
+        issueText[i].innerText = `${issues[j].title}`;
       }
 
 
@@ -2317,15 +2324,17 @@
 
 
       for (let i = 0; i < images.length; i++) {
+        let j = images.length-i-1;
+
         images[i].addEventListener('click', function () {
           payment = issues[i].paymentLink;
           payLink = payment;
 
-          issueNo = i;
-          magHead.setAttribute('src', issues[i].cover[0]);
-          magHeadText.innerText = `${issues[i].title}`;
-          magHeadDisc.innerText = `${issues[i].description}`;
-          magHeadDisc.innerText = `${issues[i].description}`;
+          issueNo = j;
+          magHead.setAttribute('src', issues[j].cover[0]);
+          magHeadText.innerText = `${issues[j].title}`;
+          magHeadDisc.innerText = `${issues[j].description}`;
+          magHeadDisc.innerText = `${issues[j].description}`;
           console.log(issueNo);
 
 
@@ -2396,40 +2405,45 @@
             // Create a new div element
             const newDiv = document.createElement("div");
 
-            // Set the class and style attributes of the div
-            newDiv.setAttribute("class", "container-fluid");
-            newDiv.setAttribute("style", "border-radius: 16px; padding: 2px; background: #FAF8F4;margin: 0.5vw;width:100%");
+        // Set the class and style attributes of the div
+        newDiv.setAttribute("class", "container");
+        newDiv.setAttribute("style", "border-radius: 16px; padding: 2px; padding-top:10px; padding-bottom:10px; background: #FAF8F4;margin: 0.5vw;width:100%");
 
-            // Add the code to the innerHTML of the div
-            newDiv.innerHTML = `
-              <div class="row" style="width:100%">
-            <div class="col-md-4 d-flex align-items-center justify-content-center" >
-              <div class="col-fluid " style="
-                              border: none;
-                              background-color: #ED683866;
-                              border-radius: 16px;
+        // Add the code to the innerHTML of the div
+        newDiv.innerHTML = `
 
-                            ">
-            <img src="img/images/car4.png" alt="yourimage" class="  " style="height:1vh;width:1vh" id="highIm" ></div>
-            </div>
-            <div class="col-md-8 d-flex flex-column justify-content-center" style="justify-self: flex-start;">
+          <div class="row" style="width:100%">
+          <div class="col-md-3 d-flex align-items-center justify-content-center" >
+          
+          <button class="btn btn-light" style="
+                            width: 54px;
+                            height: 54px;
+                            border: none;
+                            background-color: #ED683866;
+                            border-radius: 16px;
+                          ">
+                        <img src="img/images/car4.png" alt="yourimage" style="width: 100%; height: auto" id="highIm" />
+                      </button>
+          </div>
+          <div class="col-md-9 d-flex flex-column justify-content-center" style="justify-self: flex-start;">
 
-            <h1 id="highText" class="fw mb-0" style="
-            font-family: Merriweather;
-            font-size: 1vw;
-            font-weight: 700;
+          <h1 id="highText" class="fw mb-0" style="
+          font-family: Merriweather;
+          font-size: 1vw;
+          font-weight: 700;
 
-            ">I love the variety and mix of topics that Chief of Stuff covers - it's always so interesting!</h1>
-            <h1 id="highSubText" class="fw mb-0" style="
-            color:#000000B8;
-            font-family: Inter;
-            font-size: 1vw;
-            font-weight: 400;
-            margin-top: 2%;
-            ">- Matt</h1>
-            </div>
-            </div>
-            `;
+          ">I love the variety and mix of topics that Chief of Stuff covers - it's always so interesting!</h1>
+          <h1 id="highSubText" class="fw mb-0" style="
+          color:#000000B8;
+          font-family: Inter;
+          font-size: 1vw;
+          font-weight: 400;
+          margin-top: 2%;
+          ">- Matt</h1>
+          </div>
+          </div>
+          `;
+
 
             // Add the new div to the container element
             contain.appendChild(newDiv);
@@ -2648,16 +2662,16 @@
   <div class="container-fluid" style=" margin-top: 2%;">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-6 d-none  d-sm-block">
+        <div class="col-10 d-none  d-sm-block">
           <p class="text-left" style="
                 font-family: Merriweather;
-                font-size: 1.5rem;
+                font-size: 2vw;
                 font-weight: 700;
               ">
             Chief Of Stuff
           </p>
         </div>
-        <div class="col-6 d-flex justify-content-end d-none  d-sm-block">
+        <div class="col-2 d-flex justify-content-end d-none  d-sm-block">
           <div class="row">
             <div class="col-4">
               <button class="btn btn-primary" style="
@@ -2698,7 +2712,7 @@
           </div>
         </div>
 
-        <div class="col d-flex flex-column justify-content-center " style="margin-top: 5%;">
+        <div class="col d-flex d-block  d-sm-none flex-column justify-content-center " style="margin-top: 5%;">
           <div>
             <p style="font-family: Merriweather;
             font-size: 8vw;
@@ -2743,12 +2757,25 @@
       <div class="column">
         <hr />
       </div>
-      <div class="row " style="margin-top: 4%; margin-bottom: 4%">
+      <div class="row d-block d-sm-none" style="margin-top: 4%; margin-bottom: 4%">
         <div class="col d-flex align-items-center justify-content-center">
           <p style="
                 font-family: Inter;
                 font-size: 4vw;
                 font-weight: 500;
+                color: #5c5c5c;
+              ">
+            © Chief Of Stuff 2023 - All rights reserved
+          </p>
+        </div>
+      </div>
+      <div class="row align-items-center" style="margin-top: 2%; margin-bottom: 4%">
+        <div class="col d-none d-sm-block">
+          <p style="
+                font-family: Inter;
+                font-size: 1vw;
+                font-weight: 500;
+                text-align: left;
                 color: #5c5c5c;
               ">
             © Chief Of Stuff 2023 - All rights reserved
@@ -2769,7 +2796,6 @@
 
       setInterval(function () {
         var isMobModal = ($('#isMobModal').val() === 'true');
-        console.log($('#isMobModal').val());
         if (isMobModal) {
           // do something if isSubscribed is true
           $('.custom-substack-widget').find(':submit').click(function () {
