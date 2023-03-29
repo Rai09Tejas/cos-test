@@ -96,7 +96,7 @@
       // Check if the value is true or false
       if (subscriber !== null) {
         if (subscriber === 'true') {
-          //offer_code changed to code ! if subscribe == true 
+          //offer_code changed to code ! if
           linkMob = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1&code=welcome';
           linkDesktop = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1&code=welcome';
         } else {
@@ -241,7 +241,7 @@
                         <div class="modal-header">
                           <button type="button" class="btn-close" id="closeBtn" data-bs-dismiss="modal"
                             aria-label="Close" onclick="
-                      var modal = document.getElementById('myModal2');
+                      var modal = document.getElementById('myModal');
                   modal.classList.remove('show');
                       "></button>
                         </div>
@@ -2808,13 +2808,18 @@
           // do something if isSubscribed is true
           $('.custom-substack-widget').find(':submit').click(function () {
             $('#isSubscribed').val('1');
+            $('#myModal').modal('show');
+          })
+          $('.custom-substack-widget').find(':submit').click(function () {
+            $('#isSubscribed').val('1');
             $('#myModal2').modal('show');
           })
+
         } else {
           // do something else if isSubscribed is false
           $('.custom-substack-widget').find(':submit').click(function () {
             $('#isSubscribed').val('1');
-            $('#myModal').modal('show');
+            $('#myModal2').modal('show');
           })
         }
 
