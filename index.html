@@ -96,9 +96,8 @@
       // Check if the value is true or false
       if (subscriber !== null) {
         if (subscriber === 'true') {
-          //offer_code changed to code ! if
-          linkMob = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1&code=welcome';
-          linkDesktop = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1&code=welcome';
+          linkMob = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1&offer_code=welcome';
+          linkDesktop = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1&offer_code=welcome';
         } else {
           linkMob = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1';
           linkDesktop = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1';
@@ -243,7 +242,6 @@
                             aria-label="Close" onclick="
                       var modal = document.getElementById('myModal2');
                   modal.classList.remove('show');
-                  
                       "></button>
                         </div>
                         <div class="modal-body">
@@ -280,7 +278,6 @@
                         cursor: pointer;" data-bs-dismiss="modal" onclick="
                         var modal = document.getElementById('myModal2');
                         modal.classList.remove('show');
-                        
                         ">Ok</button>
                         </div>
                       </div>
@@ -876,7 +873,7 @@
               background: #ED6838;
               box-shadow: 0px 4px 16px rgba(251, 97, 42, 0.8);
               border-radius: 16px;"
-                  onclick="window.open('https://app.gumroad.com/checkout?product=lrswn&quantity=1&code=welcome', '_blank')">
+                  onclick="window.open('https://app.gumroad.com/checkout?product=lrswn&quantity=1&offer_code=welcome', '_blank')">
                   <p class="text1" style="font-family: Inter;
                 font-size: 100%;
                 font-weight: 700;
@@ -2806,21 +2803,19 @@
 
       setInterval(function () {
         var isMobModal = ($('#isMobModal').val() === 'true');
+
         if (isMobModal) {
           // do something if isSubscribed is true
           $('.custom-substack-widget').find(':submit').click(function () {
             $('#isSubscribed').val('1');
-            
-            $('#myModal').modal('show');
+            console.log('mobile modal');
             $('#myModal2').modal('show');
           })
-         
-
         } else {
           // do something else if isSubscribed is false
           $('.custom-substack-widget').find(':submit').click(function () {
             $('#isSubscribed').val('1');
-            $('#myModal2').modal('show');
+            console.log('desktop modal');
             $('#myModal').modal('show');
           })
         }
