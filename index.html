@@ -870,27 +870,27 @@
               </script>
 
               <div class="col-md-5" style="padding-left: 5%;margin-top: 10%; padding: 0;">
-                <ul class="nav nav-pills nav-justified" id="myTab">
+                <ul class="nav nav-pills nav-justified mobile-tabs" id="mobileTabs">
                   <li class="nav-item" role="presentation">
-                    <button class="active" id="tab2" style="font-family: Inter; font-size: 4vw; font-weight: 600;text-align: center; color: #000000;border:none;background-color: #F1EFEA;
+                    <button class="active tab-btn" id="mob-this-issue" style="font-family: Inter; font-size: 4vw; font-weight: 600;text-align: center; color: #000000;border:none;background-color: #F1EFEA;
                       border-bottom: 2px solid black;" data-bs-toggle="pill" data-bs-target="#this-issue2m"
                       type="button" role="tab" aria-controls="pills-high" aria-selected="false">This Issue</button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="" id="tab2"
+                    <button class="tab-btn" id="mob-high"
                       style="font-family: Inter; font-size: 4vw; font-weight: 600;text-align: center; color: #000000;border:none;background-color: #F1EFEA;""
                       data-bs-toggle=" pill" data-bs-target="#highlights2m" type="button" role="tab"
                       aria-controls="pills-high" aria-selected="false">Highlights</button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="" id="tab2"
+                    <button class="tab-btn" id="mob-about"
                       style="font-family: Inter; font-size: 4vw; font-weight: 600;text-align: center; color: #000000;border:none;background-color: #F1EFEA;""
                       data-bs-toggle=" pill" data-bs-target="#about2m" type="button" role="tab"
                       aria-controls="pills-high" aria-selected="false">About</button>
                   </li>
                 </ul>
-                <div class="tab-content" id="myTabContent">
-                  <div class="tab-pane fade show active" id="this-issue2m" role="tabpanel"
+                <div class="tab-content mobile-tabs" id="myTabContent">
+                  <div class="tab-pane fade show active tab-content" id="this-issue2m" role="tabpanel"
                     aria-labelledby="this-issue-tab">
                     <div class="row">
                       <div class="col" style="padding-top: 10%;">
@@ -910,14 +910,14 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tab-pane fade" id="highlights2m" role="tabpanel" aria-labelledby="highlights-tab">
+                  <div class="tab-pane fade tab-content" id="highlights2m" role="tabpanel" aria-labelledby="highlights-tab">
                     <!-- fbeshgfbhgsevh svhgfvhds gv hdvshf Here is the-->
 
                     <ul id="highlightsTab2" style="padding-left: 0;padding-top: 2vw;margin-right: 2vw;">
                       <!-- List items will go here -->
                     </ul>
                   </div>
-                  <div class="tab-pane fade" id="about2m" role="tabpanel" aria-labelledby="about-tab">
+                  <div class="tab-pane fade tab-content" id="about2m" role="tabpanel" aria-labelledby="about-tab">
                     <div class="row">
                       <div class="col" style="padding-top: 10%;">
                         <h1 class="text1" style="font-family: Merriweather;
@@ -983,7 +983,7 @@
                 navItem.style.borderBottom = '2px solid black';
               });
             });
-            const magItems = document.querySelectorAll('#tab2');
+            const magItems = document.querySelectorAll('.mobile-tabs .tab-btn');
 
             // add a click event listener to each button
             magItems.forEach((navItem) => {
@@ -1134,8 +1134,8 @@
     const button2m = document.getElementById('pills-profile-tab-m');
     const button3m = document.getElementById('pills-contact-tab-m');
 
-    const tabButtonsm = document.querySelectorAll('.nav-link');
-    const tabContentsm = document.querySelectorAll('.tab-pane');
+    const tabButtonsm = document.querySelectorAll('.mobile-tabs .tab-btn');
+    const tabContentsm = document.querySelectorAll('.mobile-tabs .tab-content');
 
     tabButtonsm.forEach(function (tabButton) {
       tabButton.addEventListener('click', function () {
@@ -2446,9 +2446,12 @@
       const mobileMagImages = document.querySelectorAll('#mag-imgas-m');
       const mobileMag2 = document.querySelectorAll('#mag-head-m');
 
+
+
       magHeadM.setAttribute('src', issues[issueNo].cover[0]);
       mobileIssueText.innerText = `${issues[issueNo].title}`;
       mobileIssueSubText.innerText = `${issues[issueNo].description}`;
+
 
 
       for (let i = 0; i < issues[issueNo].cover.length; i++) {
@@ -2555,6 +2558,77 @@
       for (let i = 0; i < issues[issueNo].cover.length; i++) {
         mobileMagImages[i].setAttribute('src', issues[issueNo].cover[i]);
       }
+      
+      const c2 = document.getElementById('highlightsTab2');
+        while (c2.firstChild) {
+          c2.removeChild(c2.firstChild);
+        }
+
+      for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+        // Create a new div element
+        const newDiv = document.createElement("div");
+
+        // Set the class and style attributes of the div
+        newDiv.setAttribute("class", "col");
+        newDiv.setAttribute("style", "border-radius: 16px; padding: 12px;padding-bottom:0px;padding-top:12px; background: #FAF8F4;margin: 1vw;width:100%");
+
+        // Add the code to the innerHTML of the div
+        newDiv.innerHTML = `
+          
+    <div class="row">
+      <div class="col-3">
+      <button class="btn btn-light" style="
+            width: 54px;
+            height: 54px;
+            background-color:#ED683866;
+            border: none;
+            border-radius: 16px;
+          ">
+        <img src="img/icons/arti.png" alt="image-description-here" style="width: 100%; " id="highIm2" />
+      </button>
+      </div>
+      <div class="col-9 d-flex flex-column justify-items-center">
+      <div class="col">
+        
+
+        <p id="highText2" class=" d-block d-sm-none" style="
+              font-family: Merriweather;
+              font-weight: 900;
+              font-size: 3.5vw;
+            ">
+            Stop to Smell the Roses:
+        </p>
+      </div>
+      <div class="col">
+
+        <p id="highSubText2" class="text-break d-block d-sm-none" style="
+              font-family: Inter;
+              font-weight: 500;
+              font-size: 3vw;
+            ">
+            The history of the English rose and the man behind the bouquet.
+        </p>
+      </div>
+      </div>
+    </div>
+    `;
+
+        // Add the new div to the container element
+        c2.appendChild(newDiv);
+      }
+
+
+      const image2 = document.querySelectorAll('#highIm2');
+      const highText2 = document.querySelectorAll('#highText2');
+      const highSubText2 = document.querySelectorAll('#highSubText2');
+
+
+      for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+        image2[i].setAttribute('src', issues[issueNo].highlightContent[i].src);
+        highText2[i].innerText = `${issues[issueNo].highlightContent[i].title}`;
+        highSubText2[i].innerText = `${issues[issueNo].highlightContent[i].description}`;
+      }
+
 
 
 
@@ -2567,6 +2641,75 @@
         } else {
           issueNo = issueNo - 1;
         }
+        const c2 = document.getElementById('highlightsTab2');
+        while (c2.firstChild) {
+          c2.removeChild(c2.firstChild);
+        }
+
+      for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+        // Create a new div element
+        const newDiv = document.createElement("div");
+
+        // Set the class and style attributes of the div
+        newDiv.setAttribute("class", "col");
+        newDiv.setAttribute("style", "border-radius: 16px; padding: 12px;padding-bottom:0px;padding-top:12px; background: #FAF8F4;margin: 1vw;width:100%");
+
+        // Add the code to the innerHTML of the div
+        newDiv.innerHTML = `
+          
+    <div class="row">
+      <div class="col-3">
+      <button class="btn btn-light" style="
+            width: 54px;
+            height: 54px;
+            background-color:#ED683866;
+            border: none;
+            border-radius: 16px;
+          ">
+        <img src="img/icons/arti.png" alt="image-description-here" style="width: 100%; " id="highIm2" />
+      </button>
+      </div>
+      <div class="col-9 d-flex flex-column justify-items-center">
+      <div class="col">
+        
+
+        <p id="highText2" class=" d-block d-sm-none" style="
+              font-family: Merriweather;
+              font-weight: 900;
+              font-size: 3.5vw;
+            ">
+            Stop to Smell the Roses:
+        </p>
+      </div>
+      <div class="col">
+
+        <p id="highSubText2" class="text-break d-block d-sm-none" style="
+              font-family: Inter;
+              font-weight: 500;
+              font-size: 3vw;
+            ">
+            The history of the English rose and the man behind the bouquet.
+        </p>
+      </div>
+      </div>
+    </div>
+    `;
+
+        // Add the new div to the container element
+        c2.appendChild(newDiv);
+      }
+
+
+      const image2 = document.querySelectorAll('#highIm2');
+      const highText2 = document.querySelectorAll('#highText2');
+      const highSubText2 = document.querySelectorAll('#highSubText2');
+
+
+      for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+        image2[i].setAttribute('src', issues[issueNo].highlightContent[i].src);
+        highText2[i].innerText = `${issues[issueNo].highlightContent[i].title}`;
+        highSubText2[i].innerText = `${issues[issueNo].highlightContent[i].description}`;
+      }
 
         const mobCaro = document.getElementById('mobCaro');
         while (mobCaro.firstChild) {
