@@ -3087,7 +3087,7 @@
                     background-color: #e9e6e0;
                     padding: 5%;
                   ">
-                <img src="img/icons/instagram.png" alt="Image 1" class="img-fluid" />
+                <img src="img/icons/instagram.png" alt="Image 1" class="img-fluid"  onclick="window.open('https://instagram.com/chief.of.stuff.inc?igshid=Mzc1MmZhNjY=', '_blank')"/>
               </button>
             </div>
             <div class="col-4">
@@ -3099,7 +3099,7 @@
                     background-color: #e9e6e0;
                     padding: 5%;
                   ">
-                <img src="img/icons/tiktok.png" alt="Image 2" class="img-fluid" />
+                <img src="img/icons/tiktok.png" alt="Image 2" class="img-fluid"  onclick="window.open('img/images/tiktokId.jpeg', '_blank')"/>
               </button>
             </div>
             <div class="col-4">
@@ -3111,7 +3111,7 @@
                     background-color: #e9e6e0;
                     padding: 5%;
                   ">
-                <img src="img/icons/linkedIn.png" alt="Image 3" class="img-fluid" />
+                <img src="img/icons/linkedIn.png" alt="Image 3" class="img-fluid"  onclick="window.open('https://www.linkedin.com/company/chief-of-stuff-inc', '_blank')"/>
               </button>
             </div>
           </div>
@@ -3136,7 +3136,7 @@
                     background-color: #e9e6e0;
                     padding: 5%;
                   ">
-              <img src="img/icons/instagram.png" alt="Image 1" class="img-fluid" style="height: 10vw;width: 10vw;" />
+              <img src="img/icons/instagram.png" alt="Image 1" class="img-fluid" style="height: 10vw;width: 10vw;"  onclick="window.open('https://instagram.com/chief.of.stuff.inc?igshid=Mzc1MmZhNjY=', '_blank')"/>
             </button>
             <button class="btn btn-primary" style="
               height: 20vw;width: 20vw;
@@ -3145,7 +3145,7 @@
                     background-color: #e9e6e0;
                     padding: 5%;
                   ">
-              <img src="img/icons/tiktok.png" alt="Image 2" class="img-fluid" style="height: 10vw;width: 10vw;" />
+              <img src="img/icons/tiktok.png" alt="Image 2" class="img-fluid" style="height: 10vw;width: 10vw;"  onclick="window.open('img\images\tiktokId.jpeg', '_blank')"/>
             </button>
             <button class="btn btn-primary" style="
               height: 20vw;width: 20vw;
@@ -3154,7 +3154,7 @@
                     background-color: #e9e6e0;
                     padding: 5%;
                   ">
-              <img src="img/icons/linkedIn.png" alt="Image 3" class="img-fluid" style="height: 10vw;width: 10vw;" />
+              <img src="img/icons/linkedIn.png" alt="Image 3" class="img-fluid" style="height: 10vw;width: 10vw;"  onclick="window.open('https://www.linkedin.com/company/chief-of-stuff-inc', '_blank')"/>
             </button>
           </div>
         </div>
@@ -3200,10 +3200,14 @@
     $(document).ready(function () {
 
       setInterval(function () {
-
+        if($('.custom-substack-widget').find(':input').val()!=''){
+          
+       
         if ($(window).width() < 768) {
           // do something if isSubscribed is true
           $('.custom-substack-widget').find(':submit').click(function () {
+        
+
             $('#isSubscribed').val('1');
             $('#myModal2').modal('show');
           })
@@ -3213,7 +3217,7 @@
             $('#isSubscribed').val('1');
             $('#myModal').modal('show');
           })
-        }
+        } }
 
       }, 1000);
 
