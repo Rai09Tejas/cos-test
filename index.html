@@ -2146,14 +2146,11 @@
       const highText = document.querySelectorAll('#highText');
       const highSubText = document.querySelectorAll('#highSubText');
 
-
       for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
         image[i].setAttribute('src', issues[issueNo].highlightContent[i].src);
         highText[i].innerText = `${issues[issueNo].highlightContent[i].title}`;
         highSubText[i].innerText = `${issues[issueNo].highlightContent[i].description}`;
       }
-
-
 
       const c2 = document.getElementById('highlightsTab2');
 
@@ -2430,6 +2427,7 @@
         newDiv.setAttribute("class", "btn p-0");
         newDiv.setAttribute("id", "mag-img-m");
 
+
         // Add the code to the innerHTML of the div
         newDiv.innerHTML = `
         <div class="col" id="mag-divi-m" style=" width: 12vw; height: 12vw; border: none;
@@ -2456,10 +2454,18 @@
 
       for (let i = 0; i < issues[issueNo].cover.length; i++) {
         mobileMagImages[i].setAttribute('src', issues[issueNo].cover[i]);
+        
+        mobileMagImages[i].addEventListener('click',function () {
+          imgNo=i;
+          magHeadM.setAttribute('src', issues[issueNo].cover[i]);
+        })
       }
       const prevBtn = document.getElementById('prevMob');
       const nextBtn = document.getElementById('nextMob');
       console.log(issueNo);
+
+
+      // PREV BUTTON
 
       prevBtn.addEventListener('click', function () {
         if (issueNo == issues.length - 1) {
@@ -2557,6 +2563,10 @@
 
       for (let i = 0; i < issues[issueNo].cover.length; i++) {
         mobileMagImages[i].setAttribute('src', issues[issueNo].cover[i]);
+        mobileMagImages[i].addEventListener('click',function () {
+          imgNo=i;
+          magHeadM.setAttribute('src', issues[issueNo].cover[i]);
+        })
       }
       
       const c2 = document.getElementById('highlightsTab2');
@@ -2635,6 +2645,8 @@
 
 
       })
+
+      // NEXT BUTTON
       nextBtn.addEventListener('click', function () {
         if (issueNo == 0) {
           issueNo = issues.length - 1;
@@ -2799,6 +2811,10 @@
 
       for (let i = 0; i < issues[issueNo].cover.length; i++) {
         mobileMagImages[i].setAttribute('src', issues[issueNo].cover[i]);
+        mobileMagImages[i].addEventListener('click',function () {
+          imgNo=i;
+          magHeadM.setAttribute('src', issues[issueNo].cover[i]);
+        })
       }
 
 
