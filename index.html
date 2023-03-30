@@ -22,7 +22,6 @@
 </head>
 
 <body style="background-color: #E9E6E0">
-  <input type="hidden" name="isMobModal" value="false" id="isMobModal" />
   <input type="hidden" name="isSubscribed" value="0" id="isSubscribed" />
 
   <div class="container-fluid" style="width: 100%;">
@@ -116,7 +115,7 @@
 
 
     <!-- FORM FIELD SECTION Mobile Only-->
-    <div class="container-fluid hidden-md-down d-block d-sm-none" style="
+    <div class="container-fluid hidden-md-down d-block d-sm-none" id="mobileOnlyFormField" style="
           position: relative;
           display: flex;
           flex-direction: column;
@@ -167,6 +166,7 @@
             </div>
 
             <script>
+                    
 
               function changeWordm() {
                 var wordsm = ["‘informative’", "‘interesting’", "‘innovative’", "‘inspirational’"];
@@ -185,11 +185,8 @@
                 }, 3000);
               }
 
-              document.addEventListener("DOMContentLoaded", function (event) {
-                changeWordm();
+              $(document).ready(function () {  changeWordm();});
 
-                $('#isMobModal').val('true');
-              });
             </script>
             <p style="
                   font-family: Inter;
@@ -278,6 +275,9 @@
                         cursor: pointer;" data-bs-dismiss="modal" onclick="
                         var modal = document.getElementById('myModal2');
                         modal.classList.remove('show');
+                        
+                        document.location.reload(true);
+                        
                         ">Ok</button>
                         </div>
                       </div>
@@ -302,6 +302,8 @@
 
                   </script>
                   <script src="https://substackapi.com/widget.js" async></script>
+
+                  
                 </div>
               </div>
             </div>
@@ -501,6 +503,8 @@
                         cursor: pointer;" data-bs-dismiss="modal" onclick="
                         var modal = document.getElementById('myModal');
                         modal.classList.remove('show');
+                        document.location.reload(true);
+                        
                         ">Ok</button>
                         </div>
                       </div>
@@ -811,59 +815,11 @@
                   </div>
                   <div class="col-md-6">
                     <!-- Element 2: Row of 2 image buttons -->
-                    <div class="d-flex justify-content-center" style="margin-top: 10%;margin-bottom: 10%;padding: 10%;">
-                      <button class="btn " id="mag1-m">
-                        <div class="col" id="mag1-div-m" style=" width: 12vw; border: none;
-                        border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
-                          <img src="img/images/mag1.png" class="img-fluid" id="mag-img-m" alt="Your Image"
-                            style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
-                        </div>
-                      </button>
-                      <button class="btn " id="mag2-m">
-                        <div class="col" id="mag2-div-m" style=" width: 12vw; border: none;
-                        border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
-                          <img src="img/images/mag2.png" class="img-fluid" id="mag2-img-m" alt="Your Image"
-                            style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
-                        </div>
-                      </button>
-                      <button class="btn " id="mag3-m">
-                        <div class="col" id="mag3-div-m" style=" width: 12vw; border: none;
-                        border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
-                          <img src="img/images/mag3.png" class="img-fluid" id="mag3-img-m" alt="Your Image"
-                            style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
-                        </div>
-                      </button>
-                      <button class="btn " id="mag4-m">
-                        <div class="col" id="mag4-div-m" style=" width: 12vw; border: none;
-                        border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
-                          <img src="img/images/mag4.png" class="img-fluid" id="mag4-img-m" alt="Your Image"
-                            style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));">
-                        </div>
-                      </button>
+                    <div class="d-flex justify-content-center" style="margin-top: 10%;margin-bottom: 10%;padding: 10%;" id="mobileMag">
+                      
                     </div>
                   </div>
-                  <script>
-                    var imageSrc2 = 'img/images/mag1.png';
-                    document.addEventListener('DOMContentLoaded', function () {
-
-                      document.querySelector('#mag1-m').addEventListener('click', function () {
-                        imageSrc2 = 'img/images/mag1.png';
-                        document.querySelector('#mag-head-m').src = imageSrc2;
-                      });
-                      document.querySelector('#mag2-m').addEventListener('click', function () {
-                        imageSrc2 = 'img/images/mag2.png';
-                        document.querySelector('#mag-head-m').src = imageSrc2;
-                      });
-                      document.querySelector('#mag3-m').addEventListener('click', function () {
-                        imageSrc2 = 'img/images/mag3.png';
-                        document.querySelector('#mag-head-m').src = imageSrc2;
-                      });
-                      document.querySelector('#mag4-m').addEventListener('click', function () {
-                        imageSrc2 = 'img/images/mag4.png';
-                        document.querySelector('#mag-head-m').src = imageSrc2;
-                      });
-                    });
-                  </script>
+                  
                 </div>
                 <button class="btn btn1" style="
               height: 77px;
@@ -2100,7 +2056,6 @@
       const magHead = document.getElementById('mag-head-d');
 
       const con = document.getElementById('magImages');
-      console.log(issues[issueNo].cover.length);
 
       for (let i = 0; i < issues[issueNo].cover.length; i++) {
         // Create a new div element
@@ -2114,7 +2069,7 @@
         newDiv.innerHTML = `
           <div class="col" id="mag1-div" style=" width:8vw; border: none;
                           border-radius: 16px;background-color: #E9E5DE;padding: 10%;margin-bottom: 2%;">
-                          <img src="img/images/mag1.png" class="img-fluid" id="mag-img" alt="Your Image"
+                          <img src="img/images/mag1.png" class="img-fluid" id="mag-img2" alt="Your Image"
                             style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));"/>
                         </div>
         `;
@@ -2122,7 +2077,7 @@
         // Add the new div to the container element
         con.appendChild(newDiv);
       }
-      const imagenn = document.querySelectorAll('#mag-img');
+      const imagenn = document.querySelectorAll('#mag-img2');
       const im2 = document.querySelectorAll('#mag-head-d');
 
       magHead.setAttribute('src', issues[issueNo].cover[0]);
@@ -2472,9 +2427,45 @@
 
 
 
+
+
         });
       }
+      // <button class="btn " id="mag1-m">
+      //                   <div class="col" id="mag1-div-m" style=" width: 12vw; border: none;
+      //                   border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
+      //                     <img src="img/images/mag1.png" class="img-fluid" id="mag-img-m" alt="Your Image"
+      //                       style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));"/>
+      //                   </div>
+      //                 </button>
 
+
+      const mobileMag = document.getElementById('mobileMag');
+
+      for (let i = 0; i < issues[issueNo].cover.length; i++) {
+        // Create a new div element
+        const newDiv = document.createElement("button");
+
+        // Set the class and style attributes of the div
+        newDiv.setAttribute("class", "btn");
+        newDiv.setAttribute("id", "mag-m");
+
+        // Add the code to the innerHTML of the div
+        newDiv.innerHTML = `
+        <div class="col" id="mag1-div-m" style=" width: 12vw; border: none;
+                        border-radius: 16px;background-color: #E9E5DE;padding: 10%;">
+                          <img src="img/images/mag1.png" class="img-fluid" id="mag-img-m" alt="Your Image"
+                            style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));"/>
+                        </div>
+        `;
+
+        // Add the new div to the container element
+        con.appendChild(newDiv);
+      }
+      const mobileMagImages = document.querySelectorAll('#mag-img-m');
+      const mobileMag2 = document.querySelectorAll('#mag-head-m');
+
+      magHead.setAttribute('src', issues[issueNo].cover[0]);
     });
 
 
@@ -2802,9 +2793,9 @@
     $(document).ready(function () {
 
       setInterval(function () {
-        var isMobModal = ($('#isMobModal').val() === 'true');
+        console.log($(window).width());
 
-        if (isMobModal) {
+        if ($(window).width() < 768) {
           // do something if isSubscribed is true
           $('.custom-substack-widget').find(':submit').click(function () {
             $('#isSubscribed').val('1');
