@@ -243,6 +243,7 @@
                             aria-label="Close" onclick="
                       var modal = document.getElementById('myModal2');
                   modal.classList.remove('show');
+                  
                       "></button>
                         </div>
                         <div class="modal-body">
@@ -279,6 +280,7 @@
                         cursor: pointer;" data-bs-dismiss="modal" onclick="
                         var modal = document.getElementById('myModal2');
                         modal.classList.remove('show');
+                        
                         ">Ok</button>
                         </div>
                       </div>
@@ -2818,6 +2820,7 @@
           $('.custom-substack-widget').find(':submit').click(function () {
             $('#isSubscribed').val('1');
             $('#myModal2').modal('show');
+            $('#myModal').modal('show');
           })
         }
 
