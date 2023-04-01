@@ -498,7 +498,7 @@
                   </div>
 
 
-                  <div class="mx-auto" id="custom-substack-embed">
+                  <div  id="custom-substack-embed">
 
                   </div>
 
@@ -3202,7 +3202,8 @@
     $(document).ready(function () {
 
       setInterval(function () {
-        if($('.custom-substack-widget').find(':input').val()!=''){
+        // if($('.custom-substack-widget').find(':input').val()!=''){
+          console.log('clicked');
           
        console.log('$(window).width()');
         if ($(window).width() < 768) {
@@ -3210,21 +3211,24 @@
           $('.custom-substack-widget').find(':submit').click(function () {
             $('#isSubscribed').val('1');
             $('#myModal2').modal('show');
+            console.log('clicked m');
 
             $('#realContent').height('135vh');
           });
         } else {
           // do something else if isSubscribed is false
           $('.custom-substack-widget').find(':submit').click(function () {
+            console.log('clicked');
             $('#isSubscribed').val('1');
             $('#myModal').modal('show');
-            $('.custom-substack-widget .csw-theme-custom').width('100vw');
+            // $('.custom-substack-widget .csw-theme-custom').width('100vw');
             
 
           });
           
 
-        } }
+        } 
+      // }
 
       }, 1000);
 
