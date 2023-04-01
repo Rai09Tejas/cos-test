@@ -815,7 +815,7 @@
                       background-color: #FAF8F4;
                       border: none;">
                         <img src="img/icons/zoom.png" class="img-fluid" alt="Image" data-toggle="modal"
-                          data-target="#imageModal" onclick="zoomMobileImage()">
+                          data-target="#imageModal" onclick="zoomMobileImage()">    
 
 
                       </button>
@@ -2880,7 +2880,7 @@
   </script>
 
   <!-- REAL CONTENT REAL VOICE SECTION-->
-  <div class="container-fluid align-items-center" style="background-color: #ffffff; padding: 5%;height: 135vh;">
+  <div class="container-fluid align-items-center" id="realContent" style="background-color: #ffffff; padding: 5%;">
     <h1 class="fw-bold d-none d-sm-block" style="
             font-family: Merriweather;
             font-size: 54px;
@@ -3201,20 +3201,24 @@
       setInterval(function () {
         if($('.custom-substack-widget').find(':input').val()!=''){
           
-       
+       console.log($(window).width());
         if ($(window).width() < 768) {
           // do something if isSubscribed is true
           $('.custom-substack-widget').find(':submit').click(function () {
-        
-
             $('#isSubscribed').val('1');
             $('#myModal2').modal('show');
-          })
+
+            $('#realContent').height('135vh');
+          });
+          
+          $('.custom-substack-widget').find(':submit').text('>');
         } else {
           // do something else if isSubscribed is false
           $('.custom-substack-widget').find(':submit').click(function () {
             $('#isSubscribed').val('1');
             $('#myModal').modal('show');
+            $('.custom-substack-widget .csw-theme-custom').width('100vw%');
+
           })
         } }
 
