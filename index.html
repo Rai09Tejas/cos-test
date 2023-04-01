@@ -84,29 +84,6 @@
       </div>
     </div>
 
-    <script>
-      var linkMob = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1';
-      var linkDesktop = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1';
-      // Get the value of the subscriber variable from the URL
-      const urlParams = new URLSearchParams(window.location.search);
-      const subscriber = urlParams.get('subscriber');
-
-      // Check if the value is true or false
-      if (subscriber !== null) {
-        if (subscriber === 'true') {
-          linkMob = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1&code=welcome';
-          linkDesktop = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1&code=welcome';
-        } else {
-          linkMob = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1';
-          linkDesktop = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1';
-        }
-      }
-      else {
-
-        linkMob = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1';
-        linkDesktop = 'https://app.gumroad.com/checkout?product=lrswn&quantity=1';
-      }
-    </script>
 
 
 
@@ -325,7 +302,7 @@
           display: flex;
           flex-direction: column;
           align-content: center;
-          margin-top: 5%;
+          margin-top: 0;
           background: radial-gradient(50% 50% at 50% 50%, #FCCDBC 0%, #E9E6E0 100%),radial-gradient(circle at 95.23% 40%, rgba(237, 104, 56, 0.72) 0%, rgba(255, 204, 77, 0.72) 100%);
         ">
       <div class="row d-flex justify-content-center align-items-center ">
@@ -1738,7 +1715,7 @@
 
   <!-- Previous Issues Section Desktop Only-->
   <div class="container-fluid  d-none d-sm-block"
-    style="padding: 3%;padding-top: 5%;padding-bottom: 5%; margin-top: 2%;margin-bottom: 5%;">
+    style="padding: 3%;padding-top: 0;padding-bottom: 5%; margin-top: 2%;margin-bottom: 0">
     <div class="row">
       <div class="col-12">
         <p class="text"
@@ -2000,8 +1977,8 @@
         ],
         title: "Issue #4",
         description: "Our Fourth Issue examines the tension between artificial intelligence and human originality. We believe that good things take time, but tech can be a helpful asset if used wisely. If innovations make our lives easier, then we can use our resources wisely and dedicate our energy to explore the stuff we love.",
-        paymentLink: "https://chiefofstuff.gumroad.com/l/issuefour",
-        paymentLinkNoOffer: "https://chiefofstuff.gumroad.com/l/issuefour",
+        paymentLink: "https://app.gumroad.com/checkout?product=issuefour&amp;quantity=1&code=welcome",
+        paymentLinkNoOffer: "https://app.gumroad.com/checkout?product=issuefour&amp;quantity=1",
         highlightContent: [
           {
             title: "Stop to Smell the Roses:",
@@ -2040,6 +2017,31 @@
 
     var issueNo = issues.length - 1;
     var imgNo = 0;
+
+
+    
+    var linkMob = issues[issueNo].paymentLink;
+      var linkDesktop =issues[issueNo].paymentLink;
+      console.log(linkMob);
+      // Get the value of the subscriber variable from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const subscriber = urlParams.get('subscriber');
+
+      // Check if the value is true or false
+      if (subscriber !== null) {
+        if (subscriber === 'true') {
+          linkMob = issues[issueNo].paymentLink;
+          linkDesktop = issues[issueNo].paymentLink;
+        } else {
+          linkMob = issues[issueNo].paymentLinkNoOffer;
+          linkDesktop = issues[issueNo].paymentLinkNoOffer;
+        }
+      }
+      else {
+
+        linkMob = issues[issueNo].paymentLinkNoOffer;
+        linkDesktop =issues[issueNo].paymentLinkNoOffer;
+      }
 
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -2880,7 +2882,7 @@
   </script>
 
   <!-- REAL CONTENT REAL VOICE SECTION-->
-  <div class="container-fluid align-items-center" id="realContent" style="background-color: #ffffff; padding: 5%;">
+  <div class="container-fluid align-items-center" id="realContent" style="background-color: #ffffff; padding: 5%;padding-bottom: 0;">
     <h1 class="fw-bold d-none d-sm-block" style="
             font-family: Merriweather;
             font-size: 54px;
@@ -3201,7 +3203,7 @@
       setInterval(function () {
         if($('.custom-substack-widget').find(':input').val()!=''){
           
-       console.log($(window).width());
+       console.log('$(window).width()');
         if ($(window).width() < 768) {
           // do something if isSubscribed is true
           $('.custom-substack-widget').find(':submit').click(function () {
@@ -3217,9 +3219,12 @@
           $('.custom-substack-widget').find(':submit').click(function () {
             $('#isSubscribed').val('1');
             $('#myModal').modal('show');
-            $('.custom-substack-widget .csw-theme-custom').width('100vw%');
+            $('.custom-substack-widget .csw-theme-custom').width('100vw');
+            
 
-          })
+          });
+          $('.custom-substack-widget').find('submit').text('>');
+
         } }
 
       }, 1000);
