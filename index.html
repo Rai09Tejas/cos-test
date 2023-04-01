@@ -184,28 +184,28 @@
             </p>
 
             <!-- form -->
-            <div style="
+            <!-- <div style="
                   width: 100%;
                   background-color: #ffffff8a;
                   border-radius: 16px;
                   padding: 24px;
                   margin-top: 3%;
-                ">
-              <div style="
+                "> -->
+              <div class=" mx-auto" style="
                     display: flex;
                     flex-direction: column;
                     justify-self: center;
                   " class="text-start">
-                <h1 style="
+                <!-- <h1 style="
                       font-family: Merriweather;
                       font-weight: 700;
                       font-size: 4vw;
                     ">
                   Say hello to stuff!
-                </h1>
+                </h1> -->
 
                 <!-- <iframe src="https://www.chiefofstuff.org/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe> -->
-                <div class="row d-flex justify-content-center align-content-center" style="width: 100%;">
+                <div class="row d-flex justify-content-center align-content-center  mx-auto" style="width: 100%;">
                   <div class="modal fade" id="myModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -266,7 +266,7 @@
                     </div>
                   </div>
 
-                  <div id="custom-substack-embed"></div>
+                  <div class=" mx-auto" id="custom-substack-embed"></div>
                   <script>
                     window.CustomSubstackWidget = {
                       substackUrl: "thechiefofstuff.substack.com",
@@ -288,7 +288,7 @@
 
                 </div>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
 
@@ -417,32 +417,32 @@
             </p>
 
             <!-- form -->
-            <div style="
+            <!-- <div style="
                   width: 100%;
                   background-color: #ffffff8a;
                   border-radius: 16px;
                   padding: 24px;
                   margin-top: 3%;
-                ">
-              <div style="
+                "> -->
+              <div class=" mx-auto" style="
                     display: flex;
                     flex-direction: column;
                     justify-self: center;
-                  " class="text-start">
-                <h1 style="
+                  " >
+                <!-- <h1 style="
                       font-family: Merriweather;
                       font-weight: 700;
                       font-size: 1.5vw;
                     ">
                   Say hello to stuff!
-                </h1>
+                </h1> -->
 
 
                 <!-- <iframe src="https://www.chiefofstuff.org/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe> -->
-                <div class="row d-flex justify-content-center align-content-center" style="width: 100%;">
+                <div class="row d-flex justify-content-center align-content-center mx-auto" style="width: 100%;">
                   <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                     aria-labelledby="staticBackdropLabel" aria-hidden="true"
-                    ">
+                    >
                     <div class="modal-dialog modal-lg" >
                       <div class="modal-content"style="  background-color: #E9E6E0;">
                         <div class="modal-header">
@@ -497,7 +497,7 @@
                   </div>
 
 
-                  <div id="custom-substack-embed">
+                  <div class="mx-auto" id="custom-substack-embed">
 
                   </div>
 
@@ -524,7 +524,7 @@
 
                 </div>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
         <div class="col-md-3 justify-content-end align-content-end">
@@ -2020,8 +2020,8 @@
 
 
     
-    var linkMob = issues[issueNo].paymentLink;
-      var linkDesktop =issues[issueNo].paymentLink;
+    var linkMob = issues[issues.length - 1].paymentLink;
+      var linkDesktop =issues[issues.length - 1].paymentLink;
       console.log(linkMob);
       // Get the value of the subscriber variable from the URL
       const urlParams = new URLSearchParams(window.location.search);
@@ -2030,11 +2030,11 @@
       // Check if the value is true or false
       if (subscriber !== null) {
         if (subscriber === 'true') {
-          linkMob = issues[issueNo].paymentLink;
-          linkDesktop = issues[issueNo].paymentLink;
+          linkMob = issues[issues.length - 1].paymentLink;
+          linkDesktop = issues[issues.length - 1].paymentLink;
         } else {
-          linkMob = issues[issueNo].paymentLinkNoOffer;
-          linkDesktop = issues[issueNo].paymentLinkNoOffer;
+          linkMob = issues[issues.length - 1].paymentLinkNoOffer;
+          linkDesktop = issues[issues.length - 1].paymentLinkNoOffer;
         }
       }
       else {
@@ -2912,7 +2912,7 @@
 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="width: 100%;">
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
+        <div class="carousel-item active" data-bs-interval="5000">
           <div class="container-fluid" style="width: 100%; padding: 0%; margin-top: 5%; margin-bottom: 5%">
             <div class="row">
               <div class="col-md-4">
@@ -2947,7 +2947,7 @@
 
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="10000">
+        <div class="carousel-item" data-bs-interval="5000">
           <div class="container-fluid" style="width: 100%; padding: 0%; margin-top: 5%; margin-bottom: 5%">
             <div class="row">
               <div class="col-md-4">
@@ -2984,7 +2984,7 @@
 
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="10000">
+        <div class="carousel-item" data-bs-interval="5000">
           <div class="container-fluid" style="width: 100%; padding: 0%; margin-top: 5%; margin-bottom: 5%">
             <div class="row">
               <div class="col-md-4">
@@ -3019,7 +3019,7 @@
 
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="10000">
+        <div class="carousel-item" data-bs-interval="5000">
           <div class="container-fluid" style="width: 100%; padding: 0%; margin-top: 5%; margin-bottom: 5%">
             <div class="row">
               <div class="col-md-4">
