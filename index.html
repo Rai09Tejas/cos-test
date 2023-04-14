@@ -28,6 +28,8 @@
     <!-- <object data="components/desktop/header.html"  ></object> -->
     <a href="components/desktop/header.html">Link</a>
     <!--#include virtual="components/desktop/header.html" -->
+    <div id="component"></div>
+
 
     
     <div class="container d-block d-sm-none " style="height: 30%;margin-top: 2%;">
@@ -3099,7 +3101,16 @@
   
 
   <script>
+    fetch('components/desktop/header.html')
+  .then(response => response.text())
+  .then(html => {
+    console.log(html);
+    const componentDiv = document.getElementById('component');
+    componentDiv.innerHTML = html;
+  });
     $(document).ready(function () {
+      
+
 
       setInterval(function () {
         if($('.custom-substack-widget').find(':input').val().trim()!=''){
