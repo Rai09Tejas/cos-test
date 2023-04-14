@@ -28,12 +28,6 @@
     <div id="header-d"></div>
     <div id="header-m"></div>
 
-
-
-
-
-
-
     <!-- FORM FIELD SECTION -->
     <div id="form"></div>
     
@@ -46,166 +40,8 @@
 
 
     <!-- Curated SECTION -->
-    <div class="row d-flex m-sm-2 m-md-3 m-lg-3" style="color: white;margin-top: 10%;">
-      <div class="col-md-4">
-        <div class="my-element text-start" style="border-radius: 16px; padding: 16px; background: #8D77DA;height: 90%; box-shadow: 0px 4px 16px rgba(26, 26, 23, 0.24);
-            margin: 2%;">
-          <div class="col">
-            <button class="btn btn-light" style="
-                  width: 54px;
-                  height: 54px;
-                  border: none;
-                  background-color: #FFFFFF3D;
-                  border-radius: 16px;
-                ">
-              <img src="img/icons/curatedIcon.png" alt="image-description-here" style="width: 100%; height: auto" />
-            </button>
-            <div class="col">
-              <p class="d-none d-sm-block" style="
-                    font-family: Merriweather;
-                    font-weight: 700;
-                    font-size: 2vw;
-                    margin-top: 2%;
-                  ">
-                Curated
-              </p>
-
-              <p class=" d-block d-sm-none" style="
-                    font-family: Merriweather;
-                    font-weight: 700;
-                    font-size: 5vw;
-                    margin-top: 2%;
-                  ">
-                Curated
-              </p>
-            </div>
-            <div class="col">
-              <p class="text-break d-none d-sm-block" style="
-                    font-family: Inter;
-                    font-weight: 500;
-                    font-size: 1vw;
-                  ">
-                A vast selection of innovative & inspirational stuff
-              </p>
-
-              <p class="text-break d-block d-sm-none" style="
-                    font-family: Inter;
-                    font-weight: 500;
-                    font-size: 4vw;
-                  ">
-                A vast selection of innovative & inspirational stuff
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="my-element" style="border-radius: 16px; padding: 16px; background: #6FCB5A; height: 90%;box-shadow: 0px 4px 16px rgba(26, 26, 23, 0.24);
-            margin: 2%;">
-          <div class="col">
-            <button class="btn btn-light" style="
-                  width: 54px;
-                  height: 54px;
-                  background-color: #ffffff3d;
-                  border: none;
-                  border-radius: 16px;
-                ">
-              <img src="img/icons/deliveredIcon.png" alt="image-description-here" style="width: 100%; height: auto" />
-            </button>
-            <div class="col">
-              <p class="d-none d-sm-block" style="
-                    font-family: Merriweather;
-                    font-weight: 700;
-                    font-size: 2vw;
-                    margin-top: 2%;
-                  ">
-                Delivered
-              </p>
-
-              <p class=" d-block d-sm-none" style="
-                    font-family: Merriweather;
-                    font-weight: 700;
-                    font-size: 5vw;
-                    margin-top: 2%;
-                  ">
-                Delivered
-              </p>
-            </div>
-            <div class="col">
-              <p class="text-break d-none d-sm-block" style="
-                    font-family: Inter;
-                    font-weight: 500;
-                    font-size: 1vw;
-                  ">
-                Hot, fresh & hand delivered right in your inbox on a recurring basis
-              </p>
-
-              <p class="text-break d-block d-sm-none" style="
-                    font-family: Inter;
-                    font-weight: 500;
-                    font-size: 4vw;
-                  ">
-                Hot, fresh & hand delivered right in your inbox on a recurring basis
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="my-element" style="border-radius: 16px; padding: 16px; background: #38A3E0;height: 90%;box-shadow: 0px 4px 16px rgba(26, 26, 23, 0.24);
-            margin: 2%;">
-          <div class="col">
-            <button class="btn btn-light" style="
-                  width: 54px;
-                  height: 54px;
-                  background-color: #ffffff3d;
-                  border-radius: 16px;
-                  border: none;
-                ">
-              <img src="img/icons/connectedIcon.png" alt="image-description-here" style="width: 100%; height: auto" />
-            </button>
-            <div class="col">
-              <p class="d-none d-sm-block" style="
-                    font-family: Merriweather;
-                    font-weight: 700;
-                    font-size: 2vw;
-                    margin-top: 2%;
-                    
-                  ">
-                Connected
-              </p>
-
-              <p class=" d-block d-sm-none" style="
-                    font-family: Merriweather;
-                    font-weight: 700;
-                    font-size: 5vw;
-                    margin-top: 2%;
-                    
-                  ">
-                Connected
-              </p>
-            </div>
-            <div class="col">
-              <p class="text-break d-none d-sm-block" style="
-                    font-family: Inter;
-                    font-weight: 500;
-                    font-size: 1vw;
-                  ">
-                Join a community of awesome like minded people
-              </p>
-
-              <p class="text-break d-block d-sm-none" style="
-                    font-family: Inter;
-                    font-weight: 500;
-                    font-size: 4vw;
-                  ">
-                Join a community of awesome like minded people
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="currated"></div>
+    
 
     <!-- TABS Section  MOBILE ONLY-->
     <div class="container-fluid align-content-center justify-content-center  d-block d-sm-none" style="
@@ -2734,6 +2570,13 @@
       .then(html => {
         console.log(html);
         const componentDiv = document.getElementById('form');
+        componentDiv.innerHTML = html;
+      });
+      fetch('components/common/currated.html')
+      .then(response => response.text())
+      .then(html => {
+        console.log(html);
+        const componentDiv = document.getElementById('currated');
         componentDiv.innerHTML = html;
       });
 
