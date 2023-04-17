@@ -16,6 +16,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 
+  <script src="script.jsscript.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 </head>
@@ -29,9 +30,9 @@
     <div id="header-m"></div>
 
     <!-- FORM FIELD SECTION -->
-    
+
     <div id="form"></div>
-    <include src ="components/common/form.html"></include>
+    <include src="components/common/form.html"></include>
     <script>
       window.CustomSubstackWidget = {
         substackUrl: "thechiefofstuff.substack.com",
@@ -49,12 +50,12 @@
 
     </script>
     <script src="https://substackapi.com/widget.js" async></script>
-    
+
 
 
     <!-- Curated SECTION -->
     <div id="currated"></div>
-    
+
 
     <!-- TABS Section  MOBILE ONLY-->
     <div id="tabs-m"></div>
@@ -68,24 +69,24 @@
 
   <!-- TABS Section  desktop ONLY-->
   <div id="tabs-d"></div>
-</div>
+  </div>
 
   <!-- Previous Issues Section Desktop Only-->
   <div id="previousIssueTab-d"></div>
-  
+
 
   <!-- Previous Issues Section Mobile Only-->
   <div id="previousIssueTab-m"></div>
-  
+
 
   <!-- REAL CONTENT REAL VOICE SECTION-->
   <div id="realContentTab"></div>
-  
+
   </div>
 
   <!-- Footer-->
   <div id="footer"></div>
-  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
@@ -107,49 +108,49 @@
         const componentDiv = document.getElementById('header-m');
         componentDiv.innerHTML = html;
       });
-      fetch('components/common/form.html')
+    fetch('components/common/form.html')
       .then(response => response.text())
       .then(html => {
         console.log(html);
         const componentDiv = document.getElementById('form');
         componentDiv.innerHTML = html;
       });
-      fetch('components/common/currated.html')
+    fetch('components/common/currated.html')
       .then(response => response.text())
       .then(html => {
         console.log(html);
         const componentDiv = document.getElementById('currated');
         componentDiv.innerHTML = html;
       });
-      fetch('components/mobile/tabs-m.html')
+    fetch('components/mobile/tabs-m.html')
       .then(response => response.text())
       .then(html => {
         console.log(html);
         const componentDiv = document.getElementById('tabs-m');
         componentDiv.innerHTML = html;
       });
-      fetch('components/desktop/tabs-d.html')
+    fetch('components/desktop/tabs-d.html')
       .then(response => response.text())
       .then(html => {
         console.log(html);
         const componentDiv = document.getElementById('tabs-d');
         componentDiv.innerHTML = html;
       });
-      fetch('components/common/realContentTab.html')
+    fetch('components/common/realContentTab.html')
       .then(response => response.text())
       .then(html => {
         console.log(html);
         const componentDiv = document.getElementById('tabs-d');
         componentDiv.innerHTML = html;
       });
-      fetch('components/common/footer.html')
+    fetch('components/common/footer.html')
       .then(response => response.text())
       .then(html => {
         console.log(html);
         const componentDiv = document.getElementById('tabs-d');
         componentDiv.innerHTML = html;
       });
-      fetch('components/desktop/previousIssueTab-d.html')
+    fetch('components/desktop/previousIssueTab-d.html')
       .then(response => response.text())
       .then(html => {
         console.log(html);
