@@ -3,12 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if ($(window).width() > 768) { formField.style.padding = '3%' }
 })
 
-
-
-
-const button1m = document.getElementById('pills-home-tab-m');
-const button2m = document.getElementById('pills-profile-tab-m');
-const button3m = document.getElementById('pills-contact-tab-m');
+const button1m = document.getElementById('components/mobile/tabs-m.html/pills-home-tab-m');
+const button2m = document.getElementById('components/mobile/tabs-m.html/pills-profile-tab-m');
+const button3m = document.getElementById('components/mobile/tabs-m.html/pills-contact-tab-m');
 
 const tabButtonsm = document.querySelectorAll('.mobile-tabs .tab-btn');
 const tabContentsm = document.querySelectorAll('.mobile-tabs .tab-content');
@@ -27,51 +24,51 @@ tabButtonsm.forEach(function (tabButton) {
 });
 
 button2m.addEventListener('click', function () {
-    document.getElementById('pills-home-tab-m').style.backgroundColor = '#FFFFFF52';
-    document.getElementById('pills-contact-tab-m').style.backgroundColor = '#FFFFFF52';
-    document.getElementById('pills-home-tab-m').style.boxShadow = 'none';
-    document.getElementById('pills-contact-tab-m').style.boxShadow = 'none';
+    document.getElementById('components/mobile/tabs-m.html/pills-home-tab-m').style.backgroundColor = '#FFFFFF52';
+    document.getElementById('components/mobile/tabs-m.html/pills-contact-tab-m').style.backgroundColor = '#FFFFFF52';
+    document.getElementById('components/mobile/tabs-m.html/pills-home-tab-m').style.boxShadow = 'none';
+    document.getElementById('components/mobile/tabs-m.html/pills-contact-tab-m').style.boxShadow = 'none';
 
     this.style.backgroundColor = '#ED6838';
     this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
 
-    document.getElementById('text1').style.color = '#000';
-    document.getElementById('text2').style.color = '#fff';
-    document.getElementById('text3').style.color = '#000';
+    document.getElementById('components/mobile/tabs-m.html/text1').style.color = '#000';
+    document.getElementById('components/mobile/tabs-m.html/text2').style.color = '#fff';
+    document.getElementById('components/mobile/tabs-m.html/text3').style.color = '#000';
 });
 button1m.addEventListener('click', function () {
-    document.getElementById('pills-profile-tab-m').style.backgroundColor = '#FFFFFF52';
-    document.getElementById('pills-contact-tab-m').style.backgroundColor = '#FFFFFF52';
-    document.getElementById('pills-profile-tab-m').style.boxShadow = 'none';
-    document.getElementById('pills-contact-tab-m').style.boxShadow = 'none';
+    document.getElementById('components/mobile/tabs-m.html/pills-profile-tab-m').style.backgroundColor = '#FFFFFF52';
+    document.getElementById('components/mobile/tabs-m.html/pills-contact-tab-m').style.backgroundColor = '#FFFFFF52';
+    document.getElementById('components/mobile/tabs-m.html/pills-profile-tab-m').style.boxShadow = 'none';
+    document.getElementById('components/mobile/tabs-m.html/pills-contact-tab-m').style.boxShadow = 'none';
 
     this.style.backgroundColor = '#ED6838';
     this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
 
-    document.getElementById('text1').style.color = '#fff';
-    document.getElementById('text2').style.color = '#000';
-    document.getElementById('text3').style.color = '#000';
+    document.getElementById('components/mobile/tabs-m.html/text1').style.color = '#fff';
+    document.getElementById('components/mobile/tabs-m.html/text2').style.color = '#000';
+    document.getElementById('components/mobile/tabs-m.html/text3').style.color = '#000';
 });
 button3m.addEventListener('click', function () {
-    document.getElementById('pills-home-tab-m').style.backgroundColor = '#FFFFFF52';
-    document.getElementById('pills-profile-tab-m').style.backgroundColor = '#FFFFFF52';
-    document.getElementById('pills-home-tab-m').style.boxShadow = 'none';
-    document.getElementById('pills-profile-tab-m').style.boxShadow = 'none';
+    document.getElementById('components/mobile/tabs-m.html/pills-home-tab-m').style.backgroundColor = '#FFFFFF52';
+    document.getElementById('components/mobile/tabs-m.html/pills-profile-tab-m').style.backgroundColor = '#FFFFFF52';
+    document.getElementById('components/mobile/tabs-m.html/pills-home-tab-m').style.boxShadow = 'none';
+    document.getElementById('components/mobile/tabs-m.html/pills-profile-tab-m').style.boxShadow = 'none';
 
     this.style.backgroundColor = '#ED6838';
     this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
 
-    document.getElementById('text1').style.color = '#000';
-    document.getElementById('text2').style.color = '#000';
-    document.getElementById('text3').style.color = '#fff';
+    document.getElementById('components/mobile/tabs-m.html/text1').style.color = '#000';
+    document.getElementById('components/mobile/tabs-m.html/text2').style.color = '#000';
+    document.getElementById('components/mobile/tabs-m.html/text3').style.color = '#fff';
 });
 
 
 
 
-const button1 = document.getElementById('pills-home-tab');
-const button2 = document.getElementById('pills-profile-tab');
-const button3 = document.getElementById('pills-contact-tab');
+const button1 = document.getElementById('components/desktop/tabs-d.html/pills-home-tab');
+const button2 = document.getElementById('components/desktop/tabs-d.html/pills-profile-tab');
+const button3 = document.getElementById('components/desktop/tabs-d.html/pills-contact-tab');
 
 const tabButtons = document.querySelectorAll('.nav-link');
 const tabContents = document.querySelectorAll('.tab-pane');
@@ -90,44 +87,44 @@ tabButtons.forEach(function (tabButton) {
 });
 
 button2.addEventListener('click', function () {
-    document.getElementById('pills-home-tab').style.backgroundColor = '#FFFFFF52';
-    document.getElementById('pills-contact-tab').style.backgroundColor = '#FFFFFF52';
-    document.getElementById('pills-home-tab').style.boxShadow = 'none';
-    document.getElementById('pills-contact-tab').style.boxShadow = 'none';
+    document.getElementById('components/desktop/tabs-d.html/pills-home-tab').style.backgroundColor = '#FFFFFF52';
+    document.getElementById('components/desktop/tabs-d.html/pills-contact-tab').style.backgroundColor = '#FFFFFF52';
+    document.getElementById('components/desktop/tabs-d.html/pills-home-tab').style.boxShadow = 'none';
+    document.getElementById('components/desktop/tabs-d.html/pills-contact-tab').style.boxShadow = 'none';
 
     this.style.backgroundColor = '#ED6838';
     this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
 
-    document.getElementById('text1-d').style.color = '#000';
-    document.getElementById('text2-d').style.color = '#fff';
-    document.getElementById('text3-d').style.color = '#000';
+    document.getElementById('components/desktop/tabs-d.html/text1-d').style.color = '#000';
+    document.getElementById('components/desktop/tabs-d.html/text2-d').style.color = '#fff';
+    document.getElementById('components/desktop/tabs-d.html/text3-d').style.color = '#000';
 });
 button1.addEventListener('click', function () {
 
-    document.getElementById('pills-profile-tab').style.backgroundColor = '#FFFFFF52';
-    document.getElementById('pills-contact-tab').style.backgroundColor = '#FFFFFF52';
-    document.getElementById('pills-profile-tab').style.boxShadow = 'none';
-    document.getElementById('pills-contact-tab').style.boxShadow = 'none';
+    document.getElementById('components/desktop/tabs-d.html/pills-profile-tab').style.backgroundColor = '#FFFFFF52';
+    document.getElementById('components/desktop/tabs-d.html/pills-contact-tab').style.backgroundColor = '#FFFFFF52';
+    document.getElementById('components/desktop/tabs-d.html/pills-profile-tab').style.boxShadow = 'none';
+    document.getElementById('components/desktop/tabs-d.html/pills-contact-tab').style.boxShadow = 'none';
 
     this.style.backgroundColor = '#ED6838';
     this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
 
-    document.getElementById('text1-d').style.color = '#fff';
-    document.getElementById('text2-d').style.color = '#000';
-    document.getElementById('text3-d').style.color = '#000';
+    document.getElementById('components/desktop/tabs-d.html/text1-d').style.color = '#fff';
+    document.getElementById('components/desktop/tabs-d.html/text2-d').style.color = '#000';
+    document.getElementById('components/desktop/tabs-d.html/text3-d').style.color = '#000';
 });
 button3.addEventListener('click', function () {
-    document.getElementById('pills-home-tab').style.backgroundColor = '#FFFFFF52';
-    document.getElementById('pills-profile-tab').style.backgroundColor = '#FFFFFF52';
-    document.getElementById('pills-home-tab').style.boxShadow = 'none';
-    document.getElementById('pills-profile-tab').style.boxShadow = 'none';
+    document.getElementById('components/desktop/tabs-d.html/pills-home-tab').style.backgroundColor = '#FFFFFF52';
+    document.getElementById('components/desktop/tabs-d.html/pills-profile-tab').style.backgroundColor = '#FFFFFF52';
+    document.getElementById('components/desktop/tabs-d.html/pills-home-tab').style.boxShadow = 'none';
+    document.getElementById('components/desktop/tabs-d.html/pills-profile-tab').style.boxShadow = 'none';
 
     this.style.backgroundColor = '#ED6838';
     this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
 
-    document.getElementById('text1-d').style.color = '#000';
-    document.getElementById('text2-d').style.color = '#000';
-    document.getElementById('text3-d').style.color = '#fff';
+    document.getElementById('components/desktop/tabs-d.html/text1-d').style.color = '#000';
+    document.getElementById('components/desktop/tabs-d.html/text2-d').style.color = '#000';
+    document.getElementById('components/desktop/tabs-d.html/text3-d').style.color = '#fff';
 });
 //highlights
 const issues = [
@@ -310,9 +307,6 @@ const issues = [
 
 var issueNo = issues.length - 1;
 var imgNo = 0;
-
-
-
 var linkMob = issues[issues.length - 1].paymentLink;
 var linkDesktop = issues[issues.length - 1].paymentLink;
 // Get the value of the subscriber variable from the URL
