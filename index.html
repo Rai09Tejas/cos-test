@@ -31,6 +31,7 @@
     <!-- FORM FIELD SECTION -->
     
     <div id="form"></div>
+    <include src ="components/common/form.html"></include>
     <script>
       window.CustomSubstackWidget = {
         substackUrl: "thechiefofstuff.substack.com",
@@ -2191,6 +2192,21 @@
         const componentDiv = document.getElementById('currated');
         componentDiv.innerHTML = html;
       });
+      fetch('components/mobile/tabs-m.html')
+      .then(response => response.text())
+      .then(html => {
+        console.log(html);
+        const componentDiv = document.getElementById('tabs-m');
+        componentDiv.innerHTML = html;
+      });
+      fetch('components/desktop/tabs-d.html')
+      .then(response => response.text())
+      .then(html => {
+        console.log(html);
+        const componentDiv = document.getElementById('tabs-d');
+        componentDiv.innerHTML = html;
+      });
+
 
 
     $(document).ready(function () {
