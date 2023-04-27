@@ -121,32 +121,6 @@
                 ">Get It Now!</p>
                 </button>
               </div>
-              <script>
-                function openPaymentWindowMob() {
-                  var link = issues[issueNo].paymentLink;
-                  const urlParams = new URLSearchParams(window.location.search);
-                  const subscriber = urlParams.get('subscriber');
-
-                  // Check if the value is true or false
-                  if (subscriber !== null) {
-                    if (subscriber === 'true') {
-                    } else {
-                      linkMob = issues[issueNo].paymentLinkNoOffer;
-                    }
-                  }
-                  else {
-
-                    linkMob = issues[issueNo].paymentLinkNoOffer;
-                    console.log(linkMob)
-                  }
-                  window.open(linkMob, "_blank");
-                }
-
-
-                function zoomMobileImage() {
-                  window.open(issues[issueNo].cover[imgNo], '_blank');
-                }
-              </script>
 
               <div class="col-md-5" style="padding-left: 5%;margin-top: 10%; padding: 0;">
                 <ul class="nav nav-pills nav-justified mobile-tabs" id="mobileTabs">

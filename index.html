@@ -7,32 +7,320 @@
   <title>chiefofstuff | Sarah Maxwell</title>
   <link rel="icon" href="img/icons/fevicon.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" />
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-
-  <script src="script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-
 </head>
 
 <body style="background-color: #E9E6E0">
   <input type="hidden" name="isSubscribed" value="0" id="isSubscribed" />
-
   <div class="container-fluid" style="width: 100%;">
     <!-- HEADER SECTION-->
     <div id="header-d"></div>
     <div id="header-m"></div>
 
     <!-- FORM FIELD SECTION -->
-
-    <div id="form"></div>
-    <include src="components/common/form.html"></include>
+    <div id="form">
+      
+  <div id="formField" class="container-fluid hidden-md-down " style="
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 0;
+  background: radial-gradient(50% 50% at 50% 50%, #FCCDBC 0%, #E9E6E0 100%),radial-gradient(circle at 95.23% 40%, rgba(237, 104, 56, 0.72) 0%, rgba(255, 204, 77, 0.72) 100%);
+  ">
+      <div class="row d-flex justify-content-center align-items-center ">
+        <div class="col-md-3 d-block d-sm-none">
+          <img src="img/images/comb.png" alt="your image" class="img-fluid" />
+        </div>
+        <div class="col-md-3 d-none d-sm-block" style="height: 70%">
+          <img src="img/images/left.png" alt="your image" class="img-fluid" />
+        </div>
+        <div class="col-md-6 bg-image bg-position-bottom d-flex justify-content-center ">
+          <div style="
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        height: 100%;
+        width: 100%;
+      " class="text-center">
+            <iframe src="components/bg_ellipse.html" frameborder="0" style="
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        "></iframe>
+            <p class="d-flex d-block d-sm-none text-center mx-auto"
+              style="font-family: Inter; font-weight: 300; font-size: 6vw;margin-bottom: 0%;">Your source for
+            </p>
+  
+            <div id="myCarouselm" class="carousel slide carousel-vertical d-flex d-block d-sm-none" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="item active">
+                  <p style="
+              font-family: Inter;
+              font-weight: 300;
+              font-size: 6vw;
+              
+            "><span id="changingWordm" style="
+                font-family: Merriweather;
+                font-weight: 700;
+                font-size: 6vw;
+                display: inline-block;
+                width: 42vw;
+              ">‘informative’</span> stuff</p>
+                </div>
+              </div>
+            </div>
+  
+            <p class="d-none d-sm-block" style="font-family: Inter; font-weight: 300; font-size: 3vw">Your source for
+            </p>
+  
+            <div id="myCarousel" class="carousel slide carousel-vertical d-none d-sm-block" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="item active">
+                  <p style="
+          font-family: Inter;
+          font-weight: 300;
+          font-size: 3vw;
+        "><span id="changingWord" style="
+            font-family: Merriweather;
+            font-weight: 700;
+            font-size: 3vw;
+            display: inline-block;
+            width: 21vw;
+            
+          ">‘informative’</span> stuff</p>
+                </div>
+              </div>
+            </div>
+  
+            <script>
+              function changeWord() {
+                var words = ["‘informative’", "‘interesting’", "‘innovative’", "‘inspirational’"];
+                var currentIndex = 0;
+                setInterval(function () {
+                  var element = document.getElementById("changingWord");
+                  element.style.opacity = 0;
+                  setTimeout(function () {
+                    element.textContent = words[currentIndex];
+                    element.style.opacity = 1;
+                  }, 500);
+                  currentIndex++;
+                  if (currentIndex == words.length) {
+                    currentIndex = 0;
+                  }
+                }, 3000);
+              }
+  
+              document.addEventListener("DOMContentLoaded", function (event) {
+                changeWord();
+              });
+  
+  
+  
+              function changeWordm() {
+                var wordsm = ["‘informative’", "‘interesting’", "‘innovative’", "‘inspirational’"];
+                var currentIndex = 0;
+                setInterval(function () {
+                  var element = document.getElementById("changingWordm");
+                  element.style.opacity = 0;
+                  setTimeout(function () {
+                    element.textContent = wordsm[currentIndex];
+                    element.style.opacity = 1;
+                  }, 500);
+                  currentIndex++;
+                  if (currentIndex == wordsm.length) {
+                    currentIndex = 0;
+                  }
+                }, 3000);
+              }
+  
+              $(document).ready(function () { changeWordm(); });
+            </script>
+            <p class="d-block d-sm-none" style="
+          font-family: Inter;
+          font-weight: 400;
+          font-size: 4vw;
+          max-lines: 3;
+        ">
+              Whether it’s a cheeky fun fact, deep dive into emerging tech, or
+              a profile about a changemaker -
+              <span style="
+            font-family: Inter;
+            font-weight: 700;
+            font-size: 4vw;
+            max-lines: 3;
+          ">Chief of Stuff is the place to discover what’s new, novel, or
+                next.</span>
+            </p>
+  
+  
+            <p class="d-flex d-none d-sm-block" style="
+          font-family: Inter;
+          font-weight: 400;
+          font-size: 1.5vw;
+          max-lines: 3;
+          padding-left: 3%;
+          padding-right: 3%;
+        ">
+              Whether it’s a cheeky fun fact, deep dive into emerging tech, or
+              a profile about a changemaker -
+              <span style="
+            font-family: Inter;
+            font-weight: 700;
+            font-size: 1.5vw;
+            max-lines: 3;
+          ">Chief of Stuff is the place to discover what’s new, novel, or
+                next.</span>
+            </p>
+  
+  
+            <div class=" mx-auto" style="
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            margin-top: 3%;
+          ">
+  
+  
+              <div class="row d-flex justify-content-center align-content-center  mx-auto" style="width: 100%;">
+                <div class="modal fade" id="myModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content" style="  background-color: #E9E6E0;">
+                      <div class="modal-header">
+                        <button type="button" class="btn-close" id="closeBtn" data-bs-dismiss="modal" aria-label="Close"
+                          onclick="
+              var modal = document.getElementById('myModal2');
+          modal.classList.remove('show');
+              "></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="col">
+                          <img class="img-fluid" src="img/images/dialog.png" alt="dialog img" />
+                          <p class="text-center" style="
+                  font-family: Inter;
+                  font-weight: 500;
+                  font-size: 5.5vw;
+                  margin-top: 5%;
+                  margin-bottom: 5%;
+                ">Check your <span style="
+                  font-family: Merriweather;
+                  font-weight: 900;
+                  font-size: 5.5vw;
+                ">inbox</span> </p>
+                          <p class="text-center" style="
+                  font-family: Inter;
+                  font-weight: 500;
+                  font-size: 4vw;
+                  margin-top:0 ;
+                ">Confirm your email, your curiosity is calling! </p>
+                        </div>
+                      </div>
+                      <div class="modal-footer d-flex align-content-center justify-content-center mx-auto">
+                        <div class="col-md-12 d-flex align-content-center text-center">
+                          <button type="button" class="btn " id="okBtn" data-bs-dismiss="modal" style="border-radius: 16px;
+                padding: 5%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                background: #ED6838;
+                box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
+                border-radius: 16px;
+                border: none;
+                color: white;
+                font-size: 3.5vw;
+                font-weight: bold;
+                width: 70vw;
+                height: 15vw;
+                cursor: pointer;" data-bs-dismiss="modal" onclick="
+                var modal = document.getElementById('myModal2');
+                modal.classList.remove('show');
+                
+                document.location.reload(true);
+                
+                ">OK</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class=" mx-auto" id="custom-substack-embed"></div>
+              </div>
+              <div class="row d-flex justify-content-center align-content-center mx-auto" style="width: 100%;">
+                <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content" style="  background-color: #E9E6E0;">
+                      <div class="modal-header">
+                        <button type="button" class="btn-close" id="closeBtn" data-bs-dismiss="modal" aria-label="Close"
+                          onclick="
+              var modal = document.getElementById('myModal');
+          modal.classList.remove('show');
+              "></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="col-12 d-flex flex-column justify-content-center">
+                          <img class="img-fluid" src="img/images/dialog.png" alt="dialog img"
+                            style="width: 30vw;margin: auto;" />
+                          <p class="text-center" style="
+                  font-family: Inter;
+                  font-weight: 200;
+                  font-size: 2.5vw;
+                ">Check your <span style="
+                  font-family: Merriweather;
+                  font-weight: 900;
+                  font-size: 2.5vw;
+                ">inbox</span> </p>
+                          <p class="text-center" style="
+                  font-family: Inter;
+                  font-weight: 500;
+                  font-size: 1.5vw;
+                ">Confirm your email, your curiosity is calling! </p>
+                        </div>
+                      </div>
+                      <div class="modal-footer d-flex align-content-center justify-content-center mx-auto">
+                        <div class="col-md-12 d-flex align-content-center text-center">
+                          <button type="button" class="btn " id="okBtn" data-bs-dismiss="modal" style="border-radius: 16px;
+                padding: 5%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                background: #ED6838;
+                box-shadow: 0px 0px 12px rgba(251, 97, 42, 0.4);
+                border-radius: 16px;
+                border: none;
+                color: white;
+                font-size: 1.5vw;
+                font-weight: bold;
+                cursor: pointer;width: 30vw;height: 4vw;" data-bs-dismiss="modal" onclick="
+                var modal = document.getElementById('myModal');
+                modal.classList.remove('show');
+                document.location.reload(true);
+                
+                ">OK</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 justify-content-end align-content-end  d-none d-sm-block">
+          <img src="img/images/right.png" alt="your image" class="img-fluid" style="height: 100%" />
+        </div>
+      </div>
+    </div>
+  
+    </div>
+    <!-- <include src="components/common/form.html"></include> -->
+    
     <script>
       window.CustomSubstackWidget = {
         substackUrl: "thechiefofstuff.substack.com",
@@ -46,16 +334,11 @@
           text: "#FFFFFF",
         }
       };
-
-
     </script>
     <script src="https://substackapi.com/widget.js" async></script>
 
-
-
     <!-- Curated SECTION -->
     <div id="currated"></div>
-
 
     <!-- TABS Section  MOBILE ONLY-->
     <div id="tabs-m"></div>
@@ -63,19 +346,15 @@
 
   <!-- TABS Section  desktop ONLY-->
   <div id="tabs-d"></div>
-  </div>
 
   <!-- Previous Issues Section Desktop Only-->
   <div id="previousIssueTab-d"></div>
 
-
   <!-- Previous Issues Section Mobile Only-->
   <div id="previousIssueTab-m"></div>
 
-
   <!-- REAL CONTENT REAL VOICE SECTION-->
   <div id="realContentTab"></div>
-
 
   <!-- Footer-->
   <div id="footer"></div>
@@ -83,107 +362,156 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
 
   <script>
+    let button2 = null;
+
+    let mobileMag = null;
+    let mobileIssueText = null;
+    let mobileIssueSubText =null;
+    let formField = document.getElementById('email');
+
+    let button1m =null;
+    let button2m = null;
+    let button3m = null;
+
+    let tabButtonsm = null;
+    let tabContentsm = null;
+
+    let button1 = null;
+    //todo;
+    let button3 = null;
+
+    let tabButtons = document.querySelectorAll('.nav-link');
+    let tabContents = document.querySelectorAll('.tab-pane');
+    let mag = null;
+    let mag22 = null;
+
+    let magHead = null;
+    let magHeadM =null;
+
+    let con = null;
+
+
+    let contain = null;
+
+    let container = null;
+
+    let getNowBtn = null;
+
+    let prevBtn = null;
+    let nextBtn = null;
+
+
+
     fetch('components/desktop/header-d.html')
       .then(response => response.text())
       .then(html => {
-        console.log(html);
         const componentDiv = document.getElementById('header-d');
         componentDiv.innerHTML = html;
       });
     fetch('components/mobile/header-m.html')
       .then(response => response.text())
       .then(html => {
-        console.log(html);
         const componentDiv = document.getElementById('header-m');
         componentDiv.innerHTML = html;
       });
-    fetch('components/common/form.html')
-      .then(response => response.text())
-      .then(html => {
-        console.log(html);
-        const componentDiv = document.getElementById('form');
-        componentDiv.innerHTML = html;
-      });
+    // fetch('components/common/form.html')
+    //   .then(response => response.text())
+    //   .then(html => {
+    //     const componentDiv = document.getElementById('form');
+    //     componentDiv.innerHTML = html;
+    //     formField = ;
+    //   });
     fetch('components/common/currated.html')
       .then(response => response.text())
       .then(html => {
-        console.log(html);
         const componentDiv = document.getElementById('currated');
         componentDiv.innerHTML = html;
       });
     fetch('components/mobile/tabs-m.html')
       .then(response => response.text())
       .then(html => {
-        console.log(html);
         const componentDiv = document.getElementById('tabs-m');
         componentDiv.innerHTML = html;
+
+        button1m = document.getElementById('pills-home-tab-m');
+        button2m = document.getElementById('pills-profile-tab-m');
+        button3m = document.getElementById('pills-contact-tab-m');
+        mobileMag=document.getElementById('mobileMag');
+        mobileIssueText=document.getElementById('mobileIssueText');
+        mobileIssueSubText=document.getElementById('mobileIssueSubText');
+        tabButtonsm = document.querySelectorAll('.mobile-tabs .tab-btn');
+        tabContentsm =document.querySelectorAll('.mobile-tabs .tab-content');
+        magHeadM = document.getElementById('mag-head-m');
       });
     fetch('components/desktop/tabs-d.html')
       .then(response => response.text())
       .then(html => {
-        console.log(html);
         const componentDiv = document.getElementById('tabs-d');
         componentDiv.innerHTML = html;
+        button1 =document.getElementById('pills-home-tab');
+        button2 = document.getElementById('pills-profile-tab');
+        button3 =document.getElementById('pills-contact-tab');
+        mag22 =document.getElementById('magTitle');
+        mag = document.getElementById('magDiscription');
+        con = document.getElementById('magImages');
+        magHead = document.getElementById('mag-head-d');
+        contain =document.getElementById('highlightsTab');
+        getNowBtn = document.getElementById('getNowBtn');
       });
     fetch('components/common/realContentTab.html')
       .then(response => response.text())
       .then(html => {
-        console.log(html);
-        const componentDiv = document.getElementById('tabs-d');
+        const componentDiv = document.getElementById('realContentTab');
         componentDiv.innerHTML = html;
       });
     fetch('components/common/footer.html')
       .then(response => response.text())
       .then(html => {
-        console.log(html);
-        const componentDiv = document.getElementById('tabs-d');
+        const componentDiv = document.getElementById('footer');
         componentDiv.innerHTML = html;
       });
     fetch('components/desktop/previousIssueTab-d.html')
       .then(response => response.text())
       .then(html => {
-        console.log(html);
         const componentDiv = document.getElementById('previousIssueTab-d');
         componentDiv.innerHTML = html;
+        container =document.getElementById('issuesDiv');
       });
     fetch('components/mobile/previousIssueTab-m.html')
       .then(response => response.text())
       .then(html => {
-        console.log(html);
-        const componentDiv = document.getElementById('previousIssueTab-d');
+        const componentDiv = document.getElementById('previousIssueTab-m');
         componentDiv.innerHTML = html;
+        prevBtn =document.getElementById('prevMob');
+        nextBtn =document.getElementById('nextMob');
       });
-
-
 
     $(document).ready(function () {
 
+      setTimeout(function () {
 
 
-      setInterval(function () {
-        if ($('.custom-substack-widget').find(':input').val().trim() != '') {
+
+        if (formField) {
+          if ($(window).width() > 768) { formField.style.padding = '3%' }
+          console.log('exists');
+
+        } else {
+          console.log('not exists');
+        }
+        if (document.querySelector('.custom-substack-widget input').value.trim() !== '') {
           console.log('clicked');
-
           console.log('$(window).width()');
           if ($(window).width() < 768) {
             // do something if isSubscribed is true
             $('.custom-substack-widget').find(':submit').click(function () {
-
               if ($('.custom-substack-widget').find(':input').val() != '') {
-
-
                 $('#isSubscribed').val('1');
                 $('#myModal2').modal('show');
-
                 $('#realContent').height('135vh');
               }
-
-
-
             });
           } else {
             // do something else if isSubscribed is false
@@ -193,17 +521,1174 @@
                 $('#myModal').modal('show');
                 // $('.custom-substack-widget .csw-theme-custom').width('100vw');
               }
-
-
-
             });
-
-
           }
+        } else {
+          console.log('not touching');
         }
 
-      }, 1000);
+        tabButtonsm.forEach(function (tabButton) {
+          tabButton.addEventListener('click', function () {
+            // deactivate all tab panes
+            tabContentsm.forEach(function (tabContent) {
+              tabContent.classList.remove('active', 'show');
+            });
 
+            // activate the corresponding tab pane
+            const target = document.querySelector(tabButton.getAttribute('data-bs-target'));
+            target.classList.add('active', 'show');
+          });
+        });
+
+        button2m.addEventListener('click', function () {
+          button1m.style.backgroundColor = '#FFFFFF52';
+          button3m.style.backgroundColor = '#FFFFFF52';
+          button1m.style.boxShadow = 'none';
+          button3m.style.boxShadow = 'none';
+
+          this.style.backgroundColor = '#ED6838';
+          this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
+
+          document.getElementById('text1').style.color = '#000';
+          document.getElementById('text2').style.color = '#fff';
+          document.getElementById('text3').style.color = '#000';
+        });
+        button1m.addEventListener('click', function () {
+          button2m.style.backgroundColor = '#FFFFFF52';
+          button3m.style.backgroundColor = '#FFFFFF52';
+          button2m.style.boxShadow = 'none';
+          button3m.style.boxShadow = 'none';
+
+          this.style.backgroundColor = '#ED6838';
+          this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
+
+          document.getElementById('text1').style.color = '#fff';
+          document.getElementById('text2').style.color = '#000';
+          document.getElementById('text3').style.color = '#000';
+        });
+        button3m.addEventListener('click', function () {
+          button1m.style.backgroundColor = '#FFFFFF52';
+          button2m.style.backgroundColor = '#FFFFFF52';
+          button1m.style.boxShadow = 'none';
+          button2m.style.boxShadow = 'none';
+
+          this.style.backgroundColor = '#ED6838';
+          this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
+
+          document.getElementById('text1').style.color = '#000';
+          document.getElementById('text2').style.color = '#000';
+          document.getElementById('text3').style.color = '#fff';
+        });
+
+
+
+
+        tabButtons.forEach(function (tabButton) {
+          tabButton.addEventListener('click', function () {
+            // deactivate all tab panes
+            tabContents.forEach(function (tabContent) {
+              tabContent.classList.remove('active', 'show');
+            });
+
+            // activate the corresponding tab pane
+            const target = document.querySelector(tabButton.getAttribute('data-bs-target'));
+            target.classList.add('active', 'show');
+          });
+        });
+
+        button2.addEventListener('click', function () {
+          button1.style.backgroundColor = '#FFFFFF52';
+          button3.style.backgroundColor = '#FFFFFF52';
+          button1.style.boxShadow = 'none';
+          button3.style.boxShadow = 'none';
+
+          this.style.backgroundColor = '#ED6838';
+          this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
+
+          document.getElementById('text1-d').style.color = '#000';
+          document.getElementById('text2-d').style.color = '#fff';
+          document.getElementById('text3-d').style.color = '#000';
+        });
+        button1.addEventListener('click', function () {
+
+          button2.style.backgroundColor = '#FFFFFF52';
+          button3.style.backgroundColor = '#FFFFFF52';
+          button2.style.boxShadow = 'none';
+          button3.style.boxShadow = 'none';
+
+          this.style.backgroundColor = '#ED6838';
+          this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
+
+          document.getElementById('text1-d').style.color = '#fff';
+          document.getElementById('text2-d').style.color = '#000';
+          document.getElementById('text3-d').style.color = '#000';
+        });
+        button3.addEventListener('click', function () {
+          button1.style.backgroundColor = '#FFFFFF52';
+          button2.style.backgroundColor = '#FFFFFF52';
+          button1.style.boxShadow = 'none';
+          button2.style.boxShadow = 'none';
+
+          this.style.backgroundColor = '#ED6838';
+          this.style.boxShadow = '0px 0px 12px rgba(251, 97, 42, 0.4)';
+
+          document.getElementById('text1-d').style.color = '#000';
+          document.getElementById('text2-d').style.color = '#000';
+          document.getElementById('text3-d').style.color = '#fff';
+        });
+        //highlights
+        const issues = [
+          {
+            cover: [
+              "img/images/Issue1/2.png",
+              "img/images/Issue1/5.png",
+              "img/images/Issue1/6.png",
+              "img/images/Issue1/10.png",
+              "img/images/Issue1/13.png",
+            ],
+            title: "Issue #1",
+            description: "Introducing The Quarterly All Hands, a modern magazine and the next evolution of Chief of Stuff. Its pages are filled with snappy and substantive articles, unique interviews, and insights.",
+            paymentLink: "https://app.gumroad.com/checkout?product=nrpwv&amp;quantity=1&code=welcome",
+            paymentLinkNoOffer: "https://app.gumroad.com/checkout?product=nrpwv&amp;quantity=1",
+            highlightContent: [
+              {
+                title: "One to One",
+                description: "I sat down with documentary filmmaker Brent Hodge to hear his experience following the “Most Hated Man in America” for his film Pharma Bro",
+                src: "img/icons/highlights/h2.png",
+              },
+              {
+                title: "Product Overview",
+                description: "A deep dive into sustainable brands that are building a better future - starting with my favorite company, Rent the Runway.",
+                src: "img/icons/highlights/h1.png",
+              },
+              {
+                title: "Decoding Color:",
+                description: "Leading visual merchandiser and color enthusiast Julie Boss kicks off a new series about one of my favorite topics - color!",
+                src: "img/icons/highlights/h3.png",
+              },
+              {
+                title: "The Magic of Mushrooms:",
+                description: "In the Engineering update, I explore how one of the misunderstood organisms in nature could actually save us.",
+                src: "img/icons/highlights/h4.png",
+              },
+              {
+                title: "PLUS:",
+                description: "a compilation of favorite films, restaurants, books, wellness recommendations and so much more!",
+                src: "img/icons/highlights/h5.png",
+              },
+            ]
+          },
+          {
+            cover: [
+              "img/images/Issue2/7.png",
+              "img/images/Issue2/16.png",
+              "img/images/Issue2/18.png",
+              "img/images/Issue2/26.png",
+              "img/images/Issue2/27.png",
+
+            ],
+            title: "Issue #2",
+            description: "The Second Issue takes inspiration from Chief of Stuff’s spiritual home of Greece, celebrates Innovators, and explores New Worlds.As you scroll through, I hope you're inspired to explore new places (real and imaginary), connect with more people, and engage your senses in new ways!",
+            paymentLink: "https://app.gumroad.com/checkout?product=sgssd&amp;quantity=1&code=welcome",
+            paymentLinkNoOffer: "https://app.gumroad.com/checkout?product=sgssd&amp;quantity=1",
+            highlightContent: [
+              {
+                title: "Innovations in Ice Cream:",
+                description: "I sat down with Tyler Malek, the co-founder of Salt & Straw to discuss their novel creation, Culinary Perfume, to learn how our sense of smell has the power to unlock an entire new way to experience food.",
+                src: "img/icons/highlights/h6.png",
+              },
+              {
+                title: "Meet Me in the Metaverse:",
+                description: "I chat with Carmen Lambrianos about developments in Web3 and the unexpected group that’s pioneering the future.",
+                src: "img/icons/highlights/h7.png",
+              },
+              {
+                title: "Escape to the Islands:",
+                description: "Our “hero” story, featuring the beautiful artwork of Rachael Gan, explores my favorite hidden gems in the Cycladic Islands.",
+                src: "img/icons/highlights/h8.png",
+              },
+              {
+                title: "The Unexpected Alchemist:",
+                description: "In my One on One, ceramist and sculptor Zoe Lloyd talks about how her unique process allows her pieces to literally defy gravity.",
+                src: "img/icons/highlights/h2.png",
+              },
+              {
+                title: "Looking Ahead:",
+                description: "As you plan out Fall, Connor Swenson offers wisdom on how to gracefully ease back into school/work/life mode.",
+                src: "img/icons/highlights/h9.png",
+              },
+            ]
+          },
+          {
+            cover: [
+              "img/images/Issue3/3.png",
+              "img/images/Issue3/7.png",
+              "img/images/Issue3/16.png",
+              "img/images/Issue3/26.png",
+              "img/images/Issue3/27.png",
+
+            ],
+            title: "Issue #3",
+            description: "Our Third Issue is centered around exploration and people. We ventured all over, from Sweden to Brazil, in search of the people who are reinventing old systems, questioning the status quo, and protecting fundamental values. We asked a ton of questions and we are certain that the answers among these pages will surprise and delight you.",
+            paymentLink: "https://app.gumroad.com/checkout?product=sgssd&amp;quantity=1&code=welcome",
+            paymentLinkNoOffer: "https://app.gumroad.com/checkout?product=sgssd&amp;quantity=1",
+            highlightContent: [
+              {
+                title: "One on One with Barnaby Barford:",
+                description: "The acclaimed artist gives us insight into his new book addressing the complex nature of the most unassuming, yet most representative of all fruits... the apple.",
+                src: "img/icons/highlights/h2.png",
+              },
+              {
+                title: "Crypto 101: Bitcoin and Beyond:",
+                description: "We explain the fundamentals of crypto and what’s necessary for this new financial system to properly function in a modern world.",
+                src: "img/icons/highlights/h7.png",
+              },
+              {
+                title: "Innovations in Salt:",
+                description: "Ingrid and Niklas Mun̈ch, the duo behind ALLTGOTT salt infusions, show us how one little jar can enhance more than just flavor.",
+                src: "img/icons/highlights/h6.png",
+              },
+              {
+                title: "Decoding Color:",
+                description: "Julie Boss explores how color makes us feel, the psychology of color and how you can discover your power color!",
+                src: "img/icons/highlights/h3.png",
+              },
+              {
+                title: "Rest of World - The Hidden Gems of Brazil:",
+                description: "In this new series we uncover what makes a country like Brazil truly shine.",
+                src: "img/icons/highlights/h8.png",
+              },
+              {
+                title: "Holiday Stuff Special:",
+                description: "Just in time for Christmas. Here you can find our tips for thriving this holiday season, gift inspo and exclusive, festive party hacks and more!",
+                src: "img/icons/highlights/h10.png",
+              },
+
+            ]
+          },
+          {
+            cover: [
+              "img/images/Issue4/1.png",
+              "img/images/Issue4/2.png",
+              "img/images/Issue4/3.png",
+              "img/images/Issue4/4.png",
+              "img/images/Issue4/5.png",
+
+            ],
+            title: "Issue #4",
+            description: "Our Fourth Issue examines the tension between artificial intelligence and human originality. We believe that good things take time, but tech can be a helpful asset if used wisely. If innovations make our lives easier, then we can use our resources wisely and dedicate our energy to explore the stuff we love.",
+            paymentLink: "https://app.gumroad.com/checkout?product=fjsnw&amp;quantity=1&code=BOREDLEVEL",
+            paymentLinkNoOffer: "https://app.gumroad.com/checkout?product=fjsnw&amp;quantity=1",
+            highlightContent: [
+              {
+                title: "Stop to Smell the Roses:",
+                description: "The history of the English rose and the man behind the bouquet.",
+                src: "img/icons/highlights/h8.png",
+              },
+              {
+                title: "One on One with Hiroko Imada:",
+                description: "The acclaimed artist and teacher discusses the unique practice of Japanese woodblock printing.",
+                src: "img/icons/highlights/h2.png",
+              },
+              {
+                title: "Humans vs. Machines:",
+                description: "A look at ChatGPT and the impact of generative AI.",
+                src: "img/icons/highlights/h4.png",
+              },
+              {
+                title: "Decoding Color:",
+                description: "Special guest Allison Holman explains 12-season Color Analysis and how to embrace your natural beauty.",
+                src: "img/icons/highlights/h3.png",
+              },
+              {
+                title: "Rise & Shine:",
+                description: "Introducing new products and brands that are reinventing our morning routines.",
+                src: "img/icons/highlights/h1.png",
+              },
+              {
+                title: "Find Your Flock:",
+                description: "How to cultivate connection through passions, hobbies, and interests.",
+                src: "img/icons/highlights/h9.png",
+              },
+            ]
+          }
+        ];
+
+
+        var issueNo = issues.length - 1;
+        var imgNo = 0;
+        var linkMob = issues[issues.length - 1].paymentLink;
+        var linkDesktop = issues[issues.length - 1].paymentLink;
+        // Get the value of the subscriber variable from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const subscriber = urlParams.get('subscriber');
+
+        // Check if the value is true or false
+        if (subscriber !== null) {
+          if (subscriber === 'true') {
+            linkMob = issues[issues.length - 1].paymentLink;
+            linkDesktop = issues[issues.length - 1].paymentLink;
+          } else {
+            linkMob = issues[issues.length - 1].paymentLinkNoOffer;
+            linkDesktop = issues[issues.length - 1].paymentLinkNoOffer;
+          }
+        }
+        else {
+
+          linkMob = issues[issueNo].paymentLinkNoOffer;
+          linkDesktop = issues[issueNo].paymentLinkNoOffer;
+        }
+
+        mag22.textContent = issues[issueNo].title;
+        mag.textContent = issues[issueNo].description;
+
+
+
+        for (let i = 0; i < issues[issueNo].cover.length; i++) {
+          // Create a new div element
+          const newDiv = document.createElement("button");
+
+          // Set the class and style attributes of the div
+          newDiv.setAttribute("class", "btn");
+          newDiv.setAttribute("id", "mag-d");
+
+          // Add the code to the innerHTML of the div
+          newDiv.innerHTML = `
+        <div class="col" id="mag1-div" style=" width:8vw; border: none;
+                        border-radius: 16px;background-color: #E9E5DE;padding: 10%;margin-bottom: 2%;">
+                        <img src="img/images/mag1.png" class="img-fluid" id="mag-img2" alt="Your Image"
+                          style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));"/>
+                      </div>
+      `;
+
+          // Add the new div to the container element
+          con.appendChild(newDiv);
+        }
+        const imagenn = document.querySelectorAll('#mag-img2');
+
+        magHead.setAttribute('src', issues[issueNo].cover[0]);
+
+        for (let i = 0; i < issues[issueNo].cover.length; i++) {
+          imagenn[i].setAttribute('src', issues[issueNo].cover[i]);
+
+        }
+
+        for (let i = 0; i < imagenn.length; i++) {
+          imagenn[i].addEventListener('click', function () {
+            magHead.setAttribute('src', issues[issueNo].cover[i]);
+
+            imgNo = i;
+
+          })
+        }
+
+
+        for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+          // Create a new div element
+          const newDiv = document.createElement("div");
+
+          // Set the class and style attributes of the div
+          newDiv.setAttribute("class", "container");
+          newDiv.setAttribute("style", "border-radius: 16px; padding: 2px; padding-top:10px; padding-bottom:10px; background: #FAF8F4;margin: 0.5vw;width:100%");
+
+          // Add the code to the innerHTML of the div
+          newDiv.innerHTML = `
+
+        <div class="row" style="width:100%">
+        <div class="col-md-3 d-flex align-items-center justify-content-center" >
+        
+        <button class="btn btn-light" style="
+                          width: 54px;
+                          height: 54px;
+                          border: none;
+                          background-color: #ED683866;
+                          border-radius: 16px;
+                        ">
+                      <img src="img/images/car4.png" alt="yourimage" style="width: 100%; height: auto" id="highIm" />
+                    </button>
+        </div>
+        <div class="col-md-9 d-flex flex-column justify-content-center" style="justify-self: flex-start;">
+
+        <h1 id="highText" class="fw mb-0" style="
+        font-family: Merriweather;
+        font-size: 1vw;
+        font-weight: 700;
+
+        ">I love the variety and mix of topics that Chief of Stuff covers - it's always so interesting!</h1>
+        <h1 id="highSubText" class="fw mb-0" style="
+        color:#000000B8;
+        font-family: Inter;
+        font-size: 1vw;
+        font-weight: 400;
+        margin-top: 2%;
+        ">- Matt</h1>
+        </div>
+        </div>
+        `;
+
+          // Add the new div to the container element
+          contain.appendChild(newDiv);
+        }
+        
+    const image = document.querySelectorAll('#highIm');
+    const highText = document.querySelectorAll('#highText');
+    const highSubText = document.querySelectorAll('#highSubText');
+
+
+        for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+          image[i].setAttribute('src', issues[issueNo].highlightContent[i].src);
+          highText[i].innerText = `${issues[issueNo].highlightContent[i].title}`;
+          highSubText[i].innerText = `${issues[issueNo].highlightContent[i].description}`;
+        }
+
+        const c2 = document.getElementById('highlightsTab2');
+
+        for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+          // Create a new div element
+          const newDiv = document.createElement("div");
+
+          // Set the class and style attributes of the div
+          newDiv.setAttribute("class", "col");
+          newDiv.setAttribute("style", "border-radius: 16px; padding: 12px;padding-bottom:0px;padding-top:12px; background: #FAF8F4;margin: 1vw;width:100%");
+
+          // Add the code to the innerHTML of the div
+          newDiv.innerHTML = `
+        
+  <div class="row">
+    <div class="col-3">
+    <button class="btn btn-light" style="
+          width: 54px;
+          height: 54px;
+          background-color:#ED683866;
+          border: none;
+          border-radius: 16px;
+        ">
+      <img src="img/icons/arti.png" alt="image-description-here" style="width: 100%; " id="highIm2" />
+    </button>
+    </div>
+    <div class="col-9 d-flex flex-column justify-items-center">
+    <div class="col">
+      
+
+      <p id="highText2" class=" d-block d-sm-none" style="
+            font-family: Merriweather;
+            font-weight: 900;
+            font-size: 3.5vw;
+          ">
+          Stop to Smell the Roses:
+      </p>
+    </div>
+    <div class="col">
+
+      <p id="highSubText2" class="text-break d-block d-sm-none" style="
+            font-family: Inter;
+            font-weight: 500;
+            font-size: 3vw;
+          ">
+          The history of the English rose and the man behind the bouquet.
+      </p>
+    </div>
+    </div>
+  </div>
+  `;
+
+          // Add the new div to the container element
+          c2.appendChild(newDiv);
+        }
+
+        let image2 = document.querySelectorAll('#highIm2');
+    let highText2 = document.querySelectorAll('#highText2');
+    let highSubText2 = document.querySelectorAll('#highSubText2');
+
+
+        for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+          image2[i].setAttribute('src', issues[issueNo].highlightContent[i].src);
+          highText2[i].innerText = `${issues[issueNo].highlightContent[i].title}`;
+          highSubText2[i].innerText = `${issues[issueNo].highlightContent[i].description}`;
+        }
+
+
+        // Loop through the desired number of elements and create them
+        for (let i = 0; i < issues.length; i++) {
+          // Create a new div element
+          const newDiv = document.createElement("div");
+
+          // Set the class and style attributes of the div
+          newDiv.setAttribute("class", "col container");
+          newDiv.setAttribute("style", "margin: 1%;");
+
+          // Add the code to the innerHTML of the div
+          newDiv.innerHTML = `
+          <div class="col" id="issueContainer">
+            <div class="col" style="border-radius: 16px;background-color: #F1EFEA;padding: 10%;">
+              <img src="img/images/mag.png" id="issuesImg" class="img-fluid" alt="Your Image"
+                style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));cursor: pointer; ">
+            </div>
+            <div class="col">
+              <p class="text" id="issuesText" style="font-family: Inter;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 40px;
+                letter-spacing: 0em;
+                text-align: left;margin-top: 2%;">Issue #3</p>
+            </div>
+          </div>
+        `;
+
+          // Add the new div to the container element
+          container.appendChild(newDiv);
+
+
+        }
+
+        const images = document.querySelectorAll('#issuesImg');
+        const issueText = document.querySelectorAll('#issuesText');
+
+
+        for (let i = 0; i < images.length; i++) {
+          let j = images.length - i - 1;
+          images[i].setAttribute('src', issues[j].cover[0]);
+          issueText[i].innerText = `${issues[j].title}`;
+        }
+
+
+        var payment = issues[0].paymentLink;
+
+
+        for (let i = 0; i < images.length; i++) {
+          let j = images.length - i - 1;
+
+          images[i].addEventListener('click', function () {
+            payment = issues[issues.length - i - 1].paymentLink;
+            payLink = payment;
+
+            issueNo = j;
+            magHead.setAttribute('src', issues[j].cover[0]);
+            mag22.innerText = `${issues[j].title}`;
+            mag.innerText = `${issues[j].description}`;
+            mag.innerText = `${issues[j].description}`;
+            console.log(issueNo);
+
+
+
+
+            const con = document.getElementById('magImages');
+            console.log(issues[issueNo].cover.length);
+            while (con.firstChild) {
+              console.log('removed');
+              con.removeChild(con.firstChild);
+            }
+
+            for (let i = 0; i < issues[issueNo].cover.length; i++) {
+              // Create a new div element
+              const newDiv = document.createElement("button");
+
+              // Set the class and style attributes of the div
+              newDiv.setAttribute("class", "btn");
+              newDiv.setAttribute("id", "mag-d");
+
+              // Add the code to the innerHTML of the div
+              newDiv.innerHTML = `
+        <div class="col" id="mag1-div" style=" width:10vw; border: none;
+                        border-radius: 16px;background-color: #E9E5DE;padding: 10%;margin-bottom: 2%;">
+                        <img src="img/images/mag1.png" class="img-fluid" id="mag-im" alt="Your Image"
+                          style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));"/>
+                      </div>
+      `;
+
+              // Add the new div to the container element
+              con.appendChild(newDiv);
+            }
+            const im = document.querySelectorAll('#mag-im');
+            const im2 = document.querySelectorAll('#mag-head-d');
+            magHead.setAttribute('src', issues[issueNo].cover[0]);
+
+
+
+            for (let i = 0; i < issues[issueNo].cover.length; i++) {
+              im[i].setAttribute('src', issues[issueNo].cover[i]);
+
+            }
+
+            for (let i = 0; i < im.length; i++) {
+              im[i].addEventListener('click', function () {
+
+                magHead.setAttribute('src', issues[issueNo].cover[i]);
+                imgNo = i;
+
+              })
+            }
+
+
+
+
+
+
+            const contain = document.getElementById('highlightsTab');
+            while (contain.firstChild) {
+              console.log('removed');
+              contain.removeChild(contain.firstChild);
+            }
+
+
+
+
+            for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+              // Create a new div element
+              const newDiv = document.createElement("div");
+
+              // Set the class and style attributes of the div
+              newDiv.setAttribute("class", "container");
+              newDiv.setAttribute("style", "border-radius: 16px; padding: 2px; padding-top:10px; padding-bottom:10px; background: #FAF8F4;margin: 0.5vw;width:100%");
+
+              // Add the code to the innerHTML of the div
+              newDiv.innerHTML = `
+
+        <div class="row" style="width:100%">
+        <div class="col-md-3 d-flex align-items-center justify-content-center" >
+        
+        <button class="btn btn-light" style="
+                          width: 54px;
+                          height: 54px;
+                          border: none;
+                          background-color: #ED683866;
+                          border-radius: 16px;
+                        ">
+                      <img src="img/images/car4.png" alt="yourimage" style="width: 100%; height: auto" id="highIm" />
+                    </button>
+        </div>
+        <div class="col-md-9 d-flex flex-column justify-content-center" style="justify-self: flex-start;">
+
+        <h1 id="highText" class="fw mb-0" style="
+        font-family: Merriweather;
+        font-size: 1vw;
+        font-weight: 700;
+
+        ">I love the variety and mix of topics that Chief of Stuff covers - it's always so interesting!</h1>
+        <h1 id="highSubText" class="fw mb-0" style="
+        color:#000000B8;
+        font-family: Inter;
+        font-size: 1vw;
+        font-weight: 400;
+        margin-top: 2%;
+        ">- Matt</h1>
+        </div>
+        </div>
+        `;
+
+
+              // Add the new div to the container element
+              contain.appendChild(newDiv);
+            }
+
+            const image = document.querySelectorAll('#highIm');
+            const highText = document.querySelectorAll('#highText');
+            const highSubText = document.querySelectorAll('#highSubText');
+
+            console.log('=========issueNo down');
+            console.log(issueNo);
+
+            for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+
+              image[i].setAttribute('src', issues[issueNo].highlightContent[i].src);
+              highText[i].innerText = `${issues[issueNo].highlightContent[i].title}`;
+              highSubText[i].innerText = `${issues[issueNo].highlightContent[i].description}`;
+            }
+
+          });
+        }
+        // Mobile Tabs Query
+
+
+        for (let i = 0; i < issues[issueNo].cover.length; i++) {
+          // Create a new div element
+          const newDiv = document.createElement("button");
+
+          // Set the class and style attributes of the div
+          newDiv.setAttribute("class", "btn p-0");
+          newDiv.setAttribute("id", "mag-img-m");
+
+
+          // Add the code to the innerHTML of the div
+          newDiv.innerHTML = `
+      <div class="col" id="mag-divi-m" style=" width: 12vw; height: 12vw; border: none;
+                      border-radius: 16px;background-color: #E9E5DE;padding: 20%;">
+                        <img src="img/images/mag1.png" class="img-fluid" id="mag-imgas-m" alt="Your Image"
+                          style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));"/>
+                      </div>
+      `;
+
+          // Add the new div to the container element
+          mobileMag.appendChild(newDiv);
+        }
+
+        const mobileMagImages = document.querySelectorAll('#mag-imgas-m');
+        const mobileMag2 = document.querySelectorAll('#mag-head-m');
+
+
+
+        magHeadM.setAttribute('src', issues[issueNo].cover[0]);
+        mobileIssueText.innerText = `${issues[issueNo].title}`;
+        mobileIssueSubText.innerText = `${issues[issueNo].description}`;
+
+
+
+        for (let i = 0; i < issues[issueNo].cover.length; i++) {
+          mobileMagImages[i].setAttribute('src', issues[issueNo].cover[i]);
+
+          mobileMagImages[i].addEventListener('click', function () {
+            imgNo = i;
+            magHeadM.setAttribute('src', issues[issueNo].cover[i]);
+          })
+        }
+
+
+        // PREV BUTTON
+
+        prevBtn.addEventListener('click', function () {
+          if (issueNo == issues.length - 1) {
+            issueNo = 0;
+          } else {
+            issueNo = issueNo + 1;
+          }
+
+          const mobCaro = document.getElementById('mobCaro');
+          while (mobCaro.firstChild) {
+            console.log('removed');
+            mobCaro.removeChild(mobCaro.firstChild);
+          }
+
+          for (let i = 0; i < issues[issueNo].cover.length; i++) {
+            // Create a new div element
+            const newDiv = document.createElement("div");
+
+            // Set the class and style attributes of the div
+            if (i == 0) {
+              newDiv.setAttribute("class", "carousel-item active");
+
+            } else {
+              newDiv.setAttribute("class", "carousel-item");
+
+            }
+
+            // Add the code to the innerHTML of the div
+            newDiv.innerHTML = `
+  <div class="row">
+    <div class="col-xs-6">
+      <img class="img-fluid mx-auto"  src="img/images/issue2.png" alt="Image 1" style="width: 90vw;" id="caroMobImg"/>
+      <p class="text" style="font-family: Inter;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 40px;
+          letter-spacing: 0em;
+          text-align: left;margin-top: 2%;" id="caroMobText">Issue #2</p>
+    </div>
+
+  </div>
+`;
+
+            // Add the new div to the container element
+            mobCaro.appendChild(newDiv);
+
+          }
+
+          const caroMobImg = document.querySelectorAll('#caroMobImg');
+          const caroMobText = document.querySelectorAll('#caroMobText');
+
+
+
+          for (let i = 0; i < issues[issueNo].cover.length; i++) {
+            caroMobImg[i].setAttribute('src', issues[issueNo].cover[0]);
+            caroMobText[i].innerText = `${issues[issueNo].title}`;
+          }
+
+          const mobileMag = document.getElementById('mobileMag');
+          while (mobileMag.firstChild) {
+            console.log('removed');
+            mobileMag.removeChild(mobileMag.firstChild);
+          }
+          const mobileIssueText = document.getElementById('mobileIssueText');
+          const mobileIssueSubText = document.getElementById('mobileIssueSubText');
+
+          for (let i = 0; i < issues[issueNo].cover.length; i++) {
+            // Create a new div element
+            const newDiv = document.createElement("button");
+
+            // Set the class and style attributes of the div
+            newDiv.setAttribute("class", "btn p-0");
+            newDiv.setAttribute("id", "mag-img-m");
+
+            // Add the code to the innerHTML of the div
+            newDiv.innerHTML = `
+      <div class="col" id="mag-divi-m" style=" width: 12vw; height: 12vw; border: none;
+                      border-radius: 16px;background-color: #E9E5DE;padding: 20%;">
+                        <img src="img/images/mag1.png" class="img-fluid" id="mag-imgas-m" alt="Your Image"
+                          style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));"/>
+                      </div>
+      `;
+
+            // Add the new div to the container element
+            mobileMag.appendChild(newDiv);
+          }
+
+          const mobileMagImages = document.querySelectorAll('#mag-imgas-m');
+          const mobileMag2 = document.querySelectorAll('#mag-head-m');
+
+          magHeadM.setAttribute('src', issues[issueNo].cover[0]);
+          mobileIssueText.innerText = `${issues[issueNo].title}`;
+          mobileIssueSubText.innerText = `${issues[issueNo].description}`;
+
+
+          for (let i = 0; i < issues[issueNo].cover.length; i++) {
+            mobileMagImages[i].setAttribute('src', issues[issueNo].cover[i]);
+            mobileMagImages[i].addEventListener('click', function () {
+              imgNo = i;
+              magHeadM.setAttribute('src', issues[issueNo].cover[i]);
+            })
+          }
+
+          const c2 = document.getElementById('highlightsTab2');
+          while (c2.firstChild) {
+            c2.removeChild(c2.firstChild);
+          }
+
+          for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+            // Create a new div element
+            const newDiv = document.createElement("div");
+
+            // Set the class and style attributes of the div
+            newDiv.setAttribute("class", "col");
+            newDiv.setAttribute("style", "border-radius: 16px; padding: 12px;padding-bottom:0px;padding-top:12px; background: #FAF8F4;margin: 1vw;width:100%");
+
+            // Add the code to the innerHTML of the div
+            newDiv.innerHTML = `
+        
+  <div class="row">
+    <div class="col-3">
+    <button class="btn btn-light" style="
+          width: 54px;
+          height: 54px;
+          background-color:#ED683866;
+          border: none;
+          border-radius: 16px;
+        ">
+      <img src="img/icons/arti.png" alt="image-description-here" style="width: 100%; " id="highIm2" />
+    </button>
+    </div>
+    <div class="col-9 d-flex flex-column justify-items-center">
+    <div class="col">
+      
+
+      <p id="highText2" class=" d-block d-sm-none" style="
+            font-family: Merriweather;
+            font-weight: 900;
+            font-size: 3.5vw;
+          ">
+          Stop to Smell the Roses:
+      </p>
+    </div>
+    <div class="col">
+
+      <p id="highSubText2" class="text-break d-block d-sm-none" style="
+            font-family: Inter;
+            font-weight: 500;
+            font-size: 3vw;
+          ">
+          The history of the English rose and the man behind the bouquet.
+      </p>
+    </div>
+    </div>
+  </div>
+  `;
+
+            // Add the new div to the container element
+            c2.appendChild(newDiv);
+          }
+
+
+          const image2 = document.querySelectorAll('#highIm2');
+          const highText2 = document.querySelectorAll('#highText2');
+          const highSubText2 = document.querySelectorAll('#highSubText2');
+
+
+          for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+            image2[i].setAttribute('src', issues[issueNo].highlightContent[i].src);
+            highText2[i].innerText = `${issues[issueNo].highlightContent[i].title}`;
+            highSubText2[i].innerText = `${issues[issueNo].highlightContent[i].description}`;
+          }
+
+
+
+
+
+
+        })
+
+        // NEXT BUTTON
+        nextBtn.addEventListener('click', function () {
+          if (issueNo == 0) {
+            issueNo = issues.length - 1;
+          } else {
+            issueNo = issueNo - 1;
+          }
+          const c2 = document.getElementById('highlightsTab2');
+          while (c2.firstChild) {
+            c2.removeChild(c2.firstChild);
+          }
+
+          for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+            // Create a new div element
+            const newDiv = document.createElement("div");
+
+            // Set the class and style attributes of the div
+            newDiv.setAttribute("class", "col");
+            newDiv.setAttribute("style", "border-radius: 16px; padding: 12px;padding-bottom:0px;padding-top:12px; background: #FAF8F4;margin: 1vw;width:100%");
+
+            // Add the code to the innerHTML of the div
+            newDiv.innerHTML = `
+        
+  <div class="row">
+    <div class="col-3">
+    <button class="btn btn-light" style="
+          width: 54px;
+          height: 54px;
+          background-color:#ED683866;
+          border: none;
+          border-radius: 16px;
+        ">
+      <img src="img/icons/arti.png" alt="image-description-here" style="width: 100%; " id="highIm2" />
+    </button>
+    </div>
+    <div class="col-9 d-flex flex-column justify-items-center">
+    <div class="col">
+      
+
+      <p id="highText2" class=" d-block d-sm-none" style="
+            font-family: Merriweather;
+            font-weight: 900;
+            font-size: 3.5vw;
+          ">
+          Stop to Smell the Roses:
+      </p>
+    </div>
+    <div class="col">
+
+      <p id="highSubText2" class="text-break d-block d-sm-none" style="
+            font-family: Inter;
+            font-weight: 500;
+            font-size: 3vw;
+          ">
+          The history of the English rose and the man behind the bouquet.
+      </p>
+    </div>
+    </div>
+  </div>
+  `;
+
+            // Add the new div to the container element
+            c2.appendChild(newDiv);
+          }
+
+
+          const image2 = document.querySelectorAll('#highIm2');
+          const highText2 = document.querySelectorAll('#highText2');
+          const highSubText2 = document.querySelectorAll('#highSubText2');
+
+
+          for (let i = 0; i < issues[issueNo].highlightContent.length; i++) {
+            image2[i].setAttribute('src', issues[issueNo].highlightContent[i].src);
+            highText2[i].innerText = `${issues[issueNo].highlightContent[i].title}`;
+            highSubText2[i].innerText = `${issues[issueNo].highlightContent[i].description}`;
+          }
+
+          const mobCaro = document.getElementById('mobCaro');
+          while (mobCaro.firstChild) {
+            console.log('removed');
+            mobCaro.removeChild(mobCaro.firstChild);
+          }
+
+          for (let i = 0; i < issues[issueNo].cover.length; i++) {
+            // Create a new div element
+            const newDiv = document.createElement("div");
+
+            // Set the class and style attributes of the div
+            if (i == 0) {
+              newDiv.setAttribute("class", "carousel-item active");
+
+            } else {
+              newDiv.setAttribute("class", "carousel-item");
+
+            }
+
+            // Add the code to the innerHTML of the div
+            newDiv.innerHTML = `
+  <div class="row">
+    <div class="col-xs-6">
+      <img class="img-fluid mx-auto"  src="img/images/issue2.png" alt="Image 1" style="width: 90vw;" id="caroMobImg"/>
+      <p class="text" style="font-family: Inter;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 40px;
+          letter-spacing: 0em;
+          text-align: left;margin-top: 2%;" id="caroMobText">Issue #2</p>
+    </div>
+
+  </div>
+`;
+
+            // Add the new div to the container element
+            mobCaro.appendChild(newDiv);
+
+          }
+
+          const caroMobImg = document.querySelectorAll('#caroMobImg');
+          const caroMobText = document.querySelectorAll('#caroMobText');
+
+
+
+          for (let i = 0; i < issues[issueNo].cover.length; i++) {
+            caroMobImg[i].setAttribute('src', issues[issueNo].cover[0]);
+            caroMobText[i].innerText = `${issues[issueNo].title}`;
+          }
+          while (mobileMag.firstChild) {
+            mobileMag.removeChild(mobileMag.firstChild);
+          }
+
+          for (let i = 0; i < issues[issueNo].cover.length; i++) {
+            // Create a new div element
+            const newDiv = document.createElement("button");
+
+            // Set the class and style attributes of the div
+            newDiv.setAttribute("class", "btn p-0");
+            newDiv.setAttribute("id", "mag-img-m");
+
+            // Add the code to the innerHTML of the div
+            newDiv.innerHTML = `
+      <div class="col" id="mag-divi-m" style=" width: 12vw; height: 12vw; border: none;
+                      border-radius: 16px;background-color: #E9E5DE;padding: 20%;">
+                        <img src="img/images/mag1.png" class="img-fluid" id="mag-imgas-m" alt="Your Image"
+                          style="filter: drop-shadow(0px 4px 24px rgba(47, 19, 9, 0.24));"/>
+                      </div>
+      `;
+
+            // Add the new div to the container element
+            mobileMag.appendChild(newDiv);
+          }
+
+          const mobileMagImages = document.querySelectorAll('#mag-imgas-m');
+          const mobileMag2 = document.querySelectorAll('#mag-head-m');
+
+          magHeadM.setAttribute('src', issues[issueNo].cover[0]);
+          mobileIssueText.innerText = `${issues[issueNo].title}`;
+          mobileIssueSubText.innerText = `${issues[issueNo].description}`;
+
+
+          for (let i = 0; i < issues[issueNo].cover.length; i++) {
+            mobileMagImages[i].setAttribute('src', issues[issueNo].cover[i]);
+            mobileMagImages[i].addEventListener('click', function () {
+              imgNo = i;
+              magHeadM.setAttribute('src', issues[issueNo].cover[i]);
+            })
+          }
+
+
+
+
+        })
+        const mobCaro = document.getElementById('mobCaro');
+        while (mobCaro.firstChild) {
+          mobCaro.removeChild(mobCaro.firstChild);
+        }
+
+        for (let i = 0; i < issues[issueNo].cover.length; i++) {
+          // Create a new div element
+          const newDiv = document.createElement("div");
+
+          // Set the class and style attributes of the div
+          if (i == 0) {
+            newDiv.setAttribute("class", "carousel-item active");
+
+          } else {
+            newDiv.setAttribute("class", "carousel-item");
+
+          }
+
+          // Add the code to the innerHTML of the div
+          newDiv.innerHTML = `
+  <div class="row">
+    <div class="col-xs-6 ">
+      <img class="img-fluid mx-auto" src="img/images/issue2.png" alt="Image 1" style="width:90vw;" id="caroMobImg"/>
+      <p class="text" style="font-family: Inter;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 40px;
+          letter-spacing: 0em;
+          text-align: left;margin-top: 2%;" id="caroMobText">Issue #2</p>
+    </div>
+
+  </div>
+`;
+          // Add the new div to the container element
+          mobCaro.appendChild(newDiv);
+        }
+
+        const caroMobImg = document.querySelectorAll('#caroMobImg');
+        const caroMobText = document.querySelectorAll('#caroMobText');
+        for (let i = 0; i < issues[issueNo].cover.length; i++) {
+          caroMobImg[i].setAttribute('src', issues[issueNo].cover[0]);
+          caroMobText[i].innerText = `${issues[issueNo].title}`;
+        }
+
+getNowBtn.addEventListener('click', function () {var link = issues[issueNo].paymentLink;
+                          const urlParams = new URLSearchParams(window.location.search);
+                          const subscriber = urlParams.get('subscriber');
+
+                          // Check if the value is true or false
+                          if (subscriber !== null) {
+                            if (subscriber === 'true') {
+                            } else {
+                              linkMob = issues[issueNo].paymentLinkNoOffer;
+                            }
+                          }
+                          else {
+
+                            linkMob = issues[issueNo].paymentLinkNoOffer;
+                          }
+                          window.open(linkMob, "_blank");});
+
+        function openPaymentWindow() {
+                          
+                        }
+
+                        function openPaymentWindowMob() {
+                  var link = issues[issueNo].paymentLink;
+                  const urlParams = new URLSearchParams(window.location.search);
+                  const subscriber = urlParams.get('subscriber');
+
+                  // Check if the value is true or false
+                  if (subscriber !== null) {
+                    if (subscriber === 'true') {
+                    } else {
+                      linkMob = issues[issueNo].paymentLinkNoOffer;
+                    }
+                  }
+                  else {
+
+                    linkMob = issues[issueNo].paymentLinkNoOffer;
+                    console.log(linkMob)
+                  }
+                  window.open(linkMob, "_blank");
+                }
+
+
+                function zoomMobileImage() {
+                  window.open(issues[issueNo].cover[imgNo], '_blank');
+                }
+
+
+
+
+      }, 1000);
     });
   </script>
 
